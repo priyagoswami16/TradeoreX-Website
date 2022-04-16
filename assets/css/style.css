@@ -868,18 +868,16 @@ input[type="file"] {
 .post-action {
   cursor: pointer;
   background-color: #ffffff;
-    color: #000000;
-    font-size: 13px;
-    text-align: center;
-    text-decoration: none;
-    width: 25%;
-    border-right: 1px solid #b1b1b1;
-    border-top: none;
-    border-left: none;
-    border-bottom: none;
+  color: #000000;
+  font-size: 13px;
+  text-align: center;
+  text-decoration: none;
+  width: 25%;
+  border-right: 1px solid #b1b1b1;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
 }
-
-
 
 .add-comment-input {
   border-radius: 25px;
@@ -2440,7 +2438,9 @@ Ipad
   .post-type {
     padding: 12px;
   }
-  .photo, .video, .article {
+  .photo,
+  .video,
+  .article {
     font-size: 12px;
   }
   .type-img {
@@ -2494,7 +2494,7 @@ Ipad
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
   }
-  
+
   .post-action {
     cursor: pointer;
     background-color: #ffffff;
@@ -2511,36 +2511,64 @@ Ipad
   .post-action-icon {
     width: 12px;
   }
-.add-post-icon {
-  width: 20px;
-}
-.post-comment-form {
-  padding: 10px;
-}
-.all-comments {
-  padding: 10px 10px;
-}
+  .add-post-icon {
+    width: 20px;
+  }
+  .post-comment-form {
+    padding: 10px;
+  }
+  .all-comments {
+    padding: 10px 10px;
+  }
 
-.users-list {
-  padding: 7px;
-}
-.users-list > div > img {
-  width: 30px;
-  height: 30px;
-}
-.user-info > h6 {
-  font-size: 15px;
-}
-.suggested-connection {
-  margin-top: 10px;
-}
-.left-sticky {
-  position: static;
-}
-.sticky-on {
-  position: sticky;
-  top: 60px;
-}
+  .users-list {
+    padding: 7px;
+  }
+  .users-list > div > img {
+    width: 30px;
+    height: 30px;
+  }
+  .user-info > h6 {
+    font-size: 15px;
+  }
+  .suggested-connection {
+    margin-top: 10px;
+  }
+  .left-sticky {
+    position: static;
+  }
+  .sticky-on {
+    position: sticky;
+    top: 60px;
+  }
+
+  .all-connections {
+    padding: 10px;
+  }
+
+  .each-connection {
+    width: 31.5%;
+    margin-bottom: 10px;
+  }
+
+  .remove-connection, .decline-connection {
+    padding: 4px 7px;
+    font-size: 11px;
+  }
+
+  .comming-soon {
+    font-size: 45px;
+  }
+
+  .company-info {
+    margin-top: 120px;
+  }
+
+  .blocked-user {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+
 }
 
 /* 
@@ -2636,11 +2664,82 @@ Mobile
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .select-network, .select-comment {
+  .select-network,
+  .select-comment {
     margin-left: 2px;
   }
   .post-container {
     padding: 15px 0px;
     height: 300px;
+  }
+
+  .all-connections {
+    padding: 10px;
+  }
+
+  .each-connection {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .remove-connection, .decline-connection {
+    padding: 4px 7px;
+    font-size: 11px;
+  }
+
+  .all-notification {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .each-notify {
+    padding: 5px;
+  }
+
+  .comming-soon {
+    font-size: 35px;
+  }
+
+  .auction-img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .image-box {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .image-box > img {
+    width: 25px;
+  }
+
+  .subscribe-form {
+    width: auto;
+  }
+
+  .profile-action {
+    margin-left: 10px;
+  }
+
+  .company-info {
+    margin-top: 10px;
+  }
+
+  .single-skill {
+    margin-bottom: 10px;
+  }
+
+  .single-activity {
+    margin-bottom: 10px;
+  }
+
+  /* .industry > img {
+    width: 15px;
+  } */
+
+  .industry, .commodity, .location > img {
+    width: 15px;
   }
 }
