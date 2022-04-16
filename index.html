@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" type="text/css">
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" type="text/jacascript"></script>
+
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/assets/css/off-canvas-menu.css" type="text/css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <title>TradeoreX</title>
+</head>
+
+<body>
+  <header class="sticky-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg bg-white p-0 pt-1">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/img/logo.svg" class="logo">
+        </a>
+
+        <div class="search-form">
+          <form class="">
+            <div class="input-group">
+              <p class="input-group-text" id="basic-addon1">
+                <img src="/assets/img/search-icon.svg">
+              </p>
+              <input type="text" class="form-control search-input" placeholder="Search" aria-label="Search"
+                aria-describedby="basic-addon1">
+            </div>
+          </form>
+        </div>
+
+        <div class="navigation">
+          <ul class="navbar-nav mt-2">
+            <li class="nav-item serach-icon">
+              <a class="nav-link" aria-current="page" href="/index.html">
+                <img src="/assets/img/search-icon.svg" class="nav-icon">
+                <!-- <p>Home</p> -->
+              </a>
+            </li>
+            <li class="nav-item nav-mobile-hide">
+              <a class="nav-link" aria-current="page" href="/index.html">
+                <img src="/assets/img/home-icon.svg" class="nav-icon">
+                <p>Home</p>
+              </a>
+              <div class="nav-active"></div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="network.html">
+                <img src="/assets/img/network-icon.svg" class="nav-icon">
+                <span class="notify-count">9</span>
+                <p>Network</p>
+              </a>
+              <div class="nav-active"></div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="notifications.html">
+                <img src="/assets/img/notification-icon.svg" class="nav-icon">
+                <span class="notify-count">+99</span>
+                <p>Notification</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="messages.html">
+                <img src="/assets/img/messages-icon.svg" class="nav-icon">
+                <span class="notify-count">9</span>
+                <p>Messages</p>
+              </a>
+            </li>
+            <li class="nav-item nav-mobile-hide">
+              <a class="nav-link" aria-current="page" href="materialinquiry.html">
+                <img src="/assets/img/material-inquiry.svg" class="nav-icon">
+                <span class="notify-count">9</span>
+                <p>Material Inquiry</p>
+              </a>
+            </li>
+            <li class="nav-item nav-mobile-hide">
+              <a class="nav-link" aria-current="page" href="marketplace.html">
+                <img src="/assets/img/listed.svg" class="nav-icon">
+                <p>Marketplace</p>
+              </a>
+            </li>
+            <li class="nav-item nav-mobile-hide">
+              <a class="nav-link" aria-current="page" href="auction.html">
+                <img src="/assets/img/auction-icon.svg" class="nav-icon">
+                <p>Auction</p>
+              </a>
+            </li>
+
+            <div class="icon-open-row only-mobile">
+              <div class="icon-open-container">
+                <div class="icon-open-col-1">
+                  ☰
+                </div>
+              </div>
+            </div>
+            <!-- ./off-canvas navigation trigger -->
+
+
+            <li class="nav-item profile-nav nav-mobile-hide">
+              <a class="nav-link" aria-current="page" href="#">
+
+                <div class="btn-group">
+                  <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static"
+                    aria-expanded="false">
+                    <!-- Progress bar 1 -->
+                    <div class="progress mx-auto" data-value='90'>
+                      <span class="progress-left">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <div
+                        class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                        <img src="/assets/img/home-icon.svg" class="nav-icon small">
+                      </div>
+                    </div>
+                    <!-- END -->
+                    <p>Profile</p>
+                  </button>
+                  <div class="dropdown-menu menu-profile-box dropdown-menu-md-end py-0">
+
+                    <div class="pt-4">
+
+                      <div class="profile-info-menu d-flex pb-3 px-2">
+                        <div class="profile-imgs-menu">
+                          <img src="/assets/img/profile-img.png">
+                          <div class="profile-badge text-center">
+                            <img src="/assets/img/badge1.svg">
+                            <img src="/assets/img/badge2.svg">
+                            <img src="/assets/img/badge3.svg">
+                          </div>
+                        </div>
+                        <!-- ./profile-imgs -->
+
+                        <div class="profile-details-menu px-3">
+                          <h5 class="text-theme-secondary">Vikram Singh</h5>
+                          <p class="text-grey fw-bold">Founder | TradeoreX</p>
+                          <p class="text-grey fw-bold">Flat Steel | Long Steel</p>
+                          <p>
+                            We deal in Prime and Non Prime stock
+                            of HRC, CRC, HDGI, PPGI, ETP and
+                            many other products Secondary
+                            and Over rolling.
+                          </p>
+                          <div class="">
+                            <button href="" class="profile-view-menu-btn">
+                              View Profile
+                            </button>
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="divider"></div>
+
+                      <div class="d-flex justify-content-between">
+                        <button href="" class="btn hs-btn">
+                          <img src="/assets/img/help-and-support.svg">
+                          Help and Support
+                        </button>
+
+                        <button href="" class="btn hs-btn">
+                          <img src="/assets/img/feedback.svg">
+                          Feedback
+                        </button>
+                      </div>
+
+                      <div class="divider"></div>
+
+                      <div class="nav-dropdown-links">
+                        <img src="/assets/img/profile-settings.svg">
+                        <button class="btn p-0 profile-drop-btn text-theme">
+                          Profile Settings
+                          <p>Seetings regarding your profile</p>
+                        </button>
+                      </div>
+                      <div class="nav-dropdown-links">
+                        <img src="/assets/img/account-settings.svg">
+                        <button class="btn p-0 profile-drop-btn text-theme">
+                          Account Settings
+                          <p>Seetings to keep your profile safe</p>
+                        </button>
+                      </div>
+                      <div class="nav-dropdown-links">
+                        <img src="/assets/img/subscription-icon.svg">
+                        <button class="btn p-0 profile-drop-btn text-theme">
+                          Susbcription
+                          <p>Currently, you are on free plan</p>
+                        </button>
+                      </div>
+
+                      <div class="logout-btn text-center">
+                        <button type="button" class="btn">
+                          <img src="assets/img/logout.svg">
+                          Logout
+                        </button>
+                      </div>
+
+                    </div>
+                    <!-- ./profile-card -->
+
+                  </div>
+                </div>
+
+
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- ./navigation -->
+
+      </nav>
+    </div>
+    <!-- ./container -->
+  </header>
+
+  <div class="off-canvas">
+    <div class="off-canvas-header">
+      <a class="navbar-brand" href="/">
+        <img src="/assets/img/logo.svg" class="logo">
+      </a>
+      <div data-bs-dismiss="off-canvas" aria-label="Close">
+        <div class="icon-close"></div>
+      </div>
+    </div>
+    <div class="off-canvas-body">
+      <nav>
+        <ul class="list-level-0">
+          <li class="list-item">
+            <a class="link-level-1" href="/index.html">
+              Home
+            </a>
+          </li>
+          <li class="list-item">
+            <a class="link-level-1" href="/index.html">
+              Profile
+            </a>
+          </li>
+          <li class="list-item">
+            <a class="link-level-1" href="/index.html">
+              Marketplace
+            </a>
+          </li>
+          <li class="list-item">
+            <a class="link-level-1" href="/index.html">
+              Auction
+            </a>
+          </li>
+          <li class="list-item">
+            <a class="link-level-1" href="#">
+              Material Inquiry&nbsp;<span class="link-arrow">&#8250;</span>
+            </a>
+            <ul class="list-level-1">
+              <li class="list-item">
+                <a href="/requestedmaterial.html" class="link-level-2">
+                  <!-- <img src="/assets/img/req-material.svg" class="material-icon mr-2"> -->
+                     <p>Request Material</p>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="/offermaterial.html" class="link-level-2">
+                  <!-- <img src="/assets/img/offer-material.svg" class="material-icon"> -->
+                  Offer Material
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="link-level-2" href="#">
+                  Inquiries Received
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="link-level-2" href="#">
+                  Saved Offers
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="link-level-2" href="#">
+                  Ignored Offers
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="list-item">
+            <a class="link-level-1" href="#">
+              Marketplace&nbsp;<span class="link-arrow">&#8250;</span>
+            </a>
+            <ul class="list-level-1">
+              <li class="list-item">
+                <a class="link-level-2" href="#">
+                  Listed Material
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="link-level-2" href="#">
+                  Active Listings
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="link-level-2" href="#">
+                  Inactive Listings
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="link-level-2" href="#">
+                  Inquiries Received
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="link-level-2" href="#">
+                  List New Material
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="list-item">
+            <a class="link-level-1" href="#">
+              Network&nbsp;<span class="link-arrow">&#8250;</span>
+            </a>
+            <ul class="list-level-1">
+              <li class="list-item">
+                <a class="link-level-2" href="#">
+                  Listed Material
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="link-level-2" href="#">
+                  Active Listings
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="link-level-2" href="#">
+                  Inactive Listings
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="link-level-2" href="#">
+                  Inquiries Received
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="link-level-2" href="#">
+                  List New Material
+                </a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- ./mobile 0ff canvas -->
+
+
+  <div class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="profile-card">
+
+            <img src="/assets/img/default-bg.png" class="profile-bg-img">
+
+            <div class="profile-info d-flex p-3">
+              <div class="profile-imgs">
+                <!-- Progress bar 1 -->
+                <div class="progress-card mx-auto" data-value='50'>
+                  <span class="progress-left-card">
+                    <span class="progress-bar-card"></span>
+                  </span>
+                  <span class="progress-right-card">
+                    <span class="progress-bar-card"></span>
+                  </span>
+                  <div
+                    class="progress-value-card w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                    <img src="/assets/img/profile-img.png" class="h-100 small-card">
+                  </div>
+                </div>
+                <!-- END -->
+                <div class="user-live"></div>
+                <!-- <img src="/assets/img/profile-img.png"> -->
+                <div class="profile-badge">
+                  <img src="/assets/img/badge1.svg">
+                  <img src="/assets/img/badge2.svg">
+                  <img src="/assets/img/badge3.svg">
+                </div>
+              </div>
+              <!-- ./profile-imgs -->
+
+              <div class="profile-details px-3">
+                <h5 class="text-theme">Vikram Singh</h5>
+                <p class="text-grey">Founder | TradeoreX</p>
+                <p class="text-grey bold">Flat Steel | Long Steel</p>
+              </div>
+            </div>
+            <div class="divider"></div>
+
+            <div class="profile-intro">
+              <p>We deal in Prime and Non Prime stock
+                of HRC, CRC, HDGI, PPGI, ETP and
+                many other products Secondary
+                and Over rolling.</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="profile-view">
+              <a href="" class="profile-view-btn">View Profile</a>
+            </div>
+
+          </div>
+          <!-- ./profile-card -->
+
+
+          <div class="sticky-on">
+            <div class="navigation-card">
+              <div class="navigation-heading">
+                <h6>Material Inquiry</h6>
+              </div>
+              <div class="divider"></div>
+
+              <div class="material-nav-option">
+                <ul class="nav flex-column">
+                  <li class="side-nav">
+                    <div class="side-link">
+                      <a href="/requestedmaterial.html" class="material-nav">
+                        <img src="/assets/img/req-material.svg" class="material-icon">
+                        Request Material
+                      </a>
+                    </div>
+                    <div class="count">03</div>
+                  </li>
+                  <li class="side-nav">
+                    <div class="side-link">
+                      <a href="/offermaterial.html" class="material-nav">
+                        <img src="/assets/img/offer-material.svg" class="material-icon">
+                        Offer Material
+                      </a>
+                    </div>
+                    <div class="count">03</div>
+                  </li>
+                  <li class="side-nav">
+                    <div class="side-link">
+                      <a href="/inactivelisting.html" class="material-nav">
+                        <img src="/assets/img/inq-received.svg" class="material-icon">
+                        Inquiries Received
+                      </a>
+                    </div>
+                    <div class="count">03</div>
+                  </li>
+                  <li class="side-nav">
+                    <div class="side-link">
+                      <a href="/savedoffer.html" class="material-nav">
+                        <img src="/assets/img/saved-material.svg" class="material-icon">
+                        Saved Offers
+                      </a>
+                    </div>
+                    <div class="count">03</div>
+                  </li>
+                  <li class="side-nav">
+                    <div class="side-link">
+                      <a href="/ignoredoffer.html" class="material-nav">
+                        <img src="/assets/img/ignored-offers.svg" class="material-icon">
+                        Ignored Offers
+                      </a>
+                    </div>
+                    <div class="count">03</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- ./material-navigation -->
+
+            <div class="navigation-card">
+              <div class="navigation-heading">
+                <h6>Your Marketplace Stats</h6>
+              </div>
+              <div class="divider"></div>
+
+              <div class="material-nav-option">
+                <ul class="nav flex-column">
+                  <li class="side-nav">
+                    <div class="side-link">
+                      <a href="/listedmaterial.html" class="material-nav">
+                        <img src="/assets/img/listed.svg" class="material-icon">
+                        Listed Material
+                      </a>
+                    </div>
+                    <div class="count">03</div>
+                  </li>
+                  <li class="side-nav">
+                    <div class="side-link">
+                      <a href="/activelisting.html" class="material-nav">
+                        <img src="/assets/img/active.svg" class="material-icon">
+                        Active Listings
+                      </a>
+                    </div>
+                    <div class="count">03</div>
+                  </li>
+                  <li class="side-nav">
+                    <div class="side-link">
+                      <a href="/inactivelisting.html" class="material-nav">
+                        <img src="/assets/img/inactive.svg" class="material-icon">
+                        Inactive Listings
+                      </a>
+                    </div>
+                    <div class="count">03</div>
+                  </li>
+                  <li class="side-nav">
+                    <div class="side-link">
+                      <a href="" class="material-nav">
+                        <img src="/assets/img/inq-received.svg" class="material-icon">
+                        Inquiries Received
+                      </a>
+                    </div>
+                    <div class="count">03</div>
+                  </li>
+                  <li class="side-nav">
+                    <div class="side-link">
+                      <a href="/listnewmaterial.html" class="material-nav">
+                        <img src="/assets/img/list-new.svg" class="material-icon">
+                        List New Material
+                      </a>
+                    </div>
+                    <div class="count">03</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- ./marketplace-navigation -->
+          </div>
+          <!-- ./sticky -->
+
+        </div>
+        <!-- ./left-col -->
+
+
+        <div class="col-md-9">
+          <div class="row">
+
+            <div class="col-lg-8">
+              <div class="add-new-post">
+                <div class="modal-trigger" data-bs-toggle="modal" data-bs-target="#addNewPostModal">
+                  <img src="assets/img/add-new-post.svg" class="add-post-icon">
+                  <p>What's in your mind?</p>
+                </div>
+                <div class="divider"></div>
+
+                <div class="post-type" data-bs-toggle="modal" data-bs-target="#addNewPostModal">
+                  <div class="photo">
+                    <img src="/assets/img/photo.svg" class="type-img">
+                    <span>Photo</span>
+                  </div>
+
+                  <div class="video">
+                    <img src="/assets/img/video.svg" class="type-img">
+                    <span>Video</span>
+                  </div>
+
+                  <div class="article">
+                    <img src="/assets/img/article.svg" class="type-img">
+                    <span>Article</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal -->
+              <div class="modal" id="addNewPostModal" tabindex="-1" aria-labelledby="addNewPostModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <form action="" id="postForm">
+                      <div class="modal-header">
+                        <h6 class="modal-title text-uppercase" id="addNewPostModalLabel">Create Your Post</h6>
+                      </div>
+                      <div class="modal-body">
+                        <div class="post-conditions">
+                          <img src="/assets/img/profile-img.png">
+                          <select name="network" class="select-network">
+                            <option value="">&#128507; Anyone</option>
+                            <option value="">&#127948; Connections</option>
+                          </select>
+                          <select name="comment" class="select-comment">
+                            <option value="">&#128507; Anyone</option>
+                            <option value="">&#127948; Connections</option>
+                          </select>
+                        </div>
+                        <div class="post-container">
+                          <textarea rows="2" onchange="changeDisable()" id="post-feild" class="form-control border-0"
+                            name="desc" placeholder="What's in your mind?"></textarea>
+                          <div id="show" style="display: none;">
+                          </div>
+
+                          <video width="100%" height="100%" controls style="display: none;" id="videoShow">
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                      </div>
+                      <div class="modal-footer border-0 justify-content-between">
+                        <div class="files d-flex">
+                          <div class="add-file">
+                            <input type="file" name="photo" id="uploadImgs" class="inputfile"
+                              onchange="readImageURL(event);" multiple accept="image/gif, image/jpeg, image/png">
+                            <label for="photo"><img src="/assets/img/photo.svg">Photo</label>
+                          </div>
+                          <div class="add-file">
+                            <input type="file" name="video" id="videoUpload" class="inputfile"
+                              onchange="readVideoURL(event);" accept="video/*">
+                            <label for="photo"><img src="/assets/img/video.svg"> Video</label>
+                          </div>
+                          <div class="add-file">
+                            <input type="file" name="video" class="inputfile">
+                            <label for="photo"><img src="/assets/img/article.svg"> Article</label>
+                          </div>
+                        </div>
+                        <div class="form-actions d-flex">
+                          <button type="button" class="text-uppercase discard-btn" onClick="removePost()"
+                            data-bs-dismiss="modal">Discard</button>
+                          <button type="submit" id="post-btn" disabled class="text-uppercase post-btn">POST</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ./add-new-post -->
+
+              <div class="latest-post">
+                <div class="single-post">
+                  <div class="post-user-details">
+                    <a href="/profile.html" class='link-styles'>
+                      <div class="d-flex">
+                        <img src="assets/img/profile-img.png" class="post-user-img" />
+                        <div class="post-user-info">
+                          <h5 class="text-theme">Vanita Singh</h5>
+                          <p>Founder | Jhilmil Foundation</p>
+                          <p>18 min ago</p>
+                        </div>
+                      </div>
+                    </a>
+
+                    <div class="post-action-nav">
+                      <div class="btn-group dropstart">
+                        <div type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img src="/assets/img/three-dots.svg">
+                        </div>
+                        <ul class="dropdown-menu dropdown post-status-box" aria-labelledby="dropdownMenuButton2">
+                          <li><a class="dropdown-item" href="#"><img src="/assets/img/save-this-post.svg"> Save this
+                              post</a></li>
+                          <li><a class="dropdown-item" href="#"><img src="/assets/img/hide-this-post.svg"> Hide this
+                              post</a></li>
+                          <li><a class="dropdown-item" href="#"><img src="/assets/img/report-this-post.svg"> Report this
+                              post</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="user-post-details" data-bs-toggle="modal" data-bs-target="#postViewModal">
+                    <p>A user can send a connect request to anyone either by searching a person or by looking at the
+                      people
+                      you may know section. A user can respond on Material Inquiry and Marketplace listing even when he
+                      is
+                      not connected to the person who has posted that Material Inquiry or Marketplace Listing.</p>
+                    <div class="user-post-img-grid">
+                      <img src="/assets/img/city.jpg">
+                      <img src="/assets/img/city.jpg">
+                      <img src="/assets/img/city.jpg">
+                    </div>
+
+                  </div>
+
+                  <!-- Post View Modal -->
+                  <div class="modal fade" id="postViewModal" tabindex="-1" aria-labelledby="postViewModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                      <div class="modal-content">
+
+                        <div class="modal-body viewPostModal p-0">
+                          <div class="row">
+                            <div class="col-md-7">
+
+                              <div class="carousel-position">
+                                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"
+                                  data-bs-interval="false">
+                                  <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                      <img src="/assets/img/city.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                      <img src="/assets/img/city.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                      <img src="/assets/img/city.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                  </div>
+                                  <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                  </button>
+                                  <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                  </button>
+                                </div>
+                              </div>
+
+                            </div>
+
+                            <div class="col-md-5">
+
+                              <div class="scroll-modal-post-view">
+                                <div class="single-post-user d-flex">
+                                  <a href="/profile.html" class='link-styles'>
+                                    <div class="d-flex">
+                                      <img src="assets/img/profile-img.png" class="post-user-img" />
+                                      <div class="post-user-info">
+                                        <h5 class="text-theme">Vanita Singh</h5>
+                                        <p>Founder | Jhilmil Foundation</p>
+                                      </div>
+                                    </div>
+                                  </a>
+                                  <button type="button" class="btn-close close-user-post" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                </div>
+
+                                <div class="single-post-modal-text">
+                                  <p>A user can send a connect request to anyone either by searching a person or by
+                                    looking at
+                                    the people
+                                    you may know section. A user can respond on Material Inquiry and Marketplace listing
+                                    even
+                                    when he is
+                                    not connected to the person who has posted that Material Inquiry or Marketplace
+                                    Listing.
+                                  </p>
+
+                                </div>
+
+                                <div class="user-post-likes d-flex" data-bs-toggle="modal"
+                                  data-bs-target="#showUserLikeList">
+                                  <img src="/assets/img/profile-img.png" class="users-liked-img">
+                                  <img src="/assets/img/profile-img.png" class="users-liked-img">
+                                  <img src="/assets/img/profile-img.png" class="users-liked-img">
+                                  <p class="user-post-like-names">Raja Sharma and 21 liked this post</p>
+                                </div>
+
+                                <div class="divider"></div>
+
+                                <div class="user-post-actions">
+                                  <button class="post-action">
+                                    <img src="assets/img/like-post.svg" class="post-action-icon">
+                                    <span>Like</span>
+                                  </button>
+                                  <button class="post-action" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseExample" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    <img src="assets/img/comment-post.svg" class="post-action-icon">
+                                    <span>Comment</span>
+                                  </button>
+                                  <button class="post-action">
+                                    <img src="assets/img/share-post.svg" class="post-action-icon">
+                                    <span>Share</span>
+                                  </button>
+                                  <button class="post-action border-0">
+                                    <img src="assets/img/send-post.svg" class="post-action-icon">
+                                    <span>Send</span>
+                                  </button>
+                                </div>
+
+                                <div class="bg-white comment-box">
+                                  <div class="p-3">
+                                    <form action="" class="d-flex">
+                                      <img src="assets/img/profile-img.png" class="h-100 add-post-icon">
+                                      <textarea type="text" rows="1" class="form-control add-comment-input"></textarea>
+                                      <button type="submit" class="post-comment-btn btn">Post</button>
+                                    </form>
+                                  </div>
+
+
+                                  <div class="all-comments">
+                                    <div class="divider mb-2"></div>
+                                    <p>All Comments</p>
+                                    <div class="py-2">
+                                      <div class="d-flex my-2">
+                                        <img src="assets/img/profile-img.png" class="add-post-icon h-100">
+                                        <div class="each-comment">
+                                          <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+                                            necessitatibus
+                                            asperiores blanditiis ut quae aperiam, dicta quas, aliquam reprehenderit
+                                            doloribus
+                                            deserunt corrupti minima, esse natus earum omnis. Sit dolores eius,
+                                            repellendus
+                                            quia esse sint doloribus laboriosam saepe rerum expedita quod reprehenderit
+                                            odit.
+                                            Sunt voluptate saepe atque. Dignissimos nemo ullam perspiciatis.
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                </div>
+                              </div>
+                              <!-- ./scroll div -->
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ./Single Post Modal End -->
+
+
+
+
+                  <div class="user-post-likes d-flex" data-bs-toggle="modal" data-bs-target="#showUserLikeList">
+                    <img src="/assets/img/profile-img.png" class="users-liked-img">
+                    <img src="/assets/img/profile-img.png" class="users-liked-img">
+                    <img src="/assets/img/profile-img.png" class="users-liked-img">
+                    <p class="user-post-like-names"> Raja Sharma and 21 liked this post</p>
+                  </div>
+
+                  <!-- Modal -->
+                  <div class="modal" id="showUserLikeList" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="showUserLikeListLabel" aria-hidden="true">
+                    <div class="modal-dialog scrollable-height modal-dialog-scrollable modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h6 class="modal-title" id="showUserLikeListLabel">People Liked This Post</h6>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="liked-users">
+                            <!--  -->
+                            <div class="users-list">
+                              <div class="d-flex">
+                                <img src="/assets/img/profile-img.png">
+                                <div class="user-info">
+                                  <h6>Steve Jobs</h6>
+                                  <p>Founder | Apple</p>
+                                  <div class="connect-con d-flex">
+                                    <img src="/assets/img/active.svg" class="connection-count">
+                                    <span class="c-count">345</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <button type="button" class="btn">
+                                <img src="/assets/img/badge1.svg">
+                              </button>
+                            </div>
+                            <div class="users-list">
+                              <div class="d-flex">
+                                <img src="/assets/img/profile-img.png">
+                                <div class="user-info">
+                                  <h6>Steve Jobs</h6>
+                                  <p>Founder | Apple</p>
+                                  <div class="connect-con d-flex">
+                                    <img src="/assets/img/active.svg" class="connection-count">
+                                    <span class="c-count">345</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <button type="button" class="btn">
+                                <img src="/assets/img/badge1.svg">
+                              </button>
+                            </div>
+                            <div class="users-list">
+                              <div class="d-flex">
+                                <img src="/assets/img/profile-img.png">
+                                <div class="user-info">
+                                  <h6>Steve Jobs</h6>
+                                  <p>Founder | Apple</p>
+                                  <div class="connect-con d-flex">
+                                    <img src="/assets/img/active.svg" class="connection-count">
+                                    <span class="c-count">345</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <button type="button" class="btn">
+                                <img src="/assets/img/badge1.svg">
+                              </button>
+                            </div>
+                            <div class="users-list">
+                              <div class="d-flex">
+                                <img src="/assets/img/profile-img.png">
+                                <div class="user-info">
+                                  <h6>Steve Jobs</h6>
+                                  <p>Founder | Apple</p>
+                                  <div class="connect-con d-flex">
+                                    <img src="/assets/img/active.svg" class="connection-count">
+                                    <span class="c-count">345</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <button type="button" class="btn">
+                                <img src="/assets/img/badge1.svg">
+                              </button>
+                            </div>
+                            <div class="users-list">
+                              <div class="d-flex">
+                                <img src="/assets/img/profile-img.png">
+                                <div class="user-info">
+                                  <h6>Steve Jobs</h6>
+                                  <p>Founder | Apple</p>
+                                  <div class="connect-con d-flex">
+                                    <img src="/assets/img/active.svg" class="connection-count">
+                                    <span class="c-count">345</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <button type="button" class="btn">
+                                <img src="/assets/img/badge1.svg">
+                              </button>
+                            </div>
+                            <div class="users-list">
+                              <div class="d-flex">
+                                <img src="/assets/img/profile-img.png">
+                                <div class="user-info">
+                                  <h6>Steve Jobs</h6>
+                                  <p>Founder | Apple</p>
+                                  <div class="connect-con d-flex">
+                                    <img src="/assets/img/active.svg" class="connection-count">
+                                    <span class="c-count">345</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <button type="button" class="btn">
+                                <img src="/assets/img/badge1.svg">
+                              </button>
+                            </div>
+                            <div class="users-list">
+                              <div class="d-flex">
+                                <img src="/assets/img/profile-img.png">
+                                <div class="user-info">
+                                  <h6>Steve Jobs</h6>
+                                  <p>Founder | Apple</p>
+                                  <div class="connect-con d-flex">
+                                    <img src="/assets/img/active.svg" class="connection-count">
+                                    <span class="c-count">345</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <button type="button" class="btn">
+                                <img src="/assets/img/badge1.svg">
+                              </button>
+                            </div>
+                            <div class="users-list">
+                              <div class="d-flex">
+                                <img src="/assets/img/profile-img.png">
+                                <div class="user-info">
+                                  <h6>Steve Jobs</h6>
+                                  <p>Founder | Apple</p>
+                                  <div class="connect-con d-flex">
+                                    <img src="/assets/img/active.svg" class="connection-count">
+                                    <span class="c-count">345</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <button type="button" class="btn">
+                                <img src="/assets/img/badge1.svg">
+                              </button>
+                            </div>
+                            <div class="users-list">
+                              <div class="d-flex">
+                                <img src="/assets/img/profile-img.png">
+                                <div class="user-info">
+                                  <h6>Steve Jobs</h6>
+                                  <p>Founder | Apple</p>
+                                  <div class="connect-con d-flex">
+                                    <img src="/assets/img/active.svg" class="connection-count">
+                                    <span class="c-count">345</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <button type="button" class="btn">
+                                <img src="/assets/img/badge1.svg">
+                              </button>
+                            </div>
+                            <div class="users-list">
+                              <div class="d-flex">
+                                <img src="/assets/img/profile-img.png">
+                                <div class="user-info">
+                                  <h6>Steve Jobs</h6>
+                                  <p>Founder | Apple</p>
+                                  <div class="connect-con d-flex">
+                                    <img src="/assets/img/active.svg" class="connection-count">
+                                    <span class="c-count">345</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <button type="button" class="btn">
+                                <img src="/assets/img/badge1.svg">
+                              </button>
+                            </div>
+                            <div class="users-list">
+                              <div class="d-flex">
+                                <img src="/assets/img/profile-img.png">
+                                <div class="user-info">
+                                  <h6>Steve Jobs</h6>
+                                  <p>Founder | Apple</p>
+                                  <div class="connect-con d-flex">
+                                    <img src="/assets/img/active.svg" class="connection-count">
+                                    <span class="c-count">345</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <button type="button" class="btn">
+                                <img src="/assets/img/badge1.svg">
+                              </button>
+                            </div>
+                            <div class="users-list">
+                              <div class="d-flex">
+                                <img src="/assets/img/profile-img.png">
+                                <div class="user-info">
+                                  <h6>Steve Jobs</h6>
+                                  <p>Founder | Apple</p>
+                                  <div class="connect-con d-flex">
+                                    <img src="/assets/img/active.svg" class="connection-count">
+                                    <span class="c-count">345</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <button type="button" class="btn">
+                                <img src="/assets/img/badge1.svg">
+                              </button>
+                            </div>
+                            <div class="users-list">
+                              <div class="d-flex">
+                                <img src="/assets/img/profile-img.png">
+                                <div class="user-info">
+                                  <h6>Steve Jobs</h6>
+                                  <p>Founder | Apple</p>
+                                  <div class="connect-con d-flex">
+                                    <img src="/assets/img/active.svg" class="connection-count">
+                                    <span class="c-count">345</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <button type="button" class="btn">
+                                <img src="/assets/img/badge1.svg">
+                              </button>
+                            </div>
+
+
+                            <!-- ./delete here -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+                <div class="divider"></div>
+
+                <div class="user-post-actions">
+                  <button class="post-action">
+                    <img src="assets/img/like-post.svg" class="post-action-icon">
+                    <span>Like</span>
+                  </button>
+                  <button class="post-action" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    <img src="assets/img/comment-post.svg" class="post-action-icon">
+                    <span>Comment</span>
+                  </button>
+                  <button class="post-action">
+                    <img src="assets/img/share-post.svg" class="post-action-icon">
+                    <span>Share</span>
+                  </button>
+                  <button class="post-action border-0">
+                    <img src="assets/img/send-post.svg" class="post-action-icon">
+                    <span>Send</span>
+                  </button>
+                </div>
+
+                <div class="collapse bg-white comment-box" id="collapseExample">
+                  <div class="post-comment-form">
+                    <form action="" class="d-flex">
+                      <img src="assets/img/profile-img.png" class="h-100 add-post-icon">
+                      <textarea type="text" rows="1" class="form-control add-comment-input"></textarea>
+                      <button type="submit" class="post-comment-btn btn">Post</button>
+                    </form>
+                  </div>
+
+
+                  <div class="all-comments">
+                    <div class="divider mb-2"></div>
+                    <p>All Comments</p>
+                    <div class="py-2">
+                      <div class="d-flex my-2">
+                        <img src="assets/img/profile-img.png" class="add-post-icon h-100">
+                        <div class="each-comment">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis necessitatibus asperiores
+                            blanditiis ut quae aperiam, dicta quas, aliquam reprehenderit doloribus deserunt corrupti
+                            minima, esse natus earum omnis. Sit dolores eius, repellendus quia esse sint doloribus
+                            laboriosam saepe rerum expedita quod reprehenderit odit. Sunt voluptate saepe atque.
+                            Dignissimos
+                            nemo ullam perspiciatis.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <!-- ./single-latest post -->
+
+
+
+              <div class="latest-post">
+                <div class="single-post">
+                  <div class="post-user-details">
+                    <a href="/profile.html" class='link-styles'>
+                      <div class="d-flex">
+                        <img src="assets/img/profile-img.png" class="post-user-img" />
+                        <div class="post-user-info">
+                          <h3>Vanita Singh</h3>
+                          <p>Founder | Jhilmil Foundation</p>
+                          <p>18 min ago</p>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="post-action-nav">
+                      <div class="btn-group dropstart">
+                        <div type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img src="/assets/img/three-dots.svg">
+                        </div>
+                        <ul class="dropdown-menu dropdown post-status-box" aria-labelledby="dropdownMenuButton2">
+                          <li><a class="dropdown-item" href="#"><img src="/assets/img/save-this-post.svg"> Save this
+                              post</a></li>
+                          <li><a class="dropdown-item" href="#"><img src="/assets/img/hide-this-post.svg"> Hide this
+                              post</a></li>
+                          <li><a class="dropdown-item" href="#"><img src="/assets/img/report-this-post.svg"> Report this
+                              post</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="user-post-details">
+                    <p>A user can send a connect request to anyone either by searching a person or by looking at the
+                      people
+                      you may know section. A user can respond on Material Inquiry and Marketplace listing even when he
+                      is
+                      not connected to the person who has posted that Material Inquiry or Marketplace Listing.</p>
+                    <div class="user-post-img-grid">
+                      <img src="/assets/img/city.jpg">
+                      <img src="/assets/img/city.jpg">
+                      <img src="/assets/img/city.jpg">
+                    </div>
+
+                  </div>
+
+                  <div class="user-post-likes">
+                    <img src="/assets/img/profile-img.png" class="users-liked-img">
+                    <img src="/assets/img/profile-img.png" class="users-liked-img">
+                    <img src="/assets/img/profile-img.png" class="users-liked-img">
+                    <p>Raja Sharma and 21 liked this post</p>
+                  </div>
+                </div>
+                <div class="divider"></div>
+
+                <div class="user-post-actions">
+                  <div class="col">
+                    <button class="post-action like-post-btn">
+                      <img src="assets/img/like-post.svg" class="post-action-icon">
+                      <span>Like</span>
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button class="post-action comment-post-btn">
+                      <img src="assets/img/comment-post.svg" class="post-action-icon">
+                      <span>Comment</span>
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button class="post-action share-post-btn">
+                      <img src="assets/img/share-post.svg" class="post-action-icon">
+                      <span>Share</span>
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button class="post-action send-post-btn">
+                      <img src="assets/img/send-post.svg" class="post-action-icon">
+                      <span>Send</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- ./single-latest post -->
+
+
+              <div class="latest-post">
+                <div class="single-post">
+                  <div class="post-user-details">
+                    <a href="/profile.html" class='link-styles'>
+                      <div class="d-flex">
+                        <img src="assets/img/profile-img.png" class="post-user-img" />
+                        <div class="post-user-info">
+                          <h3>Vanita Singh</h3>
+                          <p>Founder | Jhilmil Foundation</p>
+                          <p>18 min ago</p>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="post-action-nav">
+                      <div class="btn-group dropstart">
+                        <div type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img src="/assets/img/three-dots.svg">
+                        </div>
+                        <ul class="dropdown-menu dropdown post-status-box" aria-labelledby="dropdownMenuButton2">
+                          <li><a class="dropdown-item" href="#"><img src="/assets/img/save-this-post.svg"> Save this
+                              post</a></li>
+                          <li><a class="dropdown-item" href="#"><img src="/assets/img/hide-this-post.svg"> Hide this
+                              post</a></li>
+                          <li><a class="dropdown-item" href="#"><img src="/assets/img/report-this-post.svg"> Report this
+                              post</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="user-post-details">
+                    <p>A user can send a connect request to anyone either by searching a person or by looking at the
+                      people
+                      you may know section. A user can respond on Material Inquiry and Marketplace listing even when he
+                      is
+                      not connected to the person who has posted that Material Inquiry or Marketplace Listing.</p>
+                    <div class="user-post-img-grid">
+                      <img src="/assets/img/city.jpg">
+                      <img src="/assets/img/city.jpg">
+                      <img src="/assets/img/city.jpg">
+                    </div>
+
+                  </div>
+
+                  <div class="user-post-likes">
+                    <img src="/assets/img/profile-img.png" class="users-liked-img">
+                    <img src="/assets/img/profile-img.png" class="users-liked-img">
+                    <img src="/assets/img/profile-img.png" class="users-liked-img">
+                    <p>Raja Sharma and 21 liked this post</p>
+                  </div>
+                </div>
+                <div class="divider"></div>
+
+                <div class="user-post-actions">
+                  <div class="col">
+                    <button class="post-action like-post-btn">
+                      <img src="assets/img/like-post.svg" class="post-action-icon">
+                      <span>Like</span>
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button class="post-action comment-post-btn">
+                      <img src="assets/img/comment-post.svg" class="post-action-icon">
+                      <span>Comment</span>
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button class="post-action share-post-btn">
+                      <img src="assets/img/share-post.svg" class="post-action-icon">
+                      <span>Share</span>
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button class="post-action send-post-btn">
+                      <img src="assets/img/send-post.svg" class="post-action-icon">
+                      <span>Send</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- ./single-latest post -->
+
+              <div class="latest-post">
+                <div class="single-post">
+                  <div class="post-user-details">
+                    <a href="/profile" class='link-styles'>
+                      <div class="d-flex">
+                        <img src="assets/img/profile-img.png" class="post-user-img" />
+                        <div class="post-user-info">
+                          <h3>Vanita Singh</h3>
+                          <p>Founder | Jhilmil Foundation</p>
+                          <p>18 min ago</p>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="post-action-nav">
+                      <div class="btn-group dropstart">
+                        <div type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img src="/assets/img/three-dots.svg">
+                        </div>
+                        <ul class="dropdown-menu dropdown post-status-box" aria-labelledby="dropdownMenuButton2">
+                          <li><a class="dropdown-item" href="#"><img src="/assets/img/save-this-post.svg"> Save this
+                              post</a></li>
+                          <li><a class="dropdown-item" href="#"><img src="/assets/img/hide-this-post.svg"> Hide this
+                              post</a></li>
+                          <li><a class="dropdown-item" href="#"><img src="/assets/img/report-this-post.svg"> Report this
+                              post</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="user-post-details">
+                    <p>A user can send a connect request to anyone either by searching a person or by looking at the
+                      people
+                      you may know section. A user can respond on Material Inquiry and Marketplace listing even when he
+                      is
+                      not connected to the person who has posted that Material Inquiry or Marketplace Listing.</p>
+
+                  </div>
+
+                  <div class="user-post-likes">
+                    <img src="/assets/img/profile-img.png" class="users-liked-img">
+                    <img src="/assets/img/profile-img.png" class="users-liked-img">
+                    <img src="/assets/img/profile-img.png" class="users-liked-img">
+                    <p>Raja Sharma and 21 liked this post</p>
+                  </div>
+                </div>
+                <div class="divider"></div>
+
+                <div class="user-post-actions">
+                  <div class="col">
+                    <button class="post-action like-post-btn">
+                      <img src="assets/img/like-post.svg" class="post-action-icon">
+                      <span>Like</span>
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button class="post-action comment-post-btn">
+                      <img src="assets/img/comment-post.svg" class="post-action-icon">
+                      <span>Comment</span>
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button class="post-action share-post-btn">
+                      <img src="assets/img/share-post.svg" class="post-action-icon">
+                      <span>Share</span>
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button class="post-action send-post-btn">
+                      <img src="assets/img/send-post.svg" class="post-action-icon">
+                      <span>Send</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- ./single-latest post -->
+
+              <div class="latest-post">
+                <div class="single-post">
+                  <div class="post-user-details">
+                    <a href="/profile.html" class='link-styles'>
+                      <div class="d-flex">
+                        <img src="assets/img/profile-img.png" class="post-user-img" />
+                        <div class="post-user-info">
+                          <h3>Vanita Singh</h3>
+                          <p>Founder | Jhilmil Foundation</p>
+                          <p>18 min ago</p>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="post-action-nav">
+                      <div class="btn-group dropstart">
+                        <div type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img src="/assets/img/three-dots.svg">
+                        </div>
+                        <ul class="dropdown-menu dropdown post-status-box" aria-labelledby="dropdownMenuButton2">
+                          <li><a class="dropdown-item" href="#"><img src="/assets/img/save-this-post.svg"> Save this
+                              post</a></li>
+                          <li><a class="dropdown-item" href="#"><img src="/assets/img/hide-this-post.svg"> Hide this
+                              post</a></li>
+                          <li><a class="dropdown-item" href="#"><img src="/assets/img/report-this-post.svg"> Report this
+                              post</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="user-post-details">
+                    <p>A user can send a connect request to anyone either by searching a person or by looking at the
+                      people
+                      you may know section. A user can respond on Material Inquiry and Marketplace listing even when he
+                      is
+                      not connected to the person who has posted that Material Inquiry or Marketplace Listing.</p>
+                    <div class="user-post-img-grid">
+                      <img src="/assets/img/city.jpg">
+                      <img src="/assets/img/city.jpg">
+                      <img src="/assets/img/city.jpg">
+                    </div>
+
+                  </div>
+
+                  <div class="user-post-likes">
+                    <img src="/assets/img/profile-img.png" class="users-liked-img">
+                    <img src="/assets/img/profile-img.png" class="users-liked-img">
+                    <img src="/assets/img/profile-img.png" class="users-liked-img">
+                    <p>Raja Sharma and 21 liked this post</p>
+                  </div>
+                </div>
+                <div class="divider"></div>
+
+                <div class="user-post-actions">
+                  <div class="col">
+                    <button class="post-action like-post-btn">
+                      <img src="assets/img/like-post.svg" class="post-action-icon">
+                      <span>Like</span>
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button class="post-action comment-post-btn">
+                      <img src="assets/img/comment-post.svg" class="post-action-icon">
+                      <span>Comment</span>
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button class="post-action share-post-btn">
+                      <img src="assets/img/share-post.svg" class="post-action-icon">
+                      <span>Share</span>
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button class="post-action send-post-btn">
+                      <img src="assets/img/send-post.svg" class="post-action-icon">
+                      <span>Send</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- ./single-latest post -->
+
+            </div>
+            <!-- ./middle-col -->
+
+
+            <div class="col-lg-4">
+
+              <div class="suggested-connection">
+                <div class="navigation-heading">
+                  <h6>People you may know</h6>
+                </div>
+                <div class="divider"></div>
+
+                <div class="users-list">
+                  <div class="d-flex">
+                    <img src="/assets/img/profile-img.png">
+                    <div class="user-info">
+                      <h6>Steve Jobs</h6>
+                      <p>Founder | Apple</p>
+                    </div>
+                  </div>
+                  <button type="button" class="connect-btn">
+                    Connect
+                  </button>
+                </div>
+                <!-- ./single user -->
+                <div class="users-list">
+                  <div class="d-flex">
+                    <img src="/assets/img/profile-img.png">
+                    <div class="user-info">
+                      <h6>Steve Jobs</h6>
+                      <p>Founder | Apple</p>
+                    </div>
+                  </div>
+                  <button type="button" class="connect-btn">
+                    Connect
+                  </button>
+                </div>
+                <!-- ./single user -->
+                <div class="users-list">
+                  <div class="d-flex">
+                    <img src="/assets/img/profile-img.png">
+                    <div class="user-info">
+                      <h6>Steve Jobs</h6>
+                      <p>Founder | Apple</p>
+                    </div>
+                  </div>
+                  <button type="button" class="connect-btn">
+                    Connect
+                  </button>
+                </div>
+                <!-- ./single user -->
+
+                <div class="divider"></div>
+
+                <div class="see-all">
+                  <a href="" class="see-all-btn">
+                    See all
+                  </a>
+                </div>
+
+              </div>
+              <!-- ./suggested-connection -->
+
+              <div class="ad-banner">
+                <img src="/assets/img/ad-banner.png">
+              </div>
+              <!-- ./ad-banner -->
+
+              <div class="sticky-on left-sticky">
+                <div class="latest-news-feeds">
+                  <div class="navigation-heading">
+                    <h6>News Feeds</h6>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="news-carousel">
+                    <div class="owl-carousel owl-theme">
+                      <div class="item">
+                        <a href="">
+                          <img src="/assets/img/city.jpg">
+                          <p class="news-heading">Global steel prices declined due to the US-China trade war</p>
+                          <p class="news-exert">While the price of the primary raw material (iron ore) remained
+                            elevated,
+                            which led to the company reporting losses in 2019.</p>
+                        </a>
+                      </div>
+                      <div class="item">
+                        <a href="">
+                          <img src="/assets/img/city.jpg">
+                          <p class="news-heading">Global steel prices declined due to the US-China trade war</p>
+                          <p class="news-exert">While the price of the primary raw material (iron ore) remained
+                            elevated,
+                            which led to the company reporting losses in 2019.</p>
+                        </a>
+                      </div>
+                      <div class="item">
+                        <a href="">
+                          <img src="/assets/img/city.jpg">
+                          <p class="news-heading">Global steel prices declined due to the US-China trade war</p>
+                          <p class="news-exert">While the price of the primary raw material (iron ore) remained
+                            elevated,
+                            which led to the company reporting losses in 2019.</p>
+                        </a>
+                      </div>
+                      <div class="item">
+                        <a href="">
+                          <img src="/assets/img/city.jpg">
+                          <p class="news-heading">Global steel prices declined due to the US-China trade war</p>
+                          <p class="news-exert">While the price of the primary raw material (iron ore) remained
+                            elevated,
+                            which led to the company reporting losses in 2019.</p>
+                        </a>
+                      </div>
+                      <div class="item">
+                        <a href="">
+                          <img src="/assets/img/city.jpg">
+                          <p class="news-heading">Global steel prices declined due to the US-China trade war</p>
+                          <p class="news-exert">While the price of the primary raw material (iron ore) remained
+                            elevated,
+                            which led to the company reporting losses in 2019.</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./latest-news-feeds -->
+
+                <div class="links-box">
+                  <div class="navigation-heading">
+                    <h6>Links</h6>
+                  </div>
+                  <div class="divider"></div>
+
+                  <div class="all-links">
+                    <a href="">Terms Of Use</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">About Us</a>
+                    <a href="">How to's?</a>
+                    <a href="">Support</a>
+                    <a href="">Get the TradeorX App</a>
+                    <div class="links-logo">
+                      <img src="/assets/img/logo.svg">
+                    </div>
+                    <div class="copyright">
+                      TradeoreX India Pvt. Ltd © 2022
+                    </div>
+                  </div>
+                </div>
+                <!-- ./links-box -->
+              </div>
+
+
+            </div>
+            <!-- ./right-col -->
+
+
+          </div>
+          <!-- ./inner-row -->
+
+        </div>
+        <!-- ./col-9 -->
+
+
+      </div>
+    </div>
+
+    <!-- <div class="mobile-bottom-nav">
+      <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  </div> -->
+    <!-- ./bootom-nav -->
+
+  </div>
+  <!-- ./main -->
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    type="text/javascript"></script>
+  <script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/assets/js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: false,
+      dots: true,
+      dotsEach: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      center: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
+  <script async src="/assets/js/off-canvas-menu.js"></script>
+</body>
+
+</html>
