@@ -67,7 +67,7 @@
 
       .upload-file{
         position: relative;
-        top: -300px;
+        top: -270px;
         right: 0;
         border-radius: 4px;
         width: 180px; 
@@ -86,11 +86,15 @@
 
       .camera-icon{
         width: 27px;
-        margin-top: -100px;
-        margin-left: 8px;
-        background-color: #666666;
       }
-      
+      .image-file{
+        background: transparent;
+        position: absolute;
+        text-align: center;
+        margin-left: 60px;
+        cursor: pointer;
+        margin-top: -70px;
+      }
       .chosen-container-multi .chosen-choices li.search-choice {
         color: #fff;
         background-color: yellow;
@@ -99,11 +103,33 @@
       .chosen-container-multi .chosen-choices li.search-choice .search-choice-close{
         color: #fff;
       }
+      .user-image{
+        width: 140px; 
+        height: 140px; 
+        border-radius: 50%; 
+        border: 5px solid #ffffff;
+        margin-top: -75px;
+        margin-bottom: 10px;
+      }
+      .form-check-label{
+        font-size: 16px;
+        color: #123d59;
+
+      }
+      .form-select, .form-control{
+        background: linear-gradient(180deg, #F5F5F5 0%, #EBEBEB 100%);
+      }
+
+      button > a{
+        color: #fff;
+        text-decoration: none;
+      }
+
       
 
     </style>
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="mynav" data-bs-offset="50">
    
   <!-- ..........TOP NAV.............. -->
 
@@ -207,7 +233,7 @@
 <!--............................. PRESONAL INFORMATION................... -->
 
   <!-- main container -->
-   <div class="main">
+   <div class="main" id="mynav">
       <div class="container">
               <div class="row">
                   <div class="col-md-3">
@@ -260,7 +286,7 @@
                   </div>
                   <!-- .left col -->
 
-                  <div class="col-lg-9">
+                  <div class="col-lg-9" id="section1">
                     <div class="navigation-card">
                         <div class="edit-navigation-heading">
                           <h6>Personal Information</h6>
@@ -268,29 +294,37 @@
                     </div>   
 
                     <div class="user-profile-intro">
-                        <img src="assets/img/default-bg.png" class="w-100">
-
+                      <div class="upload-banner" id="imagediv" style="width: 100%; ">
+                        <img src="assets/img/default-bg.png" class="w-100" id="bannerid" style="height: 200px;">
+                      </div>
                           
 
 
                       <div class="intro-1">
                           <div class="row">
                               <div class="col-md-2 text-center two-icon">
-                                <img src="assets/img/profile-img.png" class="user-profile-img">
-                                <!-- <img src="assets/img/camera-icon.svg" class="camera-icon"> -->
+                                <div class="user-image bg-danger" id="userimagediv">
+                                <img src="assets/img/profile-img.png" id="userid" style="width: 131px; height: 131px; border-radius: 50%;">
+                                </div>
+                                <div class="image-file">
+                                  <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile" onchange="UserImage(event)">
+                                  <label class="form-label" for="usercustomFile">
+                                    <img src="/assets/img/camera-icon.svg" class="camera-icon">
+                                  </label>
+                                </div>
                                 
                               </div>
 
 
                               <!-- upload file -->
                           <div class=" d-flex justify-content-end"> 
-                               <div class="upload-file pt-1 bg-grey">
-                              <input class="form-control" type="file" name="inlineRadioOptions" id="customFile">
+                              <div class="upload-file pt-1 bg-grey">
+                              <input class="form-control" type="file" name="inlineRadioOptions" id="customFile" onchange="UploadBannar(event)">
                               <label class="form-label" for="customFile">
                                 <img src="assets/img/upload-icon.svg" width="20px">
                                <span class="ms-2" style="font-size: 15px;">Upload-Bannar</span>
                               </label>
-                            </div> 
+                               </div> 
                           </div> 
 
                             </div>  
@@ -298,6 +332,7 @@
 
                       <!-- form part -->
                       <!-- <form class="me-3"> -->
+                     
                       <form action="http://httpbin.org/post" method="post" class="me-3">
                       
                         <div class="row mb-4">
@@ -406,16 +441,17 @@
                            </div>
                       
                         <!-- Text input -->
-                        <div class="form-group mb-4">
-                            <label class="form-label" for="form6Example3">About</label>
-                          <input type="text" id="form6Example3" class="form-control py-5" placeholder="about your self"/>
-                        </div>
-                       
+                              <div class="form-group mb-4">
+                                <label class="form-label" for="form6Example3">About</label>
+                              <textarea class="form-control" id="form6Example3" rows="4" placeholder="about your self"></textarea>
+                            </div>
+                      
                         <!-- Submit button -->
                         <div class="col d-flex justify-content-end">
-                            <button type="submit" class="btn btn-warning text-white px-5 btn-block mb-4">Next</button>
+                            <button type="submit" class="btn btn-warning text-white btn-block px-5 mb-4"><a href="#section2" role="button">Next</a></button>
                         </div>
                       </form>
+                   
 
                   </div>
                   <!-- .right col -->
@@ -425,7 +461,7 @@
 
       <!--................ TRADE INFORMATION.................. -->
 
-            <div class="row">
+            <div class="row" id="section2">
                 <div class="col">
                   <div class="navigation-card">
                       <div class="edit-navigation-heading">
@@ -493,37 +529,37 @@
                             <div class="col-md-12">
                                   <div class="py-2">
                                     <div class="form-check form-check-inline">
-                                      <input class="form-check-input border border-outline-none" style="background:#123d59;" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                      <input type="checkbox" class="form-check-input border border-outline-none" id="ckbCheckAll" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                                       <span style="color: #123d59; font-weight: 500;">Flat Carben Steel Products</span>
                                     </div>
                                   </div> 
-                                  <div class="row">
-                                   <div class="form-check form-check-inline col-md-3 ms-4">
-                                     <input class="form-check-input bg-warning border border-outline-none" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                     <label class="form-check-label px-2" for="inlineRadio1">Hot Rolled Coil</label>
+                                  <div class="row" >
+                                   <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxes">
+                                     <input id="Checkbox1" class="form-check-input checkBoxClass" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                     <label class="form-check-label px-2" for="inlineRadio1">Hot Rolled Coil</label>    
                                    </div>
-                                   <div class="form-check form-check-inline col-md-3 ms-4">
-                                     <input class="form-check-input  bg-warning border border-outline-none" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                   <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxes">
+                                     <input id="Checkbox2" class="form-check-input checkBoxClass" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                                      <label class="form-check-label" for="inlineRadio2">Cold Rolled Coil</label>
                                    </div>
-                                   <div class="form-check form-check-inline col-md-3 ms-4">
-                                     <input class="form-check-input  bg-warning border border-outline-none" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                   <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxes">
+                                     <input id="Checkbox3" class="form-check-input checkBoxClass" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3">
                                      <label class="form-check-label" for="inlineRadio3">Cold Rolled Coil</label>
                                    </div>
                                    </div>
                             </div>  
                             <div class="col-md-12">
                                  <div class="row">
-                                 <div class="form-check form-check-inline col-md-3 ms-4">
-                                   <input class="form-check-input bg-warning border border-outline-none" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                 <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxes">
+                                   <input id="Checkbox1" class="form-check-input checkBoxClass" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                                    <label class="form-check-label px-2" for="inlineRadio1">Tin Plate</label>
                                  </div>
-                                 <div class="form-check form-check-inline col-md-3 ms-4">
-                                   <input class="form-check-input  bg-warning border border-outline-none" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                 <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxes">
+                                   <input id="Checkbox2" class="form-check-input checkBoxClass" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                                    <label class="form-check-label" for="inlineRadio2">PPGI</label>
                                  </div>
-                                 <div class="form-check form-check-inline col-md-3 ms-4">
-                                   <input class="form-check-input  bg-warning border border-outline-none" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                 <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxes">
+                                   <input id="Checkbox3" class="form-check-input  checkBoxClass" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3">
                                    <label class="form-check-label" for="inlineRadio3">Hot Rolled Coil</label>
                                  </div>
                                 </div>
@@ -533,37 +569,37 @@
                             <div class="col-md-12 mt-2">
                               <div class="py-2">
                                 <div class="form-check form-check-inline">
-                                  <input class="form-check-input border border-outline-none" style="background:#123d59;" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1" disabled>
+                                  <input type="checkbox" class="form-check-input border border-outline-none" id="ckbCheckAllll" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                                   <span style="color: #123d59; font-weight: 500;">Long Carban Steel Products</span> 
                                 </div>
                               </div> 
                               <div class="row">
-                               <div class="form-check form-check-inline col-md-3 ms-4">
-                                 <input class="form-check-input " type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1" disabled>
+                               <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxess">
+                                 <input id="Checkbox7" class="form-check-input checkBoxClassess" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                                  <label class="form-check-label" for="inlineRadio1">Rebars</label>
                                </div>
-                               <div class="form-check form-check-inline col-md-3 ms-4">
-                                 <input class="form-check-input bg-warning border border-outline-none" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                               <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxess">
+                                 <input id="Checkbox8" class="form-check-input checkBoxClassess" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                                  <label class="form-check-label" for="inlineRadio2">Profile</label>
                                </div>
-                               <div class="form-check form-check-inline col-md-3 ms-4">
-                                 <input class="form-check-input  " type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                               <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxess">
+                                 <input id="Checkbox9" class="form-check-input checkBoxClassess" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3">
                                  <label class="form-check-label" for="inlineRadio3">Rebars</label>
                                </div>
                                </div>
                             </div>  
                           <div class="col-md-12 ">
                             <div class="row">
-                             <div class="form-check form-check-inline col-md-3 ms-4">
-                               <input class="form-check-input bg-warning border border-outline-none " type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                             <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxess">
+                               <input id="Checkbox10" class="form-check-input checkBoxClassess" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                                <label class="form-check-label" for="inlineRadio1">Wire Rods</label>
                              </div>
-                             <div class="form-check form-check-inline col-md-3 ms-4">
-                               <input class="form-check-input " type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2" disabled>
+                             <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxess">
+                               <input id="Checkbox11" class="form-check-input checkBoxClassess" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                                <label class="form-check-label" for="inlineRadio2">Insulated Wires</label>
                              </div>
-                             <div class="form-check form-check-inline col-md-3 ms-4">
-                               <input class="form-check-input  bg-warning border border-outline-none" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                             <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxess">
+                               <input id="Checkbox12" class="form-check-input  checkBoxClassess" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3">
                                <label class="form-check-label" for="inlineRadio3">Wire Rods</label>
                              </div>
                             </div>
@@ -574,22 +610,22 @@
                           <div class="col-md-12 mt-2">
                             <div class="py-2">
                               <div class="form-check form-check-inline">
-                                <input class="form-check-input border border-outline-none" style="background:#123d59;" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <input class="form-check-input border border-outline-none" type="checkbox" id="ckbCheckAllllll" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                                 <span style="color: #123d59; font-weight: 500;"> Metal Scrap (Ferrous & Non-Ferrous)</span> 
                               </div>
                             </div> 
                            
                             <div class="row">
-                             <div class="form-check form-check-inline col-md-3 ms-4">
-                               <input class="form-check-input bg-warning border border-outline-none" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                             <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxesss">
+                               <input  id="Checkbox13" class="form-check-input  checkBoxClassessss" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                                <label class="form-check-label" for="inlineRadio1">Zobra</label>
                              </div>
-                             <div class="form-check form-check-inline col-md-3 ms-4">
-                               <input class="form-check-input bg-warning border border-outline-none" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                             <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxesss">
+                               <input  id="Checkbox14" class="form-check-input  checkBoxClassessss" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                                <label class="form-check-label" for="inlineRadio2">Extrusion</label>
                              </div>
-                             <div class="form-check form-check-inline col-md-3 ms-4">
-                               <input class="form-check-input bg-warning border border-outline-none" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                             <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxesss">
+                               <input  id="Checkbox15" class="form-check-input checkBoxClassessss " type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3">
                                <label class="form-check-label" for="inlineRadio3">Extrusion</label>
                              </div>
                              </div>
@@ -597,16 +633,16 @@
                           </div>  
                         <div class="col-md-12">
                           <div class="row">
-                           <div class="form-check form-check-inline col-md-3 ms-4">
-                             <input class="form-check-input bg-warning border border-outline-none" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                           <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxesss">
+                             <input  id="Checkbox16" class="form-check-input  checkBoxClassessss" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                              <label class="form-check-label" for="inlineRadio1">HMS</label>
                            </div>
-                           <div class="form-check form-check-inline col-md-3 ms-4">
-                             <input class="form-check-input  bg-warning border border-outline-none" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                           <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxesss">
+                             <input  id="Checkbox17" class="form-check-input  checkBoxClassessss" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                              <label class="form-check-label" for="inlineRadio2">P&S</label>
                            </div>
-                           <div class="form-check form-check-inline col-md-3 ms-4">
-                             <input class="form-check-input  bg-warning border border-outline-none" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                           <div class="form-check form-check-inline col-md-3 ms-4" id="checkBoxesss">
+                             <input  id="Checkbox18" class="form-check-input  checkBoxClassessss" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3">
                              <label class="form-check-label" for="inlineRadio3">P&S</label>
                            </div>
                           </div>
@@ -621,8 +657,8 @@
                           <!-- Submit button -->
                           <div class="row mx-3 pt-2">
                         <div class="col d-flex justify-content-between">
-                         <button type="submit" class="btn btn-outline-warning text-warning px-5 btn-block mb-4">Back</button>
-                         <button type="submit" class="btn btn-warning text-white px-5 btn-block mb-4">Next</button>
+                         <button type="submit" class="btn btn-outline-warning text-warning px-5 btn-block mb-4"><a role="button" class="text-black" href="#section1">Back</a></button>
+                         <button type="submit" class="btn btn-warning text-white px-5 btn-block mb-4"><a href="#section3" role="button">Next</a></button>
                         </div>
                       </div>
                 
@@ -634,7 +670,7 @@
 
         <!-- PERSONAL INFORMATION -->
 
-              <div class="row">
+              <div class="row" id="section3">
                   <div class="col">
                     <div class="navigation-card">
                         <div class="edit-navigation-heading">
@@ -694,7 +730,8 @@
          
                            <!-- Submit button -->
                         <div class="col d-flex justify-content-end">
-                            <button type="submit" class="btn btn-warning text-white px-5 btn-block mb-4">Next</button>
+                            <button type="submit" class="btn btn-warning text-white px-5 btn-block mb-4">
+                              <a href="#section2">Next</a></button>
                         </div>
                     </form>
 
@@ -709,11 +746,81 @@
   <!-- main end -->
 
 
+<!-- .....................javascript code start............................... -->
+
+
      <script>
+
         $(".chosen-select").chosen({
-        no_results_text: "Oops, nothing found!"
-        
-       })
+         no_results_text: "Oops, nothing found!"
+         
+        }) 
+
+
+        // first single multiple checkbox
+
+        $(document).ready(function () {
+          $("#ckbCheckAll").click(function () {
+              $(".checkBoxClass").prop('checked', $(this).prop('checked'));
+          });
+          
+          $(".checkBoxClass").change(function(){
+              if (!$(this).prop("checked")){
+                  $("#ckbCheckAll").prop("checked",false);
+              }
+          });
+        });
+
+
+        // second single multiple checkbox
+
+        $(document).ready(function () {
+          $("#ckbCheckAllll").click(function () {
+              $(".checkBoxClassess").prop('checked', $(this).prop('checked'));
+          });
+          
+          $(".checkBoxClassess").change(function(){
+              if (!$(this).prop("checked")){
+                  $("#ckbCheckAllll").prop("checked",false);
+              }
+          });
+        });
+
+
+        // third single multiple checkbox
+
+        $(document).ready(function () {
+          $("#ckbCheckAllllll").click(function () {
+              $(".checkBoxClassessss").prop('checked', $(this).prop('checked'));
+          });
+          
+          $(".checkBoxClassessss").change(function(){
+              if (!$(this).prop("checked")){
+                  $("#ckbCheckAllllll").prop("checked",false);
+              }
+          });
+        });
+
+
+      //  baaner upload.....
+        function UploadBannar(event){
+          let image = URL.createObjectURL(event.target.files[0]);
+          let imagediv = document.getElementById('imagediv');
+          let newimg = document.getElementById('bannerid');
+          newimg.src = image;
+          newimg.width = 100;
+          imagediv.appendChild(newimg);
+        }
+
+      //user image upload 
+      function UserImage(event){
+          let userimage = URL.createObjectURL(event.target.files[0]);
+          let userimagediv = document.getElementById('userimagediv');
+          let usernewimg = document.getElementById('userid');
+          usernewimg.src = userimage;
+          userimagediv.appendChild(usernewimg);
+        }
+
      </script>
         
 </body>
