@@ -16,6 +16,85 @@
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <title>Security</title>
+    <style>
+/* phone */
+.col-lg-9 .user-profile-intro .intro-1 .row .col p{
+  font-size: 17px;
+     font-weight: 500;
+     color: gray;
+}
+.table tr > td{
+  font-size: 13px;
+}
+
+.table tr > td a{
+  text-decoration: none;
+
+}
+
+  
+
+   /* sectiontable */
+
+   .sectiontable{
+     width: 100%;
+   }
+   .sectiontable .user-profile-intro .intro-1 .row .col p{
+    font-size: 17px;
+     font-weight: 400;
+     color: gray;
+   }
+   .sectiontable .user-profile-intro .intro-1 .row .col form .row .col-md-6 .form-label{
+      font-size: 13px;
+   }
+   .input-group-text{
+     /* background-color: transparent; */
+     border-right: 1px solid #ced4da;
+     border-top: 1px solid #ced4da;
+     border-bottom: 1px solid #ced4da;
+     border-top-right-radius: 4px !important;
+     border-bottom-right-radius: 4px !important;
+     background-color: linear-gradient(180deg, #F5F5F5 0%, #EBEBEB 100%);
+  
+   }
+
+   /* sectioncheckbox */
+   .sectioncheckbox{
+     width: 100%;
+    
+   }
+   .sectioncheckbox .intro-1 .row .col .checkboxes p{
+     font-size: 17px;
+     font-weight: 500;
+     color: gray;
+   }
+   .sectioncheckbox .intro-1 .row .col .checkboxes .form-check{
+
+     margin-right: 40px;  }
+
+     .sectioncheckbox .intro-1 .row .col .checkboxes .form-check .form-check-label{
+       font-size: 13px;
+       margin: 0px 10px;
+     }
+
+     .form-control{
+      background: linear-gradient(180deg, #F5F5F5 0%, #EBEBEB 100%);
+     }
+
+    /* notification */
+    .notification{
+      width: 100%;
+    }
+    .notification .intro-1 .row .col-md-8 h6{
+      font-size: 16px;
+      font-weight: 400;
+      color: gray;
+    }
+    .notification .intro-1 .row .col-md-8 p{
+      font-size: 10px;
+     
+    }
+    </style>
 </head>
 <body>
 
@@ -121,55 +200,394 @@
   <div class="main">
       <div class="container">
           <div class="row">
-            <div class="col-md-3">
-                <div class="navigation-card">
-                    <div class="edit-navigation-heading">
-                      <h6>PROFILE SETTINGS</h6>
-                    </div>
-                    <div class="divider"></div>
-        
-                    <div class="edit-nav-option">
-                      <ul class="nav flex-column">
-                        <li class="side-nav ms-3">
-                          <div class="side-link py-2">
-                            <a href="#section1" class="editprofile-nav">
-                              <img src="/assets/img/profile-settings-icon.svg" class="editprofile-icon">
-                              Personal Information
-                            </a>
-                          </div>
-                        </li>
-                        <li class="side-nav ms-3">
-                          <div class="side-link py-2">
-                            <a href="#section2" class="editprofile-nav">
-                              <img src="/assets/img/inq-sent.svg" class="editprofile-icon">
-                              Trade Information
-                            </a>
-                          </div>
-                        </li>
-                        <li class="side-nav ms-3">
-                          <div class="side-link py-2">
-                            <a href="#section3" class="editprofile-nav">
-                              <img src="/assets/img/location-icon.svg" class="editprofile-icon">
-                              Company Information
-                            </a>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <!-- ./inquiry-navigation -->
+              <!--... left col start...... -->
+                    <div class="col-md-3">
+                        <div class="navigation-card">
+                            <div class="edit-navigation-heading">
+                            <h6>PROFILE SETTINGS</h6>
+                            </div>
+                            <div class="divider"></div>
+                
+                            <div class="edit-nav-option">
+                            <ul class="nav flex-column">
+                                <li class="side-nav ms-3">
+                                <div class="side-link py-2">
+                                    <a href="#section1" class="editprofile-nav">
+                                    <img src="/assets/img/profile-settings-icon.svg" class="editprofile-icon">
+                                    Personal Information
+                                    </a>
+                                </div>
+                                </li>
+                                <li class="side-nav ms-3">
+                                <div class="side-link py-2">
+                                    <a href="#section2" class="editprofile-nav">
+                                    <img src="/assets/img/inq-sent.svg" class="editprofile-icon">
+                                    Trade Information
+                                    </a>
+                                </div>
+                                </li>
+                                <li class="side-nav ms-3">
+                                <div class="side-link py-2">
+                                    <a href="#section3" class="editprofile-nav">
+                                    <img src="/assets/img/location-icon.svg" class="editprofile-icon">
+                                    Company Information
+                                    </a>
+                                </div>
+                                </li>
+                            </ul>
+                            </div>
+                        </div>
+                        <!-- ./inquiry-navigation -->
 
-                  <div class="ad-banner">
-                    <img src="/assets/img/ad-banner.png">
-                  </div>
-                  <!-- ./ad-banner -->
-                  <div class="ad-banner">
-                    <img src="/assets/img/ad-banner.png">
-                  </div>
-                  <!-- ./ad-banner -->
+                        <div class="ad-banner">
+                            <img src="/assets/img/ad-banner.png">
+                        </div>
+                        <!-- ./ad-banner -->
+                        <div class="ad-banner">
+                            <img src="/assets/img/ad-banner.png">
+                        </div>
+                        <!-- ./ad-banner -->
 
-              </div>
-          </div>
+                     
+                    </div>
+               <!--... left col end...... -->
+
+                <!-- right col start -->
+                    
+                <div class="col-lg-9">
+                        <div class="navigation-card">
+                            <div class="edit-navigation-heading px-4">
+                            <h6 class="py-2">EMAIL ADDRESS</h6>
+                            </div>
+                        </div>
+                        <div class="user-profile-intro">
+                            <div class="intro-1">
+                                <div class="row me-2 my-2">
+                                    <div class="col py-3">
+                                        <p>Change or Verify your email address on account.</p>
+                                         <div class="row">
+                                             <div class="col-md-8 mx-5 py-3">
+                                                 <table class="table">
+                                                     <tr class="" >
+                                                        <td class="">priyagoswami@gamil.com</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>primary</td>
+                                                     </tr>
+                                                     <tr>
+                                                        <td>priyagoswami@gamil.com</td>
+                                                        <td><a href="" style="color: yellow;">Make primary</a></td>
+                                                        <td><a href="" style="color: red;">Remove</a></td>
+                                                        <td><a href="" style="color: #123d59;">Verify</a></td>
+                                                     </tr>
+                                                 
+                                                 </table>
+
+                                                 <div class="col-md-6 mt-4">
+                                                    <div class="input-group form-outline mb-4">
+                                                      <input type="text" id="form6Example3" class="form-control" placeholder="Add email address" style="border-right: none;"/>
+                                                      <span class="input-group-text px-4" onclick="togglePassword()">
+                                                        <img src="/assets/img/plus-icon.svg" style="width: 15px; margin-right: 4px;">
+                                                        <a href="" style="text-decoration: none; color: #000; font-size: 12px;">ADD</a>
+                                                      </span>
+                                                     </div>
+                                                </div>
+
+                                             </div>
+                                         </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- jhjkk -->
+                        <div class="navigation-card">
+                            <div class="edit-navigation-heading px-4">
+                            <h6 class="py-2">PHONE NUMBER</h6>
+                            </div>
+                        </div>
+                        <div class="user-profile-intro">
+                            <div class="intro-1 ">
+                                <div class="row me-2 my-2">
+                                    <div class="col py-3">
+                                        <p>Change or Verify your phone number on account.</p>
+                                        <div class="row">
+                                            <div class="col-md-8 mx-5 py-3">
+                                                 <table class="table">
+                                                     <tr class="my-0" >
+                                                        <td>+91-623545234648</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>primary</td>
+                                                     </tr>
+                                                     <tr>
+                                                        <td>+91-623545234648</td>
+                                                        <td><a href="" style="color: yellow;">Make primary</a></td>
+                                                        <td><a href="" style="color: red;">Remove</a></td>
+                                                        <td><a href="" style="color: #123d59;">Verify</a></td>
+                                                     </tr>
+                                                     
+                                                 </table>
+                                                  <div class="col-md-6 mt-4">
+                                                        <div class="input-group form-outline mb-4">
+                                                          <input type="text" id="form6Example3" class="form-control " placeholder="Add phone number" style="border-right: none;"/>
+                                                          <span class="input-group-text px-4" onclick="togglePassword()">
+                                                            <img src="/assets/img/plus-icon.svg" style="width: 15px; margin-right: 4px;">
+                                                            <a href="" style="text-decoration: none; color: #000; font-size: 12px;">ADD</a>
+                                                          </span>
+                                                         </div>
+                                                  </div>
+                                                  
+                                            </div>
+                                    </div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- mklk -->
+                 
+                <!-- table......... -->
+                    <section class="sectiontable">
+                        <div class="navigation-card">
+                            <div class="edit-navigation-heading px-4">
+                            <h6 class="py-2">CHANGE PASSWORD</h6>
+                            </div>
+                        </div>
+                        <div class="user-profile-intro">
+                            <div class="intro-1">
+                                <div class="row py-4  me-2">
+                                    <div class="col">
+                                        <p>Keep your password strong and uniquie, at least 8 charaters alphanumeric including special characters and upper case</p>
+                                        <form class="pt-3">
+                                            <!-- Text input -->
+                                            <div class="row mb-1">
+                                                <div class="col-md-6">
+                                                  <label class="form-label" for="form6Example3">Current Password</label>
+                                                    <div class="input-group form-outline mb-4">
+                                                    <input type="text" id="form6Example3" class="form-control" placeholder="Enter your current password" style="border-right: none;"/>
+                                                    <span class="input-group-text" onclick="togglePassword()">
+                                                      <img src="/assets/img/eye-icon.svg" id="hide">
+                                                      <img src="/assets/img/designation-icon.svg" id="view" style="display: none;">
+                                                    </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-4">
+                                              <div class="col-md-6">
+                                                <label class="form-label" for="form6Example3">New Password</label>
+                                                <div class="input-group floating-label-group form-outline">
+                                                  <input type="password" class="form-control password-border" placeholder="Enter your New Password"  style="border-right: none;"/>
+                                                  <span class="input-group-text" onclick="togglePassword()">
+                                                      <img src="/assets/img/eye-icon.svg" id="hide">
+                                                      <img src="/assets/img/designation-icon.svg" id="view" style="display: none;">
+                                                  </span>
+                                                </div>
+                                              </div>
+
+                                              <div class="col-md-6">
+                                                <label class="form-label" for="form6Example3">Re-Enter New Password</label>
+                                                  <div class="input-group form-outline mb-4">
+                                                  <input type="text" id="form6Example3" class="form-control" placeholder="Enter your New Password" style="border-right: none;"/>
+                                                  <span class="input-group-text" onclick="togglePassword()">
+                                                    <img src="/assets/img/eye-icon.svg" id="hide">
+                                                    <img src="/assets/img/designation-icon.svg" id="view" style="display: none;">
+                                                  </span>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                          
+                                            <!-- Submit button -->
+                                            <button type="submit" class="btn bg-warning btn-block float-end mb-4">
+                                              <img src="/assets/img/plus-icon.svg" class="camera-icon">
+                                              Update</button>
+                                          </form>
+                                    </div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                      </section>  
+                    <!-- table -->
+
+                    <!-- checkbox -->
+                   <section class="sectioncheckbox bg-green">
+                        <div class="user-profile-intro navigation-card">
+                        <div class="edit-navigation-heading px-4">
+                        <h6 class="py-3">PRIVACY SETTINGS</h6>
+                        </div>
+                        <div class="intro-1">
+
+                            <div class="row me-2">
+                                <div class="col mx-5">
+                                    <div class="checkboxes py-3 my-2 me-2">
+                                        <p class="form-check-label mb-2">Who can see your email address in contact information?</p>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                          <label class="form-check-label" for="inlineRadio1">Only me</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                          <label class="form-check-label" for="inlineRadio2">My Network</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                          <label class="form-check-label" for="inlineRadio3">Anyone</label>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+
+                            <div class="row">
+                                <div class="col mx-5">
+                                    <div class="checkboxes py-3 my-2 me-2">
+                                        <p class="form-check-label mb-2">Who can see your phone number in contact information?</p>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                          <label class="form-check-label" for="inlineRadio1">Only me</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                          <label class="form-check-label" for="inlineRadio2">My Network</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                          <label class="form-check-label" for="inlineRadio3">Anyone</label>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+
+                            <div class="row">
+                                <div class="col mx-5">
+                                    <div class="checkboxes py-3 my-2 me-2">
+                                        <p class="form-check-label mb-2">Who can see your network list?</p>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                          <label class="form-check-label" for="inlineRadio1">Only me</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                          <label class="form-check-label" for="inlineRadio2">My Network</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                          <label class="form-check-label" for="inlineRadio3">Anyone</label>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+
+                            <div class="row">
+                                <div class="col mb-5 mx-5">
+                                    <div class="checkboxes py-3 my-2 me-2">
+                                        <p class="form-check-label mb-2">Who can comment on your post?</p>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                          <label class="form-check-label" for="inlineRadio2">My Network</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                          <label class="form-check-label" for="inlineRadio3">Anyone</label>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                    <!-- checkbox -->
+
+
+                    <!-- notifications...... -->
+                <section class="notification">
+                    <div class="user-profile-intro navigation-card">
+                        <div class="edit-navigation-heading px-4">
+                            <h6 class="py-3">NOTIFICATION SETTINGS</h6>
+                        </div>
+                        <div class="intro-1">
+                            <div class="row my-4 me-2 py-3">
+                                <div class="col-md-6 ms-4">
+                                    <h6 class="mb-2">Get notification for News & Insights</h6>
+                                    <p>Get notified every time Tradeorex publishes a new news or insight</p>
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="row my-4 me-2 py-3">
+                                <div class="col-md-6 ms-4">
+                                    <h6 class="mb-2">Get notification for New material in Material Inquiry</h6>
+                                    <p>Get notified every time a new Material inquiry for Buy or Sell is published on Tradeorex for
+                                        better trade opportunity.</p>
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="row my-4 me-2 py-3">
+                                <div class="col-md-6 ms-4">
+                                    <h6 class="mb-2">Get notification for New material in Marketplace</h6>
+                                    <p>Get notified every time a new material is posted by a suppliers in our Marketplace for 
+                                        domestic or export offers.</p>
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="row my-4 me-2 py-3">
+                                <div class="col-md-6 ms-4">
+                                    <h6 class="mb-2">Get notification for new post by your network</h6>
+                                    <p>Get notified every time a new post has been shared by your network to stay 
+                                        update with the trend</p>
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="row my-4 me-2 py-3">
+                                <div class="col-md-6 ms-4">
+                                    <h6 class="mb-2">Get notification for new network connection</h6>
+                                    <p>get notified when someone accepts your request or if someone sends you 
+                                        a connect request</p>
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="row my-4 me-2 py-3">
+                                <div class="col-md-6 ms-4">
+                                    <h6 class="mb-2">Get notification for Likes on your post or comment</h6>
+                                    <p>Get notified when someone likes your post or comment</p>
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                                      </div>
+                                </div>
+                            </div>
+                         </div>   
+                    </div>
+                </section>
+
+                    <!-- notification end -->
+
+
+            </div>    
+
       </div>
   </div>
     
