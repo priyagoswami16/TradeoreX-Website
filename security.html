@@ -17,6 +17,25 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <title>Security</title>
     <style>
+    .edit-navigation-heading h6{
+             color: #123d59;
+             text-transform: uppercase;
+
+         }
+
+
+     .editprofile-nav {
+          font-size: 15px;
+          color: #666666;
+          text-decoration: none;
+         }
+
+     .editprofile-nav > img {
+         margin-left: 20px;
+         margin-right: 13px;
+         width: 20px;
+         }       
+
 /* phone */
 .col-lg-9 .user-profile-intro .intro-1 .row .col p{
   font-size: 17px;
@@ -47,15 +66,20 @@
    .sectiontable .user-profile-intro .intro-1 .row .col form .row .col-md-6 .form-label{
       font-size: 13px;
    }
-   .input-group-text{
-     /* background-color: transparent; */
+   .sectiontable .input-group-text{
+     background: linear-gradient(180deg, #F5F5F5 0%, #EBEBEB 100%) !important; 
      border-right: 1px solid #ced4da;
      border-top: 1px solid #ced4da;
      border-bottom: 1px solid #ced4da;
      border-top-right-radius: 4px !important;
      border-bottom-right-radius: 4px !important;
-     background-color: linear-gradient(180deg, #F5F5F5 0%, #EBEBEB 100%);
+   
   
+   }
+   .user-profile-intro .intro-1 .row .col .row .col-md-8 .col-md-6 .input-group-text{
+     background: #F2B41C !important;
+  
+    
    }
 
    /* sectioncheckbox */
@@ -94,6 +118,14 @@
       font-size: 10px;
      
     }
+
+    .table > :not(caption) > * > * {
+    color: #666666;
+    padding-top: 15px;
+    padding-bottom: 2px;
+    font-size: 13px;
+}
+
     </style>
 </head>
 <body>
@@ -204,33 +236,33 @@
                     <div class="col-md-3">
                         <div class="navigation-card">
                             <div class="edit-navigation-heading">
-                            <h6>PROFILE SETTINGS</h6>
+                            <h6 class="py-2 ps-4">ACCOUNT SETTINGS</h6>
                             </div>
                             <div class="divider"></div>
                 
                             <div class="edit-nav-option">
                             <ul class="nav flex-column">
-                                <li class="side-nav ms-3">
+                                <li class="side-nav bg-grey">
                                 <div class="side-link py-2">
                                     <a href="#section1" class="editprofile-nav">
-                                    <img src="/assets/img/profile-settings-icon.svg" class="editprofile-icon">
-                                    Personal Information
+                                    <img src="/assets/img/badge1.svg" class="editprofile-icon">
+                                    Sign in & Security
                                     </a>
                                 </div>
                                 </li>
-                                <li class="side-nav ms-3">
+                                <li class="side-nav">
                                 <div class="side-link py-2">
                                     <a href="#section2" class="editprofile-nav">
-                                    <img src="/assets/img/inq-sent.svg" class="editprofile-icon">
-                                    Trade Information
+                                    <img src="/assets/img/account-settings-icon.svg" class="editprofile-icon">
+                                    Privacy settings
                                     </a>
                                 </div>
                                 </li>
-                                <li class="side-nav ms-3">
+                                <li class="side-nav">
                                 <div class="side-link py-2">
                                     <a href="#section3" class="editprofile-nav">
-                                    <img src="/assets/img/location-icon.svg" class="editprofile-icon">
-                                    Company Information
+                                    <img src="/assets/img/notification-icon.svg" class="editprofile-icon">
+                                    Notification settings
                                     </a>
                                 </div>
                                 </li>
@@ -268,17 +300,17 @@
                                          <div class="row">
                                              <div class="col-md-8 mx-5 py-3">
                                                  <table class="table">
-                                                     <tr class="" >
-                                                        <td class="">priyagoswami@gamil.com</td>
+                                                     <tr>
+                                                        <td>priyagoswami@gamil.com</td>
                                                         <td></td>
                                                         <td></td>
-                                                        <td>primary</td>
+                                                        <td class="text-end">primary</td>
                                                      </tr>
                                                      <tr>
                                                         <td>priyagoswami@gamil.com</td>
-                                                        <td><a href="" style="color: yellow;">Make primary</a></td>
-                                                        <td><a href="" style="color: red;">Remove</a></td>
-                                                        <td><a href="" style="color: #123d59;">Verify</a></td>
+                                                        <td class="text-end"><a href="" class="text-warning">Make primary</a></td>
+                                                        <td class="text-end"><a href="" style="color: red;">Remove</a></td>
+                                                        <td class="text-end"><a href="" style="color: #123d59;">Verify</a></td>
                                                      </tr>
                                                  
                                                  </table>
@@ -287,8 +319,8 @@
                                                     <div class="input-group form-outline mb-4">
                                                       <input type="text" id="form6Example3" class="form-control" placeholder="Add email address" style="border-right: none;"/>
                                                       <span class="input-group-text px-4" onclick="togglePassword()">
-                                                        <img src="/assets/img/plus-icon.svg" style="width: 15px; margin-right: 4px;">
-                                                        <a href="" style="text-decoration: none; color: #000; font-size: 12px;">ADD</a>
+                                                        <img src="/assets/img/plus-icon.svg" style="width: 18px; margin-right: 4px;">
+                                                        <a href="" style="text-decoration: none; color: #fff; font-size: 12px;">ADD</a>
                                                       </span>
                                                      </div>
                                                 </div>
@@ -315,17 +347,17 @@
                                         <div class="row">
                                             <div class="col-md-8 mx-5 py-3">
                                                  <table class="table">
-                                                     <tr class="my-0" >
+                                                     <tr>
                                                         <td>+91-623545234648</td>
                                                         <td></td>
                                                         <td></td>
-                                                        <td>primary</td>
+                                                        <td class="text-end">primary</td>
                                                      </tr>
                                                      <tr>
                                                         <td>+91-623545234648</td>
-                                                        <td><a href="" style="color: yellow;">Make primary</a></td>
-                                                        <td><a href="" style="color: red;">Remove</a></td>
-                                                        <td><a href="" style="color: #123d59;">Verify</a></td>
+                                                        <td class="text-end"><a href="" class="text-warning">Make primary</a></td>
+                                                        <td class="text-end"><a href="" style="color: red;">Remove</a></td>
+                                                        <td class="text-end"><a href="" style="color: #123d59;">Verify</a></td>
                                                      </tr>
                                                      
                                                  </table>
@@ -333,8 +365,8 @@
                                                         <div class="input-group form-outline mb-4">
                                                           <input type="text" id="form6Example3" class="form-control " placeholder="Add phone number" style="border-right: none;"/>
                                                           <span class="input-group-text px-4" onclick="togglePassword()">
-                                                            <img src="/assets/img/plus-icon.svg" style="width: 15px; margin-right: 4px;">
-                                                            <a href="" style="text-decoration: none; color: #000; font-size: 12px;">ADD</a>
+                                                            <img src="/assets/img/plus-icon.svg" style="width: 18px; margin-right: 4px;">
+                                                            <a href="" style="text-decoration: none; color: #fff; font-size: 12px;">ADD</a>
                                                           </span>
                                                          </div>
                                                   </div>
@@ -379,7 +411,7 @@
                                               <div class="col-md-6">
                                                 <label class="form-label" for="form6Example3">New Password</label>
                                                 <div class="input-group floating-label-group form-outline">
-                                                  <input type="password" class="form-control password-border" placeholder="Enter your New Password"  style="border-right: none;"/>
+                                                  <input type="password" class="form-control password-border" placeholder="Enter your new password"  style="border-right: none;"/>
                                                   <span class="input-group-text" onclick="togglePassword()">
                                                       <img src="/assets/img/eye-icon.svg" id="hide">
                                                       <img src="/assets/img/designation-icon.svg" id="view" style="display: none;">
@@ -390,7 +422,7 @@
                                               <div class="col-md-6">
                                                 <label class="form-label" for="form6Example3">Re-Enter New Password</label>
                                                   <div class="input-group form-outline mb-4">
-                                                  <input type="text" id="form6Example3" class="form-control" placeholder="Enter your New Password" style="border-right: none;"/>
+                                                  <input type="text" id="form6Example3" class="form-control" placeholder="Enter your new password" style="border-right: none;"/>
                                                   <span class="input-group-text" onclick="togglePassword()">
                                                     <img src="/assets/img/eye-icon.svg" id="hide">
                                                     <img src="/assets/img/designation-icon.svg" id="view" style="display: none;">
