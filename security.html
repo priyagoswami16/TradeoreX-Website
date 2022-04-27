@@ -113,6 +113,7 @@
 
      .form-control{
       background: linear-gradient(180deg, #F5F5F5 0%, #EBEBEB 100%);
+      
      }
 
     /* notification */
@@ -144,7 +145,11 @@
     height: 20px;
     /* padding: 5px 0px; */
 }
-
+.input-group > .form-control{
+  color: #f8f9fa;
+  font-size: 14px;
+  
+}
 
 
 
@@ -264,25 +269,25 @@
 
                       <div class="edit-nav-option">
                           <ul class="nav flex-column">
-                              <li class="side-nav bg-grey">
+                              <li class="side-nav bg-light">
                               <div class="side-link py-2">
                                   <a href="#section1" class="editprofile-nav">
-                                  <img src="/assets/img/badge1.svg" class="editprofile-icon">
+                                  <img src="/assets/img/badge.svg" class="editprofile-icon">
                                   Sign in & Security
                                   </a>
                               </div>
                               </li>
-                              <li class="side-nav" onclick="secndclick()">
+                              <li class="side-nav">
                               <div class="side-link py-2">
                                   <a href="#section2" class="editprofile-nav">
-                                  <img src="/assets/img/account-settings-icon.svg" class="editprofile-icon">
+                                  <img src="/assets/img/account-setting.svg" style="width: 17px;" class="editprofile-icon">
                                   Privacy settings
                                   </a>
                               </div>
                               </li>
-                              <li class="side-nav" onclick="thirdclick()">
+                              <li class="side-nav">
                               <div class="side-link py-2">
-                                  <a href="#section3" class="editprofile-nav">
+                                  <a href="#section3" class=" editprofile-nav">
                                   <img src="/assets/img/notification-icon.svg" class="editprofile-icon">
                                   Notification settings
                                   </a>
@@ -308,7 +313,7 @@
 
                 <!-- right col start -->
                     
-                <div class="col-lg-9">
+                <div class="col-lg-9" id="section1">
                         <div class="navigation-card">
                             <div class="edit-navigation-heading px-4">
                             <h6 class="py-2">EMAIL ADDRESS</h6>
@@ -341,7 +346,7 @@
                                                     <div class="input-group form-outline mb-4">
                                                       <input type="text" id="form6Example3" class="form-control" placeholder="Add email address" style="border-right: none;"/>
                                                       <span class="input-group-text px-4" onclick="togglePassword()">
-                                                        <img src="/assets/img/plus-icon.svg" style="width: 18px; margin-right: 5px;">
+                                                        <img src="/assets/img/plus-icon (2).svg" style="width: 18px; margin-right: 5px;">
                                                         <a href="" style="text-decoration: none; color: #fff; font-size: 12px;">ADD</a>
                                                       </span>
                                                      </div>
@@ -356,7 +361,7 @@
                         </div>
 
                         <!-- jhjkk -->
-                        <section class="phonesection">
+                       
                         <div class="navigation-card">
                             <div class="edit-navigation-heading px-4">
                             <h6 class="py-2">PHONE NUMBER</h6>
@@ -388,7 +393,7 @@
                                                         <div class="input-group form-outline mb-4">
                                                           <input type="text" id="form6Example3" class="form-control " placeholder="Add phone number" style="border-right: none;"/>
                                                           <span class="input-group-text px-4" onclick="togglePassword()">
-                                                            <img src="/assets/img/plus-icon.svg" style="width: 18px; margin-right: 5px;">
+                                                            <img src="/assets/img/plus-icon (2).svg" style="width: 18px; margin-right: 5px;">
                                                             <a href="" style="text-decoration: none; color: #fff; font-size: 12px;">ADD</a>
                                                           </span>
                                                          </div>
@@ -401,7 +406,6 @@
                             </div>
                         </div>
                     </div>
-                  </section>
 
                     <!-- mklk -->
                  
@@ -458,7 +462,7 @@
                                           
                                             <!-- Submit button -->
                                             <button type="submit" class="btn bg-warning btn-block float-end mb-4" style="color: #fff; font-size: 12px;">
-                                              <img src="/assets/img/plus-icon.svg" style="width: 18px; margin-right: 5px;">
+                                              <img src="/assets/img/plus-icon (2).svg" style="width: 18px; margin-right: 5px;">
                                               Update</button>
                                           </form>
                                     </div>
@@ -470,7 +474,7 @@
                     <!-- table -->
 
                     <!-- checkbox -->
-                   <section class="sectioncheckbox">
+                   <section class="sectioncheckbox" id="section2">
                         <div class="user-profile-intro" style="margin-top: 10px;">
                         <div class="edit-navigation-heading px-4">
                         <h6 class="py-3">PRIVACY SETTINGS</h6>
@@ -560,7 +564,7 @@
 
 
                     <!-- notifications...... -->
-                <section class="notification" id="notifi">
+                <section class="notification" id="section3">
                     <div class="user-profile-intro" style="margin-top: 10px;">
                         <div class="edit-navigation-heading px-4">
                             <h6 class="py-3">NOTIFICATION SETTINGS</h6>
@@ -680,13 +684,7 @@
         }
 
 
-        // onclick function......
-
-        function secndclick(){
-           document.getElementById('privacy').style.display = "block";
-           document.getElementById('notifi').style.display = "none";
-          //  document.getElementById('privacy').style.display = "none";
-        }
+       
 
   </script>
     
