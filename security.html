@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <title>Security</title>
     <style>
     .edit-navigation-heading h6{
@@ -150,6 +152,24 @@
   font-size: 14px;
   
 }
+.box{
+  display: block;
+}
+.box1{
+  display: none;
+}
+.box2{
+  display: none;
+}
+li:hover{
+  background-color: #e9ecef;
+  
+}
+
+li:hover a{
+  color: #000;
+}
+
 
 
 
@@ -269,9 +289,9 @@
 
                       <div class="edit-nav-option">
                           <ul class="nav flex-column">
-                              <li class="side-nav bg-light">
+                              <li class="side-nav active">
                               <div class="side-link py-2">
-                                  <a href="#section1" class="editprofile-nav">
+                                  <a href="#" class="editprofile-nav toggle-btn">
                                   <img src="/assets/img/badge.svg" class="editprofile-icon">
                                   Sign in & Security
                                   </a>
@@ -279,7 +299,7 @@
                               </li>
                               <li class="side-nav">
                               <div class="side-link py-2">
-                                  <a href="#section2" class="editprofile-nav">
+                                  <a href="#" class="editprofile-nav toggle-btn1">
                                   <img src="/assets/img/account-setting.svg" style="width: 17px;" class="editprofile-icon">
                                   Privacy settings
                                   </a>
@@ -287,7 +307,7 @@
                               </li>
                               <li class="side-nav">
                               <div class="side-link py-2">
-                                  <a href="#section3" class=" editprofile-nav">
+                                  <a href="#" class=" editprofile-nav toggle-btn2">
                                   <img src="/assets/img/notification-icon.svg" class="editprofile-icon">
                                   Notification settings
                                   </a>
@@ -313,7 +333,8 @@
 
                 <!-- right col start -->
                     
-                <div class="col-lg-9" id="section1">
+                <div class="col-lg-9">
+                  <section class=" sectiontable box active">
                         <div class="navigation-card">
                             <div class="edit-navigation-heading px-4">
                             <h6 class="py-2">EMAIL ADDRESS</h6>
@@ -410,7 +431,7 @@
                     <!-- mklk -->
                  
                 <!-- table......... -->
-                    <section class="sectiontable">
+                    <!-- <section class="sectiontable"> -->
                       <div class="navigation-card">
                           <div class="edit-navigation-heading px-4">
                           <h6 class="py-2">CHANGE PASSWORD</h6>
@@ -474,7 +495,7 @@
                     <!-- table -->
 
                     <!-- checkbox -->
-                   <section class="sectioncheckbox" id="section2">
+                   <section class="sectioncheckbox box1" id="">
                         <div class="user-profile-intro" style="margin-top: 10px;">
                         <div class="edit-navigation-heading px-4">
                         <h6 class="py-3">PRIVACY SETTINGS</h6>
@@ -564,7 +585,7 @@
 
 
                     <!-- notifications...... -->
-                <section class="notification" id="section3">
+                <section class="notification box2" id="">
                     <div class="user-profile-intro" style="margin-top: 10px;">
                         <div class="edit-navigation-heading px-4">
                             <h6 class="py-3">NOTIFICATION SETTINGS</h6>
@@ -684,9 +705,51 @@
         }
 
 
-       
-
+            
   </script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+      
+      $(".toggle-btn").click(function(){
+          $(".box").show();
+      });
+      $(".toggle-btn").click(function(){
+          $(".box1").hide();
+      });
+  });
+
+  $(document).ready(function(){
+     
+      $(".toggle-btn1").click(function(){
+          $(".box1").show();
+         
+      });
+      $(".toggle-btn1").click(function(){
+          $(".box").hide();
+         
+      });
+      $(".toggle-btn1").click(function(){
+          $(".box2").hide();
+         
+      });
+     
+  });
+  $(document).ready(function(){
+     
+      $(".toggle-btn2").click(function(){
+          $(".box2").toggle();
+      });
+      $(".toggle-btn2").click(function(){
+          $(".box").hide();
+      });
+      $(".toggle-btn2").click(function(){
+          $(".box1").hide();
+      });
+  });
+
+
+</script>
     
 </body>
 </html>

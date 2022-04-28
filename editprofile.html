@@ -124,7 +124,16 @@
         color: #fff;
         text-decoration: none;
       }
-
+      
+      .box1{
+        display: block;
+      }
+      .box2{
+        display: none;
+      }
+      .box3{
+        display: none;
+      }
       
 
     </style>
@@ -288,6 +297,7 @@
 
                    <!--.......... right col start................. -->
                   <div class="col-lg-9" id="section1">
+                  <section class="box1">
                     <div class="navigation-card">
                         <div class="edit-navigation-heading">
                           <h6>Personal Information</h6>
@@ -449,19 +459,20 @@
                       
                         <!-- Submit button -->
                         <div class="col d-flex justify-content-end">
-                            <button type="submit" class="btn btn-warning text-white btn-block px-5 mb-4">Next</button>
+                            <a href="#" type="submit" class="btn btn-warning text-white btn-block px-5 mb-4 togglebtn1">Next</a>
                         </div>
                       </form>
                    
 
+                      <section>
+                    </div>
+                    <!-- .right col -->
+                    
                   </div>
-                  <!-- .right col -->
-
-              </div>
 
 
       <!--................ TRADE INFORMATION.................. -->
-
+           <section class="box2">
             <div class="row" id="section2">
                 <div class="col">
                   <div class="navigation-card">
@@ -658,8 +669,8 @@
                           <!-- Submit button -->
                           <div class="row mx-3 pt-2">
                         <div class="col d-flex justify-content-between">
-                         <button type="submit" class="btn btn-outline-warning text-warning px-5 btn-block mb-4">Back</button>
-                         <button type="submit" class="btn btn-warning text-white px-5 btn-block mb-4">Next</button>
+                         <a href="#" type="submit" class="btn btn-outline-warning text-warning px-5 btn-block mb-4 togglebtn2">Back</a>
+                         <a href="#" type="submit" class="btn btn-warning text-white px-5 btn-block mb-4 togglebtn3">Next</a>
                         </div>
                       </div>
                 
@@ -667,10 +678,11 @@
                 <!-- .right col -->
 
             </div>
+          </section>
   
 
         <!-- PERSONAL INFORMATION -->
-
+            <section class="box3">
               <div class="row" id="section3">
                   <div class="col">
                     <div class="navigation-card">
@@ -731,7 +743,7 @@
          
                            <!-- Submit button -->
                         <div class="col d-flex justify-content-end">
-                            <button type="submit" class="btn btn-warning text-white px-5 btn-block mb-4">
+                            <button type="submit" class="btn btn-warning text-white px-5 btn-block mb-4 togglebtn4">
                               Next</a></button>
                         </div>
                     </form>
@@ -740,7 +752,9 @@
                   <!-- .right col -->
 
               </div>
+              <section>
           </div>
+
     
 
     </div>
@@ -822,7 +836,22 @@
           userimagediv.appendChild(usernewimg);
         }
 
+</script>
+     
+        <script type="text/javascript">
 
+        // hide and show.......
+            $(document).ready(function(){
+                
+              $(".togglebtn1").click(function(){
+                  $(".box1").hide();
+              });
+              $(".togglebtn1").click(function(){
+                  $(".box2").show();
+              });
+
+             
+            }); 
      </script>
         
 </body>
