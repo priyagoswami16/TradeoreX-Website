@@ -911,6 +911,7 @@ input[type="file"] {
 .viewPostModal {
   height: 70vh;
   overflow-x: hidden;
+  /* overflow-y: hidden; */
 }
 
 .carousel-position {
@@ -920,16 +921,17 @@ input[type="file"] {
 
 .single-post-user {
   position: absolute;
-  top: 15px;
-  width: inherit;
-  padding-bottom: 10px;
+  /* top: 15px; */
+  /* width: inherit; */
+  width: 39%;
+  /* padding-bottom: 10px; */
   background-color: #ffffff;
 }
 
 .close-user-post {
   position: absolute;
-  top: 0%;
-  right: 5%;
+  top: 24%;
+  right: 4%;
 }
 
 .single-post-modal-text {
@@ -938,6 +940,7 @@ input[type="file"] {
 
 .scroll-modal-post-view {
   overflow-y: scroll;
+  height: 70vh;
 }
 
 .suggested-connection {
