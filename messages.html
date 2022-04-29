@@ -17,6 +17,120 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
   <title>News - TradeoreX</title>
+  <style>
+
+.chet-list {
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 14%), 0px 0px 3px rgb(0 0 0 / 12%);
+}
+.chet-list .navigation-heading {
+    color: #123d59;
+    padding: 10px;
+    text-transform: capitalize;
+    border-bottom: 1px solid rgba(168, 168, 168, 0.15);
+}
+.scroll-chet-user {
+    overflow-y: scroll;
+    height: 80vh;
+}
+.each-chet-user {
+    padding: 20px;
+    /* background-color: green; */
+}
+.pic-info p{
+  font-size: 12px;
+}
+.chet-div{
+  width: 300px;
+  padding: 9px 9px;
+  background-color: #A6A6A4; 
+  color: #fff;
+  position: relative;
+  border-radius: 10px;
+
+  
+}
+
+.chet-div::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background: red;
+  background: linear-gradient(135deg,#A6A6A4 0%,#A6A6A4 50%,transparent 50%,transparent);
+}
+
+.chet-div2{
+  width: 300px;
+  padding: 9px 9px;
+  background-color: #eee;
+  position: relative;
+  border-radius: 10px;
+
+  
+}
+.chet-div2::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -12px;
+  width: 20px;
+  height: 20px;
+  background: red;
+  background: linear-gradient(-135deg,#eee 0%,#eee 50%,transparent 50%,transparent);
+}
+
+.chet-message{
+  height: 100px;
+  /* background-color: green; */
+  padding-left: 10px;
+  border-top: 1px solid rgb(0 0 0 / 12%);
+  border-bottom: 1px solid rgb(0 0 0 / 12%);
+}
+.chet-message .form-control{
+  border-radius: 0px;
+  padding: 0px;
+  border: 0px;
+}
+textarea {
+    resize: none;
+}
+.devider{
+  width: 100%;
+  height: 1px;
+  background-color: #f2b41c;
+  position: relative;
+  margin-top: 10px;
+}
+.devider::before{
+  content: "26 Jan 2022";
+  position: absolute;
+  width:90px;
+  height: 19px;
+  display: flex;
+  top:-10px;
+  left: 40%;
+  background-color: #fff;
+  color: #f2b41c;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+.time span{
+  font-size: 13px;
+}
+
+.navigation-heading.pic .user-img .h-100 {
+    height: 100%;
+}
+
+
+
+  </style>
 </head>
 
 <body>
@@ -307,7 +421,111 @@
         <!-- ./left-col -->
 
         <div class="col-md-6">
-
+          <div class="chet-list">
+               <div class="navigation-heading d-flex justify-content-between align-items-center">
+                 <div class="pic d-flex justify-content-center ps-3">
+                    <div class="user-img">
+                    <img src="/assets/img/post-user.svg" class="h-100">
+                    </div>
+                    <div class="pic-info ms-2">
+                        <h6 class="mt-1">Cindy Evalina Putri</h6>
+                        <p>Crimica</p>
+                    </div>
+                 </div>
+                 <div class="pic-img pe-3">
+                    <img src="/assets/img/3-dots-circle.svg" width="33px">
+                 </div>
+               </div>
+               <div class="scroll-chet-user">
+                  <div class="each-chet-user d-flex justify-content-end">
+                      <div class="chet-div clearfix">
+                         <div class="para pb-1">
+                          hii i am web developer and new design 
+                         </div>
+                         <div class="time pt-1 float-end">
+                           <span>10:00 AM</span>
+                           <span><img src="/assets/img/double-tick.svg"></span>
+                         </div>
+                      </div>
+                  </div>
+                  <div class="each-chet-user">
+                      <div class="chet-div2">
+                         <div class="para pb-1">
+                          hii i am web developer and new design 
+                         </div>
+                         <div class="time pt-1">
+                           <span class="text-muted">10:00 AM</span>
+                           <span><img src="/assets/img/double-tick.svg"></span>
+                         </div>
+                      </div>
+                  </div>
+                  <div class="each-chet-user d-flex justify-content-end">
+                      <div class="chet-div clearfix">
+                         <div class="para pb-1">
+                          hii i am web developer and new design
+                         </div>
+                         <div class="time pt-1 float-end">
+                           <span>10:00 AM</span>
+                           <span><img src="/assets/img/double-tick.svg"></span>
+                         </div>
+                      </div>
+                  </div>
+                  <div class="each-chet-user">
+                      <div class="chet-div2">
+                         <div class="para pb-1">
+                          hii i am web developer and new design 
+                         </div>
+                         <div class="time pt-1">
+                           <span class="text-muted">10:00 AM</span>
+                           <span><img src="/assets/img/double-tick.svg"></span>
+                         </div>
+                      </div>
+                  </div>
+                  <div class="devider"></div>
+                  <div class="each-chet-user d-flex justify-content-end">
+                      <div class="chet-div">
+                         <div class="para pb-1 clearfix">
+                          hii i am web developer and new design 
+                         </div>
+                         <div class="time pt-1 float-end">
+                           <span>10:00 AM</span>
+                           <span><img src="/assets/img/double-tick.svg"></span>
+                         </div>
+                      </div>
+                  </div>
+                  <div class="each-chet-user">
+                      <div class="chet-div2">
+                         <div class="para pb-1">
+                          hii i am web developer and new design
+                         </div>
+                         <div class="time pt-1">
+                           <span class="text-muted">10:00 AM</span>
+                           <span><img src="/assets/img/double-tick.svg"></span>
+                         </div>
+                      </div>
+                  </div>
+                  <div class="each-chet-user d-flex justify-content-end">
+                      <div class="chet-div">
+                         <div class="para pb-1 clearfix">
+                          hii i am web developer and new design 
+                         </div>
+                         <div class="time pt-1 float-end">
+                           <span>10:00 AM</span>
+                           <span><img src="/assets/img/double-tick.svg"></span>
+                         </div>
+                      </div>
+                  </div>
+               </div>
+               <div class="chet-message">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="type your message here"></textarea>
+               </div>
+               <div class="form-box">
+                <div class="time">
+                  <span>10:00 pm</span>
+                  <span><img src="/assets/img/double-tick.svg"></span>
+                </div>
+               </div>
+          </div>
         </div>
         <!-- ./middle-col -->
 
