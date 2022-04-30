@@ -914,16 +914,18 @@ input[type="file"] {
   /* overflow-y: hidden; */
 }
 
-.carousel-position {
-  /* position: absolute; */
+/* .carousel-position {
+  position: absolute;
   top: 0%;
-}
+} */
 
 .single-post-user {
   position: absolute;
-  /* top: 15px; */
-  /* width: inherit; */
-  width: 39%;
+  top: 0; 
+  left: 0;
+  right: 0;
+   /* width: inherit; */
+  width: 100%;
   /* padding-bottom: 10px; */
   background-color: #ffffff;
 }
@@ -941,6 +943,9 @@ input[type="file"] {
 .scroll-modal-post-view {
   overflow-y: scroll;
   height: 70vh;
+  position: relative;
+  background-color: #ffffff;
+
 }
 
 .suggested-connection {

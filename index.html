@@ -16,6 +16,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <style>
+      .modal-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+        background-color: #000;
+        background-clip: padding-box;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: 0.3rem;
+        outline: 0;
+        }
+    </style>
 
   <title>TradeoreX</title>
 </head>
@@ -689,22 +703,22 @@
                     <div class="modal-dialog modal-dialog-centered modal-xl">
                       <div class="modal-content">
 
-                        <div class="modal-body viewPostModal p-0">
+                        <div class="modal-body viewPostModal py-0 pe-0">
                           <div class="row">
                             <div class="col-md-7">
 
-                              <div class="carousel-position">
-                                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"
+                              <div class="carousel-position d-flex px-2 h-100">
+                                <div id="carouselExampleControls" class="carousel slide h-100 bg-info" data-bs-ride="carousel"
                                   data-bs-interval="false">
-                                  <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                      <img src="/assets/img/city.jpg" class="d-block w-100" alt="...">
+                                  <div class="carousel-inner h-100">
+                                    <div class="carousel-item active h-100 ">
+                                      <img src="/assets/img/city.jpg" class="d-block w-100 h-100 " alt="...">
                                     </div>
-                                    <div class="carousel-item">
-                                      <img src="/assets/img/city.jpg" class="d-block w-100" alt="...">
+                                    <div class="carousel-item h-100">
+                                      <img src="/assets/img/city.jpg" class="d-block w-100 h-100" alt="...">
                                     </div>
-                                    <div class="carousel-item">
-                                      <img src="/assets/img/city.jpg" class="d-block w-100" alt="...">
+                                    <div class="carousel-item h-100">
+                                      <img src="/assets/img/city.jpg" class="d-block w-100 h-100" alt="...">
                                     </div>
                                   </div>
                                   <button class="carousel-control-prev" type="button"
@@ -722,10 +736,11 @@
 
                             </div>
 
-                            <div class="col-md-5">
+                            <div class="col-md-5 ps-0">
 
                              <div class="scroll-modal-post-view">
-                                <div class="single-post-user py-2 d-flex justify-content-between">
+                               
+                                <div class="single-post-user py-2 d-flex justify-content-between position-sticky">
                                   <a href="/profile.html" class='link-styles'>
                                     <div class="d-flex ps-3">
                                       <img src="assets/img/profile-img.png" class="post-user-img" />
@@ -739,7 +754,7 @@
                                   aria-label="Close"></button>
                                 </div>
                            
-                                <div class="single-post-modal-text ps-3 pe-2">
+                                <div class="single-post-modal-text mt-0 bg-danger ps-3 py-2 pe-2">
                                   <p>A user can send a connect request to anyone either by searching a person or by
                                     looking at
                                     the people
@@ -815,7 +830,7 @@
                                       </div>
                                     </div>
                                   </div>
-
+                               
                                 </div>
                               </div> 
                               <!-- ./scroll div -->
