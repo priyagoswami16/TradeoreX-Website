@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" type="text/css">
+    <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" type="text/jacascript"></script>
+  
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  
+  
+    <script type="text/javascript" src="custom-text-editor.js"></script>
+    <link type="text/css" rel="stylesheet" href="custom-text-editor.css"/> 
+
+    <title>Chet</title>
+    <style>
+
+        .chet-list {
+            background-color: #ffffff;
+            border-radius: 4px;
+            box-shadow: 0px 0px 4px rgb(0 0 0 / 14%), 0px 0px 3px rgb(0 0 0 / 12%);
+        }
+        .chet-list .navigation-heading {
+            color: #123d59;
+            padding: 10px;
+            text-transform: capitalize;
+            border-bottom: 1px solid rgba(168, 168, 168, 0.15);
+        }
+        .scroll-chet-user {
+            overflow-y: scroll;
+            height: 65vh;
+        }
+        .each-chet-user {
+            padding: 20px;
+            /* background-color: green; */
+        }
+        .pic-info p{
+          font-size: 12px;
+        }
+        .chet-div{
+          width: 300px;
+          padding: 9px 9px;
+          background-color: #A6A6A4; 
+          color: #fff;
+          position: relative;
+          border-radius: 10px;  
+        }
+        
+        .chet-div::before{
+          content: "";
+          position: absolute;
+          top: 0;
+          right: -10px;
+          width: 20px;
+          height: 20px;
+          background: red;
+          background: linear-gradient(135deg,#A6A6A4 0%,#A6A6A4 50%,transparent 50%,transparent);
+        }
+        
+        .chet-div2{
+          width: 300px;
+          padding: 9px 9px;
+          background-color: #eee;
+          position: relative;
+          border-radius: 10px;
+        
+          
+        }
+        .chet-div2::before{
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -12px;
+          width: 20px;
+          height: 20px;
+          background: red;
+          background: linear-gradient(-135deg,#eee 0%,#eee 50%,transparent 50%,transparent);
+        }
+        
+        .devider{
+          width: 100%;
+          height: 1px;
+          background-color: #f2b41c;
+          position: relative;
+          margin-top: 10px;
+        }
+        .devider::before{
+          content: "26 Jan 2022";
+          position: absolute;
+          width:90px;
+          height: 19px;
+          display: flex;
+          top:-10px;
+          left: 40%;
+          background-color: #fff;
+          color: #f2b41c;
+          align-items: center;
+          justify-content: center;
+          font-size: 12px;
+          font-weight: bold;
+        }
+        .time span{
+          font-size: 13px;
+        }
+        
+        .navigation-heading.pic .user-img .h-100 {
+            height: 100%;
+        }
+        #container #editor1 {
+            border-top: 1px solid grey;
+            border-bottom: 1px solid grey;
+            height: 100px;
+             }
+        #container button {
+            width: 5ex;
+            text-align: center;
+            height:22px;
+            width:25px;
+            background-repeat: no-repeat !important;
+            background-size: cover;
+            background: #fff;
+            border:none;
+        }
+        #container .bold{
+          background-image: url('/assets/img/bold-text.svg');  
+        }
+        #container .italic{
+          background-image: url('/assets/img/italic-text.svg');
+        }
+        #container .unorderedlist{
+          background-image: url('/assets/img/bold-dots.svg');  
+        }
+        [contentEditable=true]:empty:not(:focus):before{
+            content:attr(data-text);
+            color:#888;
+        }
+        
+        #show2{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: 250px;
+            overflow-x: scroll;
+            background-color: #f2b41c;
+        }
+        #show2 > img {
+            width: 300px;
+            height: auto;
+            margin: 4px 3px ;
+            border-radius: 4px;
+        }
+        .btn{
+         border-radius: 30px !important;
+         padding: 0rem 0rem;
+        }
+
+        @media only screen and (min-device-width: 200px) and (max-device-width: 767px) {
+            
+            .main{
+                height: 100vh;
+                width: 100%;
+                position: fixed;
+                left: 0;
+                right: 0;
+            }
+            .container{
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        
+
+          }
+        
+    </style>
+</head>
+<body>
+
+    
+    
+
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 m-auto">
+                    <div class="chet-list">
+                         <div class="navigation-heading d-flex justify-content-between align-items-center">
+                           <div class="pic d-flex justify-content-center ps-3">
+                              <div class="user-img">
+                              <img src="/assets/img/post-user.svg" class="h-100">
+                              </div>
+                              <div class="pic-info ms-2">
+                                  <h6 class="mt-1">Cindy Evalina Putri</h6>
+                                  <p>Crimica</p>
+                              </div>
+                           </div>
+                           <div class="pic-img pe-3">
+                              <img src="/assets/img/3-dots-circle.svg" width="33px">
+                           </div>
+                         </div>
+                         <div class="scroll-chet-user">
+                            <div class="each-chet-user d-flex justify-content-end">
+                                <div class="chet-div clearfix">
+                                   <div class="para pb-1">
+                                    hii i am web developer and new design 
+                                   </div>
+                                   <div class="time pt-1 float-end">
+                                     <span>10:00 AM</span>
+                                     <span><img src="/assets/img/double-tick.svg"></span>
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="each-chet-user">
+                                <div class="chet-div2">
+                                   <div class="para pb-1">
+                                    hii i am web developer and new design 
+                                   </div>
+                                   <div class="time pt-1">
+                                     <span class="text-muted">10:00 AM</span>
+                                     <span><img src="/assets/img/double-tick.svg"></span>
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="each-chet-user d-flex justify-content-end">
+                                <div class="chet-div clearfix">
+                                   <div class="para pb-1">
+                                    hii i am web developer and new design
+                                   </div>
+                                   <div class="time pt-1 float-end">
+                                     <span>10:00 AM</span>
+                                     <span><img src="/assets/img/double-tick.svg"></span>
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="each-chet-user">
+                                <div class="chet-div2">
+                                   <div class="para pb-1">
+                                    hii i am web developer and new design 
+                                   </div>
+                                   <div class="time pt-1">
+                                     <span class="text-muted">10:00 AM</span>
+                                     <span><img src="/assets/img/double-tick.svg"></span>
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="devider"></div>
+                            <div class="each-chet-user d-flex justify-content-end">
+                                <div class="chet-div">
+                                   <div class="para pb-1 clearfix">
+                                    hii i am web developer and new design 
+                                   </div>
+                                   <div class="time pt-1 float-end">
+                                     <span>10:00 AM</span>
+                                     <span><img src="/assets/img/double-tick.svg"></span>
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="each-chet-user">
+                                <div class="chet-div2">
+                                   <div class="para pb-1">
+                                    hii i am web developer and new design
+                                   </div>
+                                   <div class="time pt-1">
+                                     <span class="text-muted">10:00 AM</span>
+                                     <span><img src="/assets/img/double-tick.svg"></span>
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="each-chet-user d-flex justify-content-end">
+                                <div class="chet-div">
+                                   <div class="para pb-1 clearfix">
+                                    hii i am web developer and new design 
+                                   </div>
+                                   <div class="time pt-1 float-end">
+                                     <span>10:00 AM</span>
+                                     <span><img src="/assets/img/double-tick.svg"></span>
+                                   </div>
+                                </div>
+                            </div>
+                         </div>
+                         <div id="container" class="">
+                          <div id="editor1" contenteditable="true" data-text="Enter comment...."></div>
+                          <div id="show2" class="" style="display: none;"></div>
+                          <div class="d-flex justify-content-end px-3">
+                            <button class="bold m-2" onclick="document.execCommand('bold',false,null)" title="Bold Highlighted Text"></button>
+                            <button class="unorderedlist m-2" onclick="document.execCommand('insertUnorderedList',false, null)"></button>    
+                            <button class="italic m-2" onclick="document.execCommand('italic',false,null);" title="Italicize Highlighted Text"></button>
+                            <div class="attch bg-warning btn mb-3 me-3 mt-1" style="width: 30px; height: 30px;">
+                              <label for="formFile" class="form-label"><img src="/assets/img/attachment-file.svg"></label>
+                              <input class="form-control bg-warning" type="file" id="formFile" onchange="readRimageURL(event)" multiple accept="image/gif, image/jpeg, image/png">
+                            </div>
+                             <a type="submit" class="btn bg-warning text-white mb-3 mt-1 py-0 px-2">
+                              <img src="/assets/img/send-btn.svg" class="me-1">Send
+                            </a>
+                          </div>
+                          <!-- </div>
+                         </div> -->
+                        </div>
+                    </div>
+                  </div>
+                  <!-- ./middle-col -->
+            </div>
+        </div>
+    </div>
+
+
+     <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+  type="text/javascript"></script>
+<script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+
+<script>
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    dotsEach: true,
+    autoplay: true,
+    autoplayHoverPause: true,
+    center: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 1
+      }
+    }
+  })
+
+
+
+              // Show Images In Post Modal
+          function readRimageURL(event) {
+
+          let files = document.getElementById("formFile");
+          let totalFiles = files.files.length;
+          for (i = 0; i < totalFiles; i++) {
+            let urls = URL.createObjectURL(event.target.files[i]);
+            document.getElementById("show2").style.display = 'block';
+            document.getElementById("show2").innerHTML +=
+              '<img src="' + urls + '" id="removeImagess">';
+          }
+
+          }
+
+
+</script>
+    
+</body>
+</html>
