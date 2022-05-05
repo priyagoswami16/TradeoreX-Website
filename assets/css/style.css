@@ -2101,7 +2101,10 @@ Subscription Page
 }
 
 .plans-boxs {
-  padding: 100px 150px;
+  padding-top: 80px ;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 30px;
 }
 
 .fast-and-reliable {

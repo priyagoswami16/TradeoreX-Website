@@ -46,24 +46,25 @@
 
        .dropdown-content {
             position: relative;
-            height: 200px;
+            height: 250px;
             width: 250px;
+            border-radius: 4px;
            
                        
         }
         .dropdown-content .search-form{
             position: absolute;
             top: 0;
-            left: 0;
+            left: 0px;
             right: 0;
         }
         .dropdown-content .search-form-2{
             position: absolute;
             top: 40px;
-            left: 0; 
+            left: 0px; 
             right: 0;
             bottom: 0;  
-            /* border-radius: 4px; */
+            border-radius: 4px;
          }
      
         .dropdown-content .search-form-2 a {
@@ -75,14 +76,18 @@
           }
 
           .modal-dialog {
-            /* position: fixed; */
-              max-width: 252px; 
+            position: relative;
+            /* padding: 0px auto;*/
+              /* max-width: 500px;  */
               margin-top: 0.80rem;
-              margin-left:  19.5rem;
+              margin-left: 19.5rem;
+              /* background-color: #ffc107; */
               
          }  
         .modal-content {
-            position: relative;
+            position: absolute;
+            top: -12px;
+            left: 0px;
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -94,11 +99,6 @@
             outline: 0;
         }
 
-        .model-header{
-          border-bottom: none;
-          background-color: #ffc107;
-        
-        }
         .modal.fade .modal-dialog {   
           transition: transform 0s !important;
           transform: translate(0,0) !important;
@@ -106,6 +106,7 @@
        .fade{
          transition: none !important;
         }
+      
      
 
 
@@ -212,32 +213,32 @@
 
 
         
-      <!--search Modal -->
-          <div class="modal fade pt-1" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header p-0 d-flex justify-content-center align-items-center">
-                  <div class="dropdown-content"> 
-                    <div class="search-form bg-white">
-                      <form class="">
-                        <div class="input-group">
-                          <p class="input-group-text" id="basic-addon1">
-                            <img src="/assets/img/search-icon.svg">
-                          </p>
-                          <input type="text" class="form-control search-input" id="myInput" placeholder="Search" aria-label="Search"
-                          aria-describedby="basic-addon1">
+      <!-- search Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog bg-danger">
+              <div class="modal-content mt-3">
+                <div class="modal-body py-0 px-0 d-flex justify-content-between align-items-center">
+                      <div class="dropdown-content"> 
+                          <div class="search-form bg-white pt-1">
+                            <form class="">
+                              <div class="input-group">
+                                <p class="input-group-text" id="basic-addon1">
+                                  <img src="/assets/img/search-icon.svg">
+                                </p>
+                                <input type="text" class="form-control search-input" id="myInput" placeholder="Search" aria-label="Search"
+                                aria-describedby="basic-addon1">
+                              </div>
+                            </form>
+                          </div>
+                        <div class="search-form-2 py-2 bg-white mt-1">
+                              <a href="#base"> <img src="/assets/img/search-icon.svg" class="me-3">Steel Coils</a>
+                              <a href="#blog"> <img src="/assets/img/search-icon.svg" class="me-3">Belgium Steel Coil</a>
+                              <a href="#contact"> <img src="/assets/img/search-icon.svg" class="me-3">Hot Rolled Coil Steel Colis</a>
+                              <a href="#custom"> <img src="/assets/img/search-icon.svg" class="me-3">Standless Steel Colis</a>
+                              <a href="#support"> <img src="/assets/img/search-icon.svg" class="me-3">Strip steel coils</a>
+                              <a href="#tools"> <img src="/assets/img/search-icon.svg" class="me-3">HR/CR/PPGU/GI Steel Coils</a>
                         </div>
-                      </form>
-                    </div>
-                    <div class="search-form-2 bg-white py-2">
-                          <a href="#base"> <img src="/assets/img/search-icon.svg" class="me-3">Steel Coils</a>
-                          <a href="#blog"> <img src="/assets/img/search-icon.svg" class="me-3">Belgium Steel Coil</a>
-                          <a href="#contact"> <img src="/assets/img/search-icon.svg" class="me-3">Hot Rolled Coil Steel Colis</a>
-                          <a href="#custom"> <img src="/assets/img/search-icon.svg" class="me-3">Standless Steel Colis</a>
-                          <a href="#support"> <img src="/assets/img/search-icon.svg" class="me-3">Strip steel coils</a>
-                          <a href="#tools"> <img src="/assets/img/search-icon.svg" class="me-3">HR/CR/PPGU/GI Steel Coils</a>
-                    </div>
-                  </div>
+                     </div>
                 </div>
               </div>
             </div>
