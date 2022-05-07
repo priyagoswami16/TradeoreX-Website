@@ -23,12 +23,14 @@
          width: 400px;
     
       } 
-
-      /* .form-check-label{
-        font-size: 16px;
-        color: #123d59;
-
-      } */
+      .modal.fade .modal-dialog {   
+          transition: transform 0s !important;
+          transform: translate(0,0) !important;
+       }
+      .fade{
+         transition: none !important;
+        }
+      
    </style>
 
   <title>TradeoreX</title>
@@ -132,6 +134,144 @@
     <!-- ./container -->
   </header>
 
+<!-- model part -->
+     <!-- The Modal -->
+     <div class=" modal fade" id="myModal">
+      <div class="modal-dialog  modal-dialog-centered modal-lg">
+        <!-- <div class="modal-content"> -->
+          <!-- Modal body -->
+          <!-- <div class="">        -->
+          <div class=" each-inquiry">
+              <div class="inquiry-by d-flex justify-content-between">
+                <div class="time-and-date">
+                  <img src="/assets/img/listed-on.svg">
+                  <span>Listed on - 9th Jan 2021</span>
+                </div>
+  
+                <div class="offered-by">
+                  <img src="/assets/img/offered-by.svg">
+                  <span>Offered By - <span class="text-theme-secondary">Vikram Singh | TradeoreX</span></span>
+                </div>
+  
+                <div class="buy-offer">
+                  <button type="button" class="buy-offer-btn">
+                    <img src="/assets/img/active.svg" class="button-icon">
+                    Buy Offer
+                  </button>
+                </div>
+              </div>
+  
+              <div class="heading-inquiry mt-3">
+                <h5>Hot Rolled Coils / Sheets / Slabs / Slits, and can be longer like this one</h5>
+              </div>
+  
+              <div class="inquiry-info row mx-4 mt-0 p-0">
+                <div class="col-md-6 mb-0 pb-0 ">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <th scope="row">Commodity</th>
+                        <td>Carbon Steel | Stainless Steel</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">From</th>
+                        <td>Coils</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Products</th>
+                        <td>Hot Rolled</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Thickness Range</th>
+                        <td>0.5 MM to 1.85 MM</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Length Range</th>
+                        <td>0 MM to 0 MM</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Delivery Terms</th>
+                        <td>CFR | FOB | ExW</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+  
+                <div class="col-md-6">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <th scope="row">Type</th>
+                        <td>Flat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Quality</th>
+                        <td>Prime</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Origin</th>
+                        <td>@twitter</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Width Range</th>
+                        <td>1080 MM to 1250 MM</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Required Quantity</th>
+                        <td>1000 MT</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Payment Terms</th>
+                        <td>LC at Sight</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+  
+                <div class="additional-info py-0">
+                  <table class="table border-top">
+                    <tbody class="">
+                      <tr class="additional-table">
+                        <th scope="row">Additional information</th>
+                        <td>lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+  
+                <div class="product-tags">
+                  <h6 class="mb-2">Product Tags</h6>
+                  <span class="each-product-tag">HMS</span>
+                  <span class="each-product-tag">Hot Rolled Coil</span>
+                  <span class="each-product-tag">Rebar</span>
+                  <span class="each-product-tag">HDGI</span>
+                  <span class="each-product-tag">Cold Rolled Coil</span>
+                </div>
+  
+                <div class="d-flex justify-content-end py-2">
+                  <button class="btn btn-outline-warning py-1 px-3 me-5">
+                      Cancel
+                  </button>
+                  <button class="btn bg-warning py-1 px-3 text-white">
+                      Publish
+                  </button>
+                 
+                </div>
+              </div>
+              <!-- ./inquiry-info -->
+  
+            </div>
+          </div> 
+
+        <!-- </div>
+      </div> -->
+    </div>
+
+
+
+<!-- model end  -->
+
+
 
   <div class="main">
 
@@ -223,125 +363,6 @@
           </div>
           <!-- ./inquiry-navigation -->
 
-          <div class="navigation-card">
-            <div class="navigation-heading">
-              <h6>Filters</h6>
-            </div>
-            
-            <div class="material-nav-option">
-              <div class="filter-btn">
-                <div class="row mx-3 py-2">
-                  <div class="col-md-12 d-flex justify-content-between">
-                    <span style="color:#666666;">Lead Type:</span>
-                    <a href="" class="btn bg-warning text-white py-1 px-4" style="font-size:12px;font-weight: bold;">Buy</a>
-                    <a href="" class="btn btn-outline-warning text-warning py-1 px-4" style="font-size:12px;font-weight: bold;">Sell</a>
-                  </div>
-                </div>
-              </div>
-              <div class="divider"></div>
-              <div class="date-box">
-                <div class="row mx-3 py-3">
-                  <div class="heading" style="color:#666666;">Date Range</div>
-                  <div class="col-md-12 d-flex justify-content-around my-1">
-                       <input type="date">
-                       <input type="date">
-                    
-                  </div>
-                </div>
-              </div>
-
-              <div class="filter-search-box mt-1">
-                <div class="row py-3 mx-3">
-                    <div class="col-md-12">
-                        <h6 style="color:#666666;">Select the products you deal in</h6>
-                        <div class="search-icon-form mt-3" style="width: 260px">
-                            <form class="bg-grey">
-                              <div class="input-group">
-                                <p class="input-group-text" id="basic-addon1">
-                                  <img src="/assets/img/search-icon.svg">
-                                </p>
-                                <input type="text" class="form-control search-input" placeholder="Search Products" aria-label="Search"
-                                  aria-describedby="basic-addon1">
-                              </div>
-                            </form>
-                        </div>  
-                    </div>
-                </div>
-              </div>
-              <!-- drop -->
-              <div class="row mx-3 my-1 d-flex justify-content-center flex-column px-0" style=" border: 2px solid rgba(171, 171, 171, 0.2); border-radius: 4px;">
-                <!-- <div class="filter-drop bg-info" style="border: 1px solid black; width: 80%; border-radius:5px; height: 300px; overflow-y: scroll;"> -->
-                <div class="col">
-                      <div class="py-2">
-                        <div class="form-check form-check-inline">
-                          <input type="checkbox" class="form-check-input border border-outline-none" id="ckbCheckAll" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <span style="color: #123d59; font-weight: 500;">Flat Carben Steel Products</span>
-                        </div>
-                      </div> 
-                      <div class="row d-flex flex-column" >
-                      <div class="form-check form-check-inline col ms-4" id="checkBoxes">
-                        <input id="Checkbox1" class="form-check-input checkBoxClass" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1" style="color: #123d59; font-size: 13px;">Hot Rolled Coil</label>    
-                      </div>
-                      <div class="form-check form-check-inline col ms-4" id="checkBoxes">
-                        <input id="Checkbox2" class="form-check-input checkBoxClass" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2" style="color: #123d59; font-size: 13px;">Cold Rolled Coil</label>
-                      </div>
-                      </div>
-                </div>  
-                <!-- second check -->
-                <div class="col mt-2">
-                  <div class="py-2">
-                    <div class="form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input border border-outline-none" id="ckbCheckAllll" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                      <span style="color: #123d59; font-weight: 500;">Long Carban Steel Products</span> 
-                    </div>
-                  </div> 
-                  <div class="row d-flex flex-column">
-                  <div class="form-check form-check-inline col ms-4" id="checkBoxess">
-                    <input id="Checkbox7" class="form-check-input checkBoxClassess" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1" style="color: #123d59; font-size: 13px;">Rebars</label>
-                  </div>
-                  <div class="form-check form-check-inline col ms-4" id="checkBoxess">
-                    <input id="Checkbox8" class="form-check-input checkBoxClassess" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2" style="color: #123d59; font-size: 13px;">Profile</label>
-                  </div>
-                  </div>
-                </div> 
-                <!-- third check -->
-                <div class="col mt-2">
-                  <div class="py-2">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input border border-outline-none" type="checkbox" id="ckbCheckAllllll" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                      <span style="color: #123d59; font-weight: 500;"> Metal Scrap (Ferrous & Non-Ferrous)</span> 
-                    </div>
-                  </div> 
-                
-                  <div class="row d-flex flex-column">
-                  <div class="form-check form-check-inline col ms-4" id="checkBoxesss">
-                    <input  id="Checkbox13" class="form-check-input  checkBoxClassessss" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1" style="color: #123d59; font-size: 13px;">Zobra</label>
-                  </div>
-                  <div class="form-check form-check-inline col ms-4" id="checkBoxesss">
-                    <input  id="Checkbox14" class="form-check-input  checkBoxClassessss" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2" style="color: #123d59; font-size: 13px;">Extrusion</label>
-                  </div>
-                </div>
-                </div> 
-                <!-- </div>  -->
-              </div>
-              <!-- drop end -->
-              <div class="divider"></div>
-               <div class="filter-bottom-btn">
-                 <div class="row mx-3">
-                   <div class="col-md-12 mt-2 d-flex justify-content-between">
-                     <button class="btn btn-outline-warning py-1 px-4 text-warning" style="font-size:12px; font-weight: bold;">Reset</button>
-                     <button class="btn bg-warning py-1 px-4 text-white" style="font-size:12px;font-weight: bold;">Apply</button>
-                   </div>
-                 </div>
-               </div>
-           </div>
-         </div>
           <!-- ./filter-navigation -->
 
           <div class="ad-banner">
@@ -425,7 +446,7 @@
 
               <div class="row my-3">
                 <div class="col">
-                  <label for="products">Thikness Range</label>
+                  <label for="thikness">Thikness Range</label>
                   <div class="row">
                     <div class="col">
                       <div class="input-group">
@@ -557,8 +578,8 @@
               </div>
 
               <div class="form-group mb-4">
-                <label class="form-label" for="form6Example3">About</label>
-                <textarea class="form-control request-input" id="form6Example3" rows="4" placeholder="about your self"></textarea>
+                <label class="form-label" for="form6Example3">Additional Information</label>
+                <textarea class="form-control request-input" id="form6Example3" rows="4" placeholder="Additional Information"></textarea>
               </div>
       
 
@@ -620,8 +641,8 @@
                 <div class="row mx-5 py-3">
                     <div class="col">
                         <h6 style="color: #123d59; font-weight: 500;">Select the products you deal in</h6>
-                        <div class="search-icon-form mt-3">
-                            <form class="bg-grey">
+                        <div class="search-icon-form bg-grey mt-3">
+                            <form class="">
                               <div class="input-group">
                                 <p class="input-group-text" id="basic-addon1">
                                   <img src="/assets/img/search-icon.svg">
@@ -769,7 +790,7 @@
         <!-- submit btn -->
         <div class="row mx-5 py-3">
           <div class="col d-flex justify-content-center">
-          <a href="#" class="btn btn-warning text-white px-3 btn-block">Preview Inquiry</a>
+          <a href="#" class="btn btn-warning text-white px-3 btn-block" data-bs-toggle="modal" data-bs-target="#myModal">Preview Inquiry</a>
           </div>
         </div>
 
@@ -782,7 +803,6 @@
 
         </div>
         <!-- ./right-col -->
-
 
       </div>
     </div>
@@ -840,6 +860,9 @@
         positionMenuWithin: $('.position-menu-within')
       });
       $('#payment').multiSelect({
+        positionMenuWithin: $('.position-menu-within')
+      });
+      $('#thikness').multiSelect({
         positionMenuWithin: $('.position-menu-within')
       });
   });

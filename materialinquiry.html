@@ -17,6 +17,21 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
   <title>TradeoreX</title>
+  <style>
+    .filter-search-box .search-icon-form {
+         background: rgba(171, 171, 171, 0.2);
+         border-radius: 4px;
+         width: 250px;
+    
+      }
+      
+      .drop-box{
+        margin: auto;
+        height: 300px;
+        overflow-y: scroll;
+        width: 80%;
+      }
+  </style>
 </head>
 
 <body>
@@ -207,17 +222,127 @@
             </div>
           </div>
           <!-- ./inquiry-navigation -->
-
           <div class="navigation-card">
             <div class="navigation-heading">
               <h6>Filters</h6>
             </div>
-            <div class="divider"></div>
-
+            
             <div class="material-nav-option">
+              <div class="filter-btn">
+                <div class="row mx-3 py-2">
+                  <div class="col-md-12 d-flex justify-content-between">
+                    <span style="color:#666666;">Lead Type:</span>
+                    <a href="" class="btn bg-warning text-white py-1 px-4" style="font-size:12px;font-weight: bold;">Buy</a>
+                    <a href="" class="btn btn-outline-warning text-warning py-1 px-4" style="font-size:12px;font-weight: bold;">Sell</a>
+                  </div>
+                </div>
+              </div>
+              <div class="divider"></div>
+              <div class="date-box">
+                <div class="row mx-3 py-3">
+                  <div class="heading" style="color:#666666;">Date Range</div>
+                  <div class="col-md-12 d-flex justify-content-around my-1">
+                       <input type="date">
+                       <input type="date">
+                    
+                  </div>
+                </div>
+              </div>
 
-            </div>
-          </div>
+              <div class="filter-search-box mt-1">
+                <div class="row py-3 mx-3">
+                    <div class="col-md-12">
+                        <h6 style="color:#666666;">Select the products you deal in</h6>
+                        <div class="search-icon-form mt-3 bg-grey">
+                            <form class="">
+                              <div class="input-group">
+                                <p class="input-group-text" id="basic-addon1">
+                                  <img src="/assets/img/search-icon.svg">
+                                </p>
+                                <input type="text" class="form-control search-input" placeholder="Search Products" aria-label="Search"
+                                  aria-describedby="basic-addon1">
+                              </div>
+                            </form>
+                        </div>  
+                    </div>
+                </div>
+              </div>
+              <!-- drop -->
+              <div class="drop-box">
+              <div class="row d-flex justify-content-center flex-column">
+                <div class="col">
+                      <div class="py-2">
+                        <div class="form-check form-check-inline">
+                          <input type="checkbox" class="form-check-input border border-outline-none" id="ckbCheckAll" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <span style="color: #123d59; font-weight: 500;">Flat Carben Steel Products</span>
+                        </div>
+                      </div> 
+                      <div class="row d-flex flex-column" >
+                      <div class="form-check form-check-inline col ms-4" id="checkBoxes">
+                        <input id="Checkbox1" class="form-check-input checkBoxClass" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1" style="color: #123d59; font-size: 13px;">Hot Rolled Coil</label>    
+                      </div>
+                      <div class="form-check form-check-inline col ms-4" id="checkBoxes">
+                        <input id="Checkbox2" class="form-check-input checkBoxClass" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2" style="color: #123d59; font-size: 13px;">Cold Rolled Coil</label>
+                      </div>
+                      </div>
+                </div>  
+                <!-- second check -->
+                <div class="col mt-2">
+                  <div class="py-2">
+                    <div class="form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input border border-outline-none" id="ckbCheckAllll" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                      <span style="color: #123d59; font-weight: 500;">Long Carban Steel Products</span> 
+                    </div>
+                  </div> 
+                  <div class="row d-flex flex-column">
+                  <div class="form-check form-check-inline col ms-4" id="checkBoxess">
+                    <input id="Checkbox7" class="form-check-input checkBoxClassess" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1" style="color: #123d59; font-size: 13px;">Rebars</label>
+                  </div>
+                  <div class="form-check form-check-inline col ms-4" id="checkBoxess">
+                    <input id="Checkbox8" class="form-check-input checkBoxClassess" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2" style="color: #123d59; font-size: 13px;">Profile</label>
+                  </div>
+                  </div>
+                </div> 
+                <!-- third check -->
+                <div class="col mt-2">
+                  <div class="py-2">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input border border-outline-none" type="checkbox" id="ckbCheckAllllll" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                      <span style="color: #123d59; font-weight: 500;"> Metal Scrap (Ferrous & Non-Ferrous)</span> 
+                    </div>
+                  </div> 
+                
+                  <div class="row d-flex flex-column">
+                  <div class="form-check form-check-inline col ms-4" id="checkBoxesss">
+                    <input  id="Checkbox13" class="form-check-input  checkBoxClassessss" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1" style="color: #123d59; font-size: 13px;">Zobra</label>
+                  </div>
+                  <div class="form-check form-check-inline col ms-4" id="checkBoxesss">
+                    <input  id="Checkbox14" class="form-check-input  checkBoxClassessss" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2" style="color: #123d59; font-size: 13px;">Extrusion</label>
+                  </div>
+                </div>
+                </div> 
+                </div> 
+              </div>
+              <!-- drop end -->
+              <div class="divider"></div>
+               <div class="filter-bottom-btn">
+                 <div class="row mx-3">
+                   <div class="col-md-12 mt-2 d-flex justify-content-between">
+                     <button class="btn btn-outline-warning py-1 px-4 text-warning" style="font-size:12px; font-weight: bold;">Reset</button>
+                     <button class="btn bg-warning py-1 px-4 text-white" style="font-size:12px;font-weight: bold;">Apply</button>
+                   </div>
+                 </div>
+               </div>
+           </div>
+         </div>
+          <!-- ./filter-navigation -->
+
           <!-- ./filter-navigation -->
 
           <div class="ad-banner">

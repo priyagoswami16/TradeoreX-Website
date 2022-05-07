@@ -1420,7 +1420,7 @@ label {
 .select-items div,
 .select-selected {
   /* color: rgba(196, 196, 196, 1); */
-  padding: 8px 20px;
+  padding: 8px 24px;
   border: 1px solid transparent;
   border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
   cursor: pointer;
@@ -1449,7 +1449,9 @@ label {
 .range-input {
   background-color: #f2b41c !important;
   color: #ffffff;
-  border-radius: 4px !important;
+  /* border-radius: 4px !important; */
+  border-top-right-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
 }
 
 /* 
