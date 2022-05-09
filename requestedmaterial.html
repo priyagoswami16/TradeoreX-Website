@@ -138,9 +138,6 @@
      <!-- The Modal -->
      <div class=" modal fade" id="myModal">
       <div class="modal-dialog  modal-dialog-centered modal-lg">
-        <!-- <div class="modal-content"> -->
-          <!-- Modal body -->
-          <!-- <div class="">        -->
           <div class=" each-inquiry">
               <div class="inquiry-by d-flex justify-content-between">
                 <div class="time-and-date">
@@ -172,11 +169,11 @@
                     <tbody>
                       <tr>
                         <th scope="row">Commodity</th>
-                        <td id="tab-commodity">Carbon Steel | Stainless Steel</td>
+                        <td id="tab-commodity"></td>
                       </tr>
                       <tr>
                         <th scope="row">From</th>
-                        <td>Coils</td>
+                        <td id="tab-form">Coils</td>
                       </tr>
                       <tr>
                         <th scope="row">Products</th>
@@ -184,15 +181,15 @@
                       </tr>
                       <tr>
                         <th scope="row">Thickness Range</th>
-                        <td id="tab-thikness">0.5 MM <span>to</span> 1.85 MM</td>
+                        <td id="tab-thikness"></td>
                       </tr>
                       <tr>
                         <th scope="row">Length Range</th>
-                        <td id="tab-length">0 MM to 0 MM</td>
+                        <td id="tab-length"></td>
                       </tr>
                       <tr>
                         <th scope="row">Delivery Terms</th>
-                        <td id="tab-delivery">CFR | FOB | ExW</td>
+                        <td id="tab-delivery"></td>
                       </tr>
                     </tbody>
                   </table>
@@ -215,15 +212,15 @@
                       </tr>
                       <tr>
                         <th scope="row">Width Range</th>
-                        <td id="tab-widthrange">1080 MM to 1250 MM</td>
+                        <td id="tab-widthrange"></td>
                       </tr>
                       <tr>
                         <th scope="row">Required Quantity</th>
-                        <td id="tab-requiredquantity">1000 MT</td>
+                        <td id="tab-requiredquantity"></td>
                       </tr>
                       <tr>
                         <th scope="row">Payment Terms</th>
-                        <td id="tab-payment">LC at Sight</td>
+                        <td id="tab-payment"></td>
                       </tr>
                     </tbody>
                   </table>
@@ -409,6 +406,29 @@
                   <label for="type">Type</label>
                   <div class="">
                     <select id="type" name="type" multiple>
+                      <option value="Steel">Steel</option>
+                      <option value="Rods">Rods</option>
+                      <option value="Coil">Coil</option>
+                      <option value="Container">Container</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row my-3">
+                <div class="col">
+                  <label for="form">Form</label>
+                  <div class="">
+                    <select id="form" name="form" multiple>
+                      <option value="Commodity 1">Commodity 1</option>
+                      <option value="Commodity 2">Commodity 2</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col">
+                  <label for="quality">Quality</label>
+                  <div class="">
+                    <select id="quality" name="quality" multiple>
                       <option value="Steel">Steel</option>
                       <option value="Rods">Rods</option>
                       <option value="Coil">Coil</option>
@@ -863,6 +883,12 @@
       $('#commodity').multiSelect({
         positionMenuWithin: $('.position-menu-within')
       });
+      $('#form').multiSelect({
+        positionMenuWithin: $('.position-menu-within')
+      });
+      $('#quality').multiSelect({
+        positionMenuWithin: $('.position-menu-within')
+      });
       $('#origin').multiSelect({
         positionMenuWithin: $('.position-menu-within')
       });
@@ -886,6 +912,8 @@
     var additional = document.getElementById('additional');
     var commodity = document.getElementById('commodity');
     var type = document.getElementById('type');
+    var form = document.getElementById('form');
+    var quality = document.getElementById('quality');
     var products = document.getElementById('products');
     var origin = document.getElementById('origin');
     var delivery = document.getElementById('delivery');
@@ -903,6 +931,8 @@
     var tabresult = document.getElementById('tab-result');
     var tabcommodity = document.getElementById('tab-commodity');
     var tabtype = document.getElementById('tab-type');
+    var tabform = document.getElementById('tab-form');
+    var tabquality = document.getElementById('tab-quality');
     var tabproduct = document.getElementById('tab-product');
     var taborigin = document.getElementById('tab-origin');
     var tabdelivery = document.getElementById('tab-delivery');
@@ -915,8 +945,14 @@
     submitbtn.addEventListener('click',()=>{
       tabresult.innerText = additional.value;
       tabtitle.innerText = title.value;
-      tabcommodity.innerText = commodity.value1 + " / " +commodity.value2;
+      for(var i=0; i<commodity.options.length; i++){
+        if(commodity.options[i].selected === true){
+          tabcommodity.innerText += commodity.options[i].value + " | ";
+        }
+      }
       tabtype.innerText = type.value;
+      tabform.innerText = form.value;
+      tabquality.innerText = quality.value;
       tabproduct.innerText = products.value;
       taborigin.innerText = origin.value;
       tabdelivery.innerText = delivery.value;
