@@ -16,93 +16,125 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   <title>TradeoreX</title>
   <style>
-      .custom-select {
-        position: relative;
-        font-family: Arial;
-      }
-
-.custom-select select {
-  display: none; /*hide original SELECT element:*/
+    .custom-select{
+      width: 100%;
+      position: relative;
+    }
+    .custom-select .btn {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    /* background-color: #123d59; */
+    border: none;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0px !important;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.custom-select .select-selected {
-  /* background-color: #123d59; */
-  background-color: #fff;
-  border-top-right-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
-  border-bottom: 1px solid #666666;
-  border-top: 0px !important;
-  border-left: 0px !important;
-  border-right: 0px !important;
-
-  
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: #123d59;
+    /* box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%); */
+}
+/* .accordion-button:not(.collapsed)::after {
+    background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e);
+    transform: rotate(-180deg);
+} */
+.listitem{
+  height: 200px;
+  overflow-y: scroll;
 }
 
-/*style the arrow inside the select element:*/
-.select-selected:after {
+
+/* range */
+
+input[type="range"] {
+  width: 100%;
+  margin-top: 120px;
+}
+
+output {
+  border: 1px solid #000;
+  padding: 3px 12px;
   position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #000 transparent transparent transparent;
+  left: 10px;
+  top: 150px ;
+  border-radius: 3px;  
+  transform: translateX(-50%);
+}
+.customInput-wrap {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 30vh;
+  position: relative;
+ 
 }
 
-/*point the arrow upwards when the select box is open (active):*/
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
-}
+.current-value {
+    /* visibility: hidden; */
+    background: yellow;
+    border-radius: 3px;    
+    position: absolute;
+    top: 65px;
+   right: 0px;
+    padding: 10px 10px;
+    /* padding: 12px 18px; */
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    line-height: 22px;
+    white-space: nowrap;
+    transition: left 0.045s linear;}
+    .current-value::after{ 
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 50%;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid yellow;
+      margin-top: -6px;
+      margin-left: -6px;
+      bottom: -5px;
+    }
 
-.select-arrow-active.select-selected{
-  background-color: #123d59;
-  color: #fff;
-}
+    .customInput-wrap .form-select{
+         position: absolute;
+         top: 20px;
+        display: block;
+        width: 25%;
+        padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        background-color: none !important;
+        border: 0px !important;
+        border-radius: 0px !important;
+        /* transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; */
+        appearance: none;
+    }
+   
 
-
-/*style the items (options), including the selected item:*/
-.select-items div,.select-selected {
-  color: #000;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-  user-select: none;
-  text-transform: capitalize;
-}
-
-/*style items (options):*/
-.select-items {
-  position: absolute;
-   background: #fff;
-   padding: 0px 20px;
-   height: 200px;
-   overflow-y: scroll;
-  /* background: linear-gradient(180deg, #fff 0%, #fff 100%); */
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-
-/*hide the items when the select box is closed:*/
-.select-hide {
-  display: none;
-}
-
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-
-
+    
+ 
 
 
   </style>
+     
 </head>
 
 <body>
@@ -224,175 +256,307 @@
             </div>
             <!-- <div class="divider"></div> -->
             <div class="navigation-heading p-0">
-              <div class="custom-select" style="width:100%;">
-                <select>
-                  <option value="0">Material</option>
-                  <option value="1">Audi</option>
-                  <option value="2">BMW</option>
-                  <option value="3">Citroen</option>
-                  <option value="4">Ford</option>
-                  <option value="5">Honda</option>
-                </select>
+               <div class="custom-select border-bottom">
+                <button class="btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                  Material
+                </button>
               </div>
-              <div class="custom-select" style="width:100%;">
-                <select>
-                  <option value="0">Sagment</option>
-                  <option value="1">Audi</option>
-                  <option value="2">BMW</option>
-                  <option value="3">Citroen</option>
-                  <option value="4">Ford</option>
-                  <option value="5">Honda</option>
-                </select>
+              <div class="collapse" id="collapseExample1">
+                <ul class="listitem list-group list-group-flush px-3">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                </ul>
               </div>
-              <div class="custom-select" style="width:100%;">
-                <select>
-                  <option value="0">Form</option>
-                  <option value="1">Audi</option>
-                  <option value="2">BMW</option>
-                  <option value="3">Citroen</option>
-                  <option value="4">Ford</option>
-                  <option value="5">Honda</option>
-                </select>
+              <div class="custom-select border-bottom">
+                <button class="btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                  Segment
+                </button>
               </div>
-              <div class="custom-select" style="width:100%;">
-                <select>
-                  <option value="0">Production Method</option>
-                  <option value="1">One</option>
-                  <option value="2">BMW</option>
-                  <option value="3">Citroen</option>
-                  <option value="4">Ford</option>
-                  <option value="5">Honda</option>
-                </select>
+              <div class="collapse" id="collapseExample2">
+                <ul class="listitem list-group list-group-flush px-3">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                </ul>
               </div>
-              <div class="custom-select" style="width:100%;">
-                <select>
-                  <option value="0">Quality</option>
-                  <option value="1">One</option>
-                  <option value="2">BMW</option>
-                  <option value="3">Citroen</option>
-                  <option value="4">Ford</option>
-                  <option value="5">Honda</option>
-                  
-                </select>
+              <div class="custom-select border-bottom">
+                <button class="btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                  Form
+                </button>
               </div>
-              <div class="custom-select" style="width:100%;">
-                <select>
-                  <option value="0">Origin</option>
-                  <option value="1">One</option>
-                  <option value="2">BMW</option>
-                  <option value="3">Citroen</option>
-                  <option value="4">Ford</option>
-                  <option value="5">Honda</option>
-                </select>
+              <div class="collapse" id="collapseExample3">
+                <ul class="listitem list-group list-group-flush px-3">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                </ul>
               </div>
-              <div class="custom-select" style="width:100%;">
-                <select>
-                  <option value="0">Width Range</option>
-                  <option value="1">One</option>
-                  <option value="2">BMW</option>
-                  <option value="3">Citroen</option>
-                  <option value="4">Ford</option>
-                  <option value="5">Honda</option>
-                </select>
+              <div class="custom-select border-bottom">
+                <button class="btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
+                  Production Method
+                </button>
               </div>
-              <div class="custom-select" style="width:100%;">
-                <select>
-                  <option value="0">Length Range</option>
-                  <option value="1">One</option>
-                  <option value="2">BMW</option>
-                  <option value="3">Citroen</option>
-                  <option value="4">Ford</option>
-                  <option value="5">Honda</option>
-                </select>
+              <div class="collapse" id="collapseExample4">
+                <div class="row mx-3">
+                  <div class="col-md-6 px-0">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="radio" value="" aria-label="...">
+                        First 
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="radio" value="" aria-label="...">
+                        Second 
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="radio" value="" aria-label="...">
+                        Third 
+                      </li>
+                    </div>
+                    <div class="col-md-6 px-0">
+                      <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="radio" value="" aria-label="...">
+                        First 
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="radio" value="" aria-label="...">
+                        Second 
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="radio" value="" aria-label="...">
+                        Third 
+                      </li>
+                    </ul>
+                    </div>
+                  </div>
               </div>
-              <div class="custom-select" style="width:100%;">
-                <select>
-                  <option value="0">Thikness Range</option>
-                  <option value="1">One</option>
-                  <option value="2">BMW</option>
-                  <option value="3">Citroen</option>
-                  <option value="4">Ford</option>
-                  <option value="5">Honda</option>
-                </select>
+              <div class="custom-select border-bottom">
+                <button class="btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample">
+                  Quality
+                </button>
               </div>
-              <div class="custom-select" style="width:100%;">
-                <select>
-                  <option value="0">Cross Section</option>
-                  <option value="1">One</option>
-                  <option value="2">BMW</option>
-                  <option value="3">Citroen</option>
-                  <option value="4">Ford</option>
-                  <option value="5">Honda</option>
-                </select>
+              <div class="collapse" id="collapseExample5">
+                <div class="row mx-3">
+                  <div class="col-md-6 px-0">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="radio" value="" aria-label="...">
+                        First
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6 px-0">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="radio" value="" aria-label="...">
+                        First
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="custom-select" style="width:100%;">
-                <select>
-                  <option value="0">Diameter Range</option>
-                  <option value="1">One</option>
-                  <option value="2">BMW</option>
-                  <option value="3">Citroen</option>
-                  <option value="4">Ford</option>
-                  <option value="5">Honda</option>
-                </select>
+              <div class="custom-select border-bottom">
+                <button class="btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample">
+                  Origin
+                </button>
               </div>
-              <div class="custom-select" style="width:100%;">
-                <select>
-                  <option value="0">Delivery Terms</option>
-                  <option value="1">One</option>
-                  <option value="2">BMW</option>
-                  <option value="3">Citroen</option>
-                  <option value="4">Ford</option>
-                  <option value="5">Honda</option>
-                </select>
+              <div class="collapse" id="collapseExample6">
+                <ul class="listitem list-group list-group-flush px-3">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                </ul>
               </div>
-              
-            
-              <div class="custom-select" style="width:100%;">
-                <select>
-                  <option value="0">Port of Destination</option>
-                  <option value="1">One</option>
-                  <option value="2">BMW</option>
-                  <option value="3">Citroen</option>
-                  <option value="4">Ford</option>
-                  <option value="5">Honda</option>
-                </select>
+              <div class="custom-select border-bottom">
+                <button class="btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample7" aria-expanded="false" aria-controls="collapseExample">
+                  Width Range
+                </button>
               </div>
-              <div class="custom-select" style="width:100%;">
-                <select>
-                  <option value="0">Filter</option>
-                  <option value="1">Audi</option>
-                  <option value="2">BMW</option>
-                  <option value="3">Citroen</option>
-                  <option value="4">Ford</option>
-                  <option value="5">Honda</option>
-                </select>
+              <div class="collapse" id="collapseExample7">
+                <div class="customInput-wrap">
+                  <div class="range-box"> 
+                  <select class="form-select" aria-label="select example">
+                    <option selected>MM</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                  </div>
+                  <div class="current-value">€ <span>10</span></div>
+                <input type="range" name="rangeInput" min="1" max="100" onchange="customRange();" value="50" />
+                <output></output>
               </div>
-              <div class="custom-select" style="width:100%;">
-                <select>
-                  <option value="0">Filter</option>
-                  <option value="1">Audi</option>
-                  <option value="2">BMW</option>
-                  <option value="3">Citroen</option>
-                  <option value="4">Ford</option>
-                  <option value="5">Honda</option>
-                </select>
               </div>
-              <div class="custom-select" style="width:100%;">
-                <select>
-                  <option value="0">Filter</option>
-                  <option value="1">Audi</option>
-                  <option value="2">BMW</option>
-                  <option value="3">Citroen</option>
-                  <option value="4">Ford</option>
-                  <option value="5">Honda</option>
-                </select>
+              <div class="custom-select border-bottom">
+                <button class="btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample8" aria-expanded="false" aria-controls="collapseExample">
+                  Length Range
+                </button>
               </div>
-            </div>
+              <div class="collapse" id="collapseExample8">
+                <ul class="list-group list-group-flush px-3">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                </ul>
+              </div>
+              <div class="custom-select border-bottom">
+                <button class="btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample9" aria-expanded="false" aria-controls="collapseExample">
+                  Thickness Range
+                </button>
+              </div>
+              <div class="collapse" id="collapseExample9">
+                <ul class="list-group list-group-flush px-3">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                </ul>
+              </div>
+              <div class="custom-select border-bottom">
+                <button class="btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample10" aria-expanded="false" aria-controls="collapseExample">
+                  Cross Section
+                </button>
+              </div>
+              <div class="collapse" id="collapseExample10">
+                <ul class="list-group list-group-flush px-3">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                </ul>
+              </div>
+              <div class="custom-select border-bottom">
+                <button class="btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample11" aria-expanded="false" aria-controls="collapseExample">
+                  Diameter Range
+                </button>
+              </div>
+              <div class="collapse" id="collapseExample11">
+                <ul class="list-group list-group-flush px-3">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                </ul>
+              </div>
+              <div class="custom-select border-bottom">
+                <button class="btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample12" aria-expanded="false" aria-controls="collapseExample">
+                  Delivery Terms
+                </button>
+              </div>
+              <div class="collapse" id="collapseExample12">
+                <div class="row mx-3">
+                  <div class="col-md-6 px-0">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                          <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                          First 
+                        </li>
+                        <li class="list-group-item">
+                          <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                          Second 
+                        </li>
+                        <li class="list-group-item">
+                          <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                          Third 
+                        </li>
+                      </ul>
+                    </div>
+                  <div class="col-md-6 px-0">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                          <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                          First 
+                        </li>
+                        <li class="list-group-item">
+                          <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                          Second 
+                        </li>
+                        <li class="list-group-item">
+                          <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                          Third 
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+              <div class="custom-select border-bottom">
+                <button class="btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample14" aria-expanded="false" aria-controls="collapseExample">
+                  Port of Destination
+                </button>
+              </div>
+              <div class="collapse" id="collapseExample14">
+                <ul class="listitem list-group list-group-flush px-3">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                </ul>
+              </div>
+              <div class="custom-select border-bottom">
+                <button class="btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample15" aria-expanded="false" aria-controls="collapseExample">
+                  Filter
+                </button>
+              </div>
+              <div class="collapse" id="collapseExample15">
+                <ul class="listitem list-group list-group-flush px-3">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                </ul>
+              </div>
+              <div class="custom-select border-bottom">
+                <button class="btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample16" aria-expanded="false" aria-controls="collapseExample">
+                  Filter
+                </button>
+              </div>
+              <div class="collapse" id="collapseExample16">
+                <ul class="listitem list-group list-group-flush px-3">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                </ul>
+              </div>
+              <div class="custom-select border-bottom">
+                <button class="btn accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample17" aria-expanded="false" aria-controls="collapseExample">
+                  Filter
+                </button>
+              </div>
+              <div class="collapse" id="collapseExample17">
+                <ul class="listitem list-group list-group-flush px-3">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                </ul>
+              </div>
 
             <div class="navigation-heading d-flex justify-content-between align-items-center">
               <button type="submit" class="btn py-0" style="border:1px solid  #123d59; color:#123d59; font-size: 14px; font-weight:bold;">RESET ALL</button>
               <button type="submit" class="btn bg-warning text-white py-0 px-4" style="font-size: 14px; font-weight:bold;">APPLY</button>
             </div>
+
+    
           
           </div>
 
@@ -406,8 +570,8 @@
               <img src="/assets/img/ad-banner.png">
             </div>
             <!-- ./ad-banner -->
-
-
+      
+        </div>
         </div>
         <!-- ./left-col -->
 
@@ -856,6 +1020,58 @@
       }
     })
   </script>
+
+  <script>
+            function customRange(){
+          // $('input[type="range"]').next('output').css('border','1px solid red');
+          tooltip.firstElementChild.textContent = range.value;
+        
+        var startPosition = - (tooltip.clientWidth)/2 + padding + 4;
+        var stepWidth = (range.getBoundingClientRect().width - padding*2)/steps - subpixelCorrection;  
+        var currentStep =  range.value - range.min;
+        
+        // Reposition tooltip on top of the thumb
+        tooltip.style.visibility = "visible";
+        tooltip.style.left = Math.round(stepWidth*currentStep + startPosition) + "px";
+          
+       
+      };
+
+        jQuery('input[type="range"]').on('input', function() {
+        //  console.log( $(this).val() );
+          var thisInput = $(this),
+              thisInputValue = thisInput.val(),
+              thisInputOutput = thisInput.next("output");
+          
+        //  console.log( thisInputValue );
+          thisInputOutput.text( thisInputValue );
+          
+          thisInputOutput.css( 'left', thisInputValue + '%');
+        });
+       
+
+        var tooltip = document.querySelector(".current-value");
+         var steps = 16, padding = 15;
+          // There's a small error due to pixel truncating in Chrome
+          var subpixelCorrection = 0.4;
+    
+          // All browsers but IE
+          range.addEventListener("input", function(evt) {  
+            customRange();
+          }, false);
+          // IE10
+          range.addEventListener("change", function(evt) {  
+            customRange();
+          }, false);
+  </script>
+  <script>
+  
+
+     
+
+
+  </script>
+
  
 </body>
 
