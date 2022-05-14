@@ -282,6 +282,32 @@
 
               <div class="row my-3">
                 <div class="col">
+                  <label for="from">From</label>
+                  <div class="">
+                    <select id="from" name="from" multiple>
+                      <option value="Steel">Steel</option>
+                      <option value="Rods">Rods</option>
+                      <option value="Coil">Coil</option>
+                      <option value="Container">Container</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col">
+                  <label for="quality">Quality</label>
+                  <div class="">
+                    <select id="quality" name="quality" multiple>
+                      <option value="Steel">Steel</option>
+                      <option value="Rods">Rods</option>
+                      <option value="Coil">Coil</option>
+                      <option value="Container">Container</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row my-3">
+                <div class="col">
                   <label for="products">Products</label>
                   <div class="">
                     <select id="products" name="products" multiple>
@@ -430,15 +456,7 @@
                 <div class="col">
                   <label for="payment">Payment Terms</label>
                   <div class="position-menu-within">
-                    <select id="payment" name="payment" multiple>
-                      <option value="India">India</option>
-                      <option value="United States">United States</option>
-                      <option value="United Kingdom">United Kingdom</option>
-                      <option value="Japan">Japan</option>
-                      <option value="China">China</option>
-                      <option value="Germany">Germany</option>
-                      <option value="France">France</option>
-                    </select>
+                    <input type="text" class="form-control request-input" placeholder="" maxlength="200"  id="payment" name="payment">
                   </div>
                 </div>
               </div>
@@ -668,7 +686,7 @@
                 </tr>
                 <tr>
                   <th scope="row">From</th>
-                  <td>Coils</td>
+                  <td id="fromShow">Coils</td>
                 </tr>
                 <tr>
                   <th scope="row">Products</th>
@@ -711,7 +729,7 @@
                 </tr>
                 <tr>
                   <th scope="row">Quality</th>
-                  <td id="tab-quality">Prime</td>
+                  <td id="qualityShow">Prime</td>
                 </tr>
                 <tr>
                   <th scope="row">Origin</th>
@@ -802,6 +820,13 @@
       $('#commodity').multiSelect({
         positionMenuWithin: $('.position-menu-within')
       });
+      $('#from').multiSelect({
+        positionMenuWithin: $('.position-menu-within')
+      });
+      $('#quality').multiSelect({
+        positionMenuWithin: $('.position-menu-within')
+      });
+      
       $('#origin').multiSelect({
         positionMenuWithin: $('.position-menu-within')
       });
@@ -833,11 +858,56 @@
       }
       var comodityAll = commodity.join(' | ');
       console.log(comodityAll);
+       
+      var type = [];
+      for(var option of document.getElementById('type').options){
+        if(option.selected){
+          type.push(option.value);
+        }
+      }
+      var typeAll = type.join(' | ');
+      console.log(typeAll);
 
-      var type = document.getElementById('type').value;
-      var products = document.getElementById('products').value;
-      var origin = document.getElementById('origin').value;
+      var products = [];
+      for(var option of document.getElementById('products').options){
+        if(option.selected){
+         products.push(option.value);
+        }
+      }
+      var productAll = products.join(' | ');
+      console.log(productAll);
+
+      var origin = [];
+      for(var option of document.getElementById('origin').options){
+        if(option.selected){
+         origin.push(option.value);
+        }
+      }
+      var originAll = origin.join(' | ');
+      console.log(originAll);
+
+      var from = [];
+      for(var option of document.getElementById('from').options){
+        if(option.selected){
+         from.push(option.value);
+        }
+      }
+      var fromAll = from.join(' | ');
+      console.log(fromAll);
+
+      var quality = [];
+      for(var option of document.getElementById('quality').options){
+        if(option.selected){
+         quality.push(option.value);
+        }
+      }
+      var qualityAll = quality.join(' | ');
+      console.log(qualityAll);
+    
+      // var origin = document.getElementById('origin').value;
       var delivery = document.getElementById('delivery').value;
+      var from = document.getElementById('from').value;
+      var quality = document.getElementById('quality').value;
       var payment = document.getElementById('payment').value;
       var thikness1 = document.getElementById('thikness1').value;
       var thikness2 = document.getElementById('thikness2').value;
@@ -879,6 +949,8 @@
       var titleShow = document.getElementById('tab-title').innerHTML = title;
       var additionalShow = document.getElementById('additionalShow').innerHTML = additional;
       var comodityShow = document.getElementById('comodityShow').innerHTML = comodityAll;
+      var fromShow = document.getElementById('fromShow').innerHTML = fromAll;
+      var qualityShow = document.getElementById('qualityShow').innerHTML = qualityAll;
       var typeShow = document.getElementById('typeShow').innerHTML = type;
       var productsShow = document.getElementById('productsShow').innerHTML = products;
       var originShow = document.getElementById('originShow').innerHTML = origin;
@@ -902,54 +974,7 @@
     }
 
 
-    // submit btn
-    // var submitbtn = document.getElementById('submitbtn');
-
-    // //  form part
-    // var title = document.getElementById('title');
-    // var additional = document.getElementById('additional');
-    // var commodity = document.getElementById('commodity');
-    // var type = document.getElementById('type');
-    // var products = document.getElementById('products');
-    // var origin = document.getElementById('origin');
-    // var delivery = document.getElementById('delivery');
-    // var payment = document.getElementById('payment');
-    // var thikness1 = document.getElementById('thikness1');
-    // var thikness2 = document.getElementById('thikness2');
-    // var widthrange1 = document.getElementById('widthrange1');
-    // var widthrange2 = document.getElementById('widthrange2');
-    // var lengthrange1 = document.getElementById('lengthrange1');
-    // var lengthrange2 = document.getElementById('lengthrange2');
-    // var availabequantity = document.getElementById('availabequantity');
-
-    // // table part
-    // var tabtitle = document.getElementById('tab-title');
-    // var tabresult = document.getElementById('tab-result');
-    // var tabcommodity = document.getElementById('tab-commodity');
-    // var tabtype = document.getElementById('tab-type');
-    // var tabproduct = document.getElementById('tab-product');
-    // var taborigin = document.getElementById('tab-origin');
-    // var tabdelivery = document.getElementById('tab-delivery');
-    // var tabpayment = document.getElementById('tab-payment');
-    // var tabthikness = document.getElementById('tab-thikness');
-    // var tabwidthrange = document.getElementById('tab-widthrange');
-    // var tablength = document.getElementById('tab-length');
-    // var tabrequiredquantity = document.getElementById('tab-requiredquantity');
-
-    // submitbtn.addEventListener('click',()=>{
-    //   tabresult.innerText = additional.value;
-    //   tabtitle.innerText = title.value;
-    //   tabcommodity.innerText = commodity.value1 + " / " +commodity.value2;
-    //   tabtype.innerText = type.value;
-    //   tabproduct.innerText = products.value;
-    //   taborigin.innerText = origin.value;
-    //   tabdelivery.innerText = delivery.value;
-    //   tabpayment.innerText = payment.value;
-    //   tabthikness.innerText = thikness1.value + " to " + thikness2.value;
-    //   tabwidthrange.innerText = widthrange1.value + " to " + widthrange2.value;
-    //   tablength.innerText = lengthrange1.value + " to " + lengthrange2.value;
-    //   tabrequiredquantity.innerText = availabequantity.value;
-    // })
+   
 
   </script>
 </body>
