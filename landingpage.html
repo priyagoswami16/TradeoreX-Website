@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" type="text/css">
+    <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" type="text/jacascript"></script>
+  
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/off-canvas-menu.css" type="text/css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <title>Landingpage</title>
+    <style>
+       
+        .main-container{
+            width: 100%;
+
+
+        }
+        .bg-image{
+            width: 100%;
+            /* position: relative; */
+            height: 100vh;
+            background-image: url('/assets/img/main.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 100% 100%;
+          
+        }
+        .header{
+            width: 100%;
+            /* background-color: red; */
+        }
+        .bg-image .content{
+            width: 50%;
+            min-height: 400px;
+            margin: 70px auto;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+        }
+        .content h1{
+            font-size: 60px;
+            font-weight: 600;
+            color: #fff;
+            line-height: 58px;
+        }
+        .content span{
+            font-size: 60px;
+            font-weight: 600;
+            color: #f2b41c;
+            line-height: 58px;
+        }
+        .content p{
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;  
+        }
+        .bg-2-image{
+            width: 100%;
+            height: 50vh;
+            position: relative;
+            background-image: url('/assets/img/Rectangle 262.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 100%;
+            border-top: 5px solid #f2b41c;
+            border-bottom: 5px solid #f2b41c;
+
+        }
+        .bg-2-image .content{
+            width: 40%;
+            min-height: 200px;
+            margin: 70px auto;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg-2-image .content .heading{
+            font-size: 22px;
+            font-weight: 600;
+            color: #f2b41c; 
+            line-height: 60px; 
+        }
+        .bg-2-image .content .title{
+            font-size: 28px;
+            font-weight: 600;
+            color: #fff; 
+            line-height: 30px; 
+        }
+        .market-news{
+            width: 100%;
+            min-height: 100vh;
+            background-color: #123d59;
+            border-bottom: 5px solid #f2b41c;
+        }
+         .heading h4{
+            font-size: 35px;
+            font-weight: 600;
+            color: #fff;
+            text-align: center;
+        }
+        .heading .line{
+            width: 100px;
+            height: 4px;
+            background-color: #f2b41c;
+            margin: auto;
+        
+        }
+
+        .image-card{
+            width: 100%;
+        }
+        .card-div{
+            width: 100%;
+        }
+
+        /* Container needed to position the overlay. Adjust the width as needed */
+.card-title {
+  position: relative;
+  width: 50%;
+  max-width: 600px;
+  margin: 0px !important;
+}
+.card-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(180.76deg, rgba(18, 61, 89, 0.61) 0.66%, #123D59 65.16%);
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  /* opacity:0; */
+  color: white;
+  font-size: 20px;
+}
+.overlay p{
+    font-size: 12px;
+    font-weight: 500;
+}
+.overlay a{
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.card-title:hover .overlay {
+  opacity: 1;
+}
+
+.material-inquiry{
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    background-color: #123d59;
+    border-bottom: 5px solid #f2b41c;
+}
+.material-inquiry-card{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 80vh;
+    background-image: url('/assets/img/Rectangle 280.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+}
+
+.material-inquiry-card .content{
+    width: 40%;
+  
+
+}
+.material-inquiry-card .content .heading{
+            font-size: 22px;
+            font-weight: 600;
+            color: #f2b41c; 
+            text-align: center;
+            /* line-height: 60px;  */
+        }
+        .material-inquiry-card .content .title{
+            font-size: 28px;
+            font-weight: 600;
+            color: #123d59; 
+            text-align: center;
+            /* line-height: 30px;  */
+        }
+        .material-inquiry-card  a{
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+}
+.market-place{
+            width: 100%;
+            min-height: 100vh;
+            background-color: #123d59;
+            border-bottom: 5px solid #f2b41c;
+}
+.market-div{
+    width: 70%;
+}
+.market-place-div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.market-content .title{
+    font-size: 20px;
+    font-weight: 600;
+    color: #123d59;
+}
+.market-content .heading{
+    color: #f2b41c;
+    font-size: 24px;
+    font-weight: 600;
+}
+.market-place-div h4{
+    color: #123d59;
+}
+.market-place-div p{
+    color: #123d59;
+}
+.first-div{
+    width: 260px;
+}
+.private-network{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #123d59;
+           
+}
+.app-soon{
+    width: 100%;
+    position: relative;
+    background-image: url('/assets/img/Rectangle 291.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+}
+.app-soon .app-heading h3{
+    font-size: 40px;
+    font-weight: 700;
+    color: #123d59;
+}
+.app-soon .app-heading p{
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+}
+.app-heading{
+    width: 100%;
+    height: 100%;
+}
+.content .right-heading{
+   color: #f2b41c;
+   font-size: 24px;
+   font-weight: 500;
+}
+.content .right-title{
+    font-size: 30px;
+    font-weight: 500;
+    color: #123d59;
+}
+
+.content ul li {
+    font-size: 16px;
+    color: gray;
+    font-weight: bold;
+    line-height: 33px;
+
+}
+
+footer{
+    width: 100%;
+}
+@media only screen and (min-device-width: 200px) and (max-device-width: 767px) {
+    .navbar-brand{
+       padding-left: 30px;
+       /* text-align: center; */
+      
+    }
+    .navbar-nav{
+        display: none;
+    }
+    .material-inquiry-card .content{
+        width: 100%;
+    }
+    .bg-2-image .content {
+       width: 100%;
+    }
+    .bg-image .content {
+       width: 100%;
+    }
+    /* .navbar .right-div{
+        display: inline-block;
+    } */
+
+    .card-div{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-title{
+        width: 100%;
+    }
+   
+  }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="bg-image">
+                <div class="header py-4">
+                    <div class="container">
+                    <nav class="navbar navbar-expand-sm d-flex justify-content-between p-0">
+                        <div class="left-div">
+                        <a class="navbar-brand" href="/">
+                        <img src="/assets/img/white-logo 1.png" class="logo">
+                        </a>
+                        </div>
+                        <div class="right-div d-flex justify-content-between px-5">
+                            <a class="btn bg-warning mx-3 px-4  text-white" aria-current="page" href="/index.html">
+                                <p>Singh in</p> 
+                            </a>
+                            <a class="btn bg-warning mx-3 px-4 text-white" aria-current="page" href="/index.html">
+                                <p>Sign up</p>
+                            </a>    
+                            <a class="btn btn-outline-warning mx-3 text-white" aria-current="page" href="/index.html">
+                                <p>Schedule a demo</p>
+                            </a>    
+                        </div>
+                        <!-- ./navigation  -->
+                    </nav>
+                    </div>
+                     <!-- ./container -->
+                </div>
+
+                <div class="content">   
+                    <h1 class="">A DIGITAL PLATFORM</h1>
+                    <h1 class="">FOR THE COMMODITY</h1>
+                    <span class="">MARKET .</span>
+                    <p class="">online platform for byers & sellers of vairous commodities</p>
+                </div>  
+        </div>
+        <div class="bg-2-image">
+            <div class="content">
+                <div class="heading">
+                    Need Professional assistance?
+                </div>
+                <div class="title text-center">
+                    Get in touch We are looking forword <br>
+                                to help you.
+                </div>
+                <div class="button mt-3">
+                    <a href="" class="btn bg-warning text-white py-1">
+                        <img src="/assets/img/demo.svg">
+                         Schedule a demo
+
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="market-news">
+            <div class="heading  py-5">
+                <h4>MARKET NEWS</h4>
+                <div class="line mt-2"></div>
+            </div>    
+                <div class="image-card">
+                            <div class="card-div">
+                                <div class="card-title m-0">
+                                    <img src="/assets/img/Rectangle 281.png" class="image">
+                                    <div class="overlay p-4"> 
+                                        <p class="">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, velit!</p>
+                                        <a href="" class="">Read More
+                                            <img src="/assets/img/right-btn.svg" style="width: 12px;" >
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="card-title">
+                                    <img src="/assets/img/Rectangle 281 (2).png" class="image">
+                                    <div class="overlay p-4"> 
+                                        <p class="">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, velit!</p>
+                                        <a href="" class="">Read More
+                                            <img src="/assets/img/right-btn.svg" style="width: 12px;" >
+                                        </a>
+                                    </div>
+                                </div> 
+
+                                <div class="card-title">
+                                    <img src="/assets/img/Rectangle 281 (1).png" class="image">
+                                    <div class="overlay p-4"> 
+                                        <p class="">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, velit!</p>
+                                        <a href="" class="">Read More
+                                            <img src="/assets/img/right-btn.svg" style="width: 12px;" >
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-div">
+                                <div class="card-title m-0">
+                                    <img src="/assets/img/Rectangle 281 (4).png" class="image">
+                                    <div class="overlay p-4"> 
+                                        <p class="">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, velit!</p>
+                                        <a href="" class="">Read More
+                                            <img src="/assets/img/right-btn.svg" style="width: 12px;" >
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="card-title">
+                                    <img src="/assets/img/Rectangle 281 (5).png" class="image">
+                                    <div class="overlay p-4"> 
+                                        <p class="">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, velit!</p>
+                                        <a href="" class="">Read More
+                                            <img src="/assets/img/right-btn.svg" style="width: 12px;" >
+                                        </a>
+                                    </div>
+                                </div> 
+
+                                <div class="card-title">
+                                    <img src="/assets/img/Rectangle 281 (3).png" class="image">
+                                    <div class="overlay p-4"> 
+                                        <p class="">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, velit!</p>
+                                        <a href="" class="">Read More
+                                            <img src="/assets/img/right-btn.svg" style="width: 12px;" >
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+        </div>
+        <div class="material-inquiry">
+            <div class="heading py-5">
+                <h4>MATERIAL INQUIRY</h4>
+                <div class="line mt-2"></div>
+            </div>    
+                <div class="material-inquiry-card">
+                    <div class="container clearfix py-5 my-5">
+                                <div class="content bg-white ms-auto mt-5">
+                                    <div class="heading py-1">
+                                        Create your Custom Inquiry and send it to thousands of potential Buyers & Sellers
+                                    </div>
+                                    <div class="title py-1">
+                                        GET RESPONSE FROM THOUSANDS OF TRANDING PROFESSIONALS.
+                                    </div>
+                                </div>
+                                <a href="" class="float-end bg-warning px-3 py-2 mt-5">CREATE INQUIRY
+                                    <img src="/assets/img/right-btn.svg" style="width: 12px;" >
+                                </a>
+                    </div>    
+                </div>         
+        </div>
+        <div class="market-place">
+            <div class="heading py-5">
+                <h4>MARKETPLACE</h4>
+                <div class="line mt-2"></div>
+            </div>
+            <div class="container-fluid">
+                <div class="row ">
+                    <div class="col-md-6 bg-grey px-0">
+                        <div class="market-place-div  bg-white">
+                            <div class="market-div py-3 px-4">
+                                <div class="first-div d-flex justify-content-between">
+                                        <img src="/assets/img/Bars.svg">
+                                        <div class="market-content">
+                                            <p class="title"> I want to</p>
+                                            <p class="heading">BUY MATERIALS</p>
+                                        </div>
+                                </div>
+                            <h4 class="mt-3">TradeoreX Marketplace for<br> BUYERS</h4>
+                            <P class="mt-2">A very strong and powerfull tool to search the<br> 
+                                material you are looking for from a pool of <br>thousands of listed materials.</P>
+                                <div class="button mt-3 d-flex justify-content-end">
+                                    <a href="" class="btn btn-outline-warning py-0" style="color: #123d59; font-weight: bold;">
+                                         Learn More
+                                        <img src="/assets/img/Group 2317.svg">
+                                    </a>
+                                </div>
+                            </div>    
+                        </div>
+                   </div>
+                   <div class="col-md-6 px-0">
+                        <div class="market-place-div">
+                            <img src="/assets/img/image 2.png" style="width: 100%; height: 100%;">
+                        </div>
+                   </div>
+                </div>
+                <div class="row ">
+                   <div class="col-md-6 px-0">
+                        <div class="market-place-div">
+                            <img src="/assets/img/image 3-2.png" style="width: 100%; height: 100%;">
+                        </div>
+                   </div>
+                   <div class="col-md-6 px-0">
+                    <div class="market-place-div  bg-white">
+                        <div class="market-div py-3 px-4">
+                            <div class="first-div d-flex justify-content-between">
+                                    <img src="/assets/img/Bars.svg">
+                                    <div class="market-content">
+                                        <p class="title"> I want to</p>
+                                        <p class="heading">BUY MATERIALS</p>
+                                    </div>
+                            </div>
+                        <h4 class="mt-3">TradeoreX Marketplace for<br> BUYERS</h4>
+                        <P class="mt-2">A very strong and powerfull tool to search the<br> 
+                            material you are looking for from a pool of <br>thousands of listed materials.</P>
+                            <div class="button mt-3 d-flex justify-content-end">
+                                <a href="" class="btn btn-outline-warning py-0" style="color: #123d59; font-weight: bold;">
+                                     Learn More
+                                    <img src="/assets/img/Group 2317.svg">
+                                </a>
+                            </div>
+                        </div>    
+                    </div>
+               </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="private-network">
+            <div class="heading  py-5">
+                <h4>PRIVATE NETWORK</h4>
+                <div class="line mt-2"></div>
+            </div>
+            <div class="container-fluid">
+                <div class="row bg-white d-flex justify-content-center align-items-center py-5">
+                    <div class="col-md-5 text-center">
+                        <div class="content-div">
+                            <img src="/assets/img/Group 2306.png" style="width: 100%;">
+                        </div>
+
+                    </div>
+                    <div class="col-md-5 my-0">
+                        <div class="content">
+                            <div class="right-heading text-center py-3">
+                               Create your own professional Network
+                            </div>
+                            <div class="right-title text-center pb-3">
+                                GET CONNECTED TO THE THOUSANDS <br> OF LIKE MINDED PROFESSIONALS.              
+                            </div>
+                            <div class="row mx-0 d-flex justify-content-between">
+                                <div class="col-md-6 py-3">
+                                    <ul>
+                                        <li>Private Network</li>
+                                        <li>Share your thoughts</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 py-3">
+                                    <ul>
+                                        <li>Connect for Better Deals</li>
+                                        <li>Interact with professional</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="button mt-3 text-center">
+                                <a href="" class="btn bg-warning text-white py-1">
+                                    <img src="/assets/img/Group (1).svg" style="width: 18px;" >
+                                     Create Network
+            
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+           <div class="app-soon">
+               <div class="container">
+                   <div class="row d-flex justify-content-center">
+                       <div class="col-md-4 px-0">
+                        <div class="app-heading px-5 pt-5">
+                            <h3 class="pb-3">App Coming Soon</h3>
+                            <p>Download our app on Android and IOS platforms.
+                                <br>
+                                Never miss on update on New offers and  market insights.
+                            </p>
+                                
+                              <p>STAY UPDATED WITH THE INDUSTRY</p> 
+                           <div class="app-box py-5">
+                             <img src="/assets/img/appstore.png" style="width: 118px;" class="me-5">
+                             <img src="/assets/img/googleplay.png" style="width: 130px;">
+                           </div>
+                        </div>
+                       </div>
+                       <div class="col-md-4 px-0 text-center">
+                           <div class="app-heading pt-5 d-flex align-items-end justify-content-center">
+                            <img src="/assets/img/Group 2331.png" style=" margin-bottom: 0px;">
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <footer>
+            <nav class="navbar navbar-expand-lg py-3">
+                <div class="container">
+                  <!-- Links -->
+                  <a class="navbar-brand" href="#">  <img src="/assets/img/white-logo 1.png" class="logo"></a>
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="#">NEWS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="#">MATERIALINQUIRY</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="#">MARKETPLACE</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="#">AUCTION</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="#">TERMS & CONDITIONS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="#">PRIVACY POLICY</a>
+                    </li>
+                  </ul>
+                </div>
+            </nav>
+                <div class="divider"></div>
+                <div class="footer-div py-5">
+                    <div class="footer-icon text-center">
+                        <img src="/assets/img/Flat copy.svg" class="mx-2">
+                        <img src="/assets/img/Flat copy (1).svg" class="mx-2" >
+                        <img src="/assets/img/Flat copy (2).svg" class="mx-2" >
+                        <p class="text-white mt-2" style="font-size: 12px;">@ Copyright All rights reserved</p>
+                    </div>
+                </div>
+              
+           </footer>
+        </div>
+
+    </div>
+    
+</body>
+</html>
