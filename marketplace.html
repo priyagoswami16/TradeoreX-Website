@@ -259,13 +259,12 @@ div[slider] > input[type=range]::-ms-tooltip {
 p{
   display: flex;
   justify-content: space-between;
-  position: relative;
 }
 .second {
   display: flex;
   justify-content: space-between;
 }
- p input[type=text]{
+ p .box{
     text-align: center;
     margin: 0;
     font-family: inherit;
@@ -278,15 +277,19 @@ p{
     background-color: #f2b41c;
     color: #fff !important;
 }
-p input[type=text]::after{
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 10px;
-  top:10px;
-  background-color: #d02128;
-}
+ /* p input[type=text]{
+    text-align: center;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 50px;
+    height: 40px;
+    border-radius: 4px;
+    position: relative;
+    background-color: #f2b41c;
+    color: #fff !important;
+} */
 
 .second input{
     text-align: center;
@@ -562,9 +565,9 @@ p input[type=text]::after{
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                   </select>
-                  <p class="mt-5 pb-3">
-                    <input type="text" class="box" id="amount1" readonly style="border:0; color:#f6931f; font-weight:bold;">
-                    <input type="text" class="box" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                  <p class="mt-5 pb-2">
+                   <input type="text" class="box" id="amount1" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                   <input type="text" class="box" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
                   </p>
                   <div id="slider-range" class="mt-3"></div>
                   <div class="second mt-2">
@@ -1158,7 +1161,6 @@ p input[type=text]::after{
 
         </div>
         <!-- ./right-col -->
-
       </div>
     </div>
     <!-- ./container -->
@@ -1210,7 +1212,6 @@ p input[type=text]::after{
           $( "#amount" ).val( "$" + ui.values[1]);
           $( "#amount2" ).val( "$" + ui.values[0]);
           $( "#amount3" ).val( "$" + ui.values[1]);
-          
           // $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
         }
       });

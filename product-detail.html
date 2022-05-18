@@ -22,7 +22,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
-         
+          position: relative;     
         }
         .input-div-icon{
           width: 150px;
@@ -31,7 +31,65 @@
           justify-content: space-around;
           align-items: center;
         }
-      
+
+        .requested-inquiry .request-form  .select-selected {
+          background: linear-gradient(180deg, #f5f5f5 0%, #ebebeb 100%);
+          /* border-top-right-radius: 4px !important;
+          border-bottom-right-radius: 4px !important; */
+          border: 1px solid #e9e5e5 !important;
+          color: rgba(196, 196, 196, 1);
+          font-size: 13px;
+          }
+          .requested-inquiry .request-form .select-selected {
+              padding: 8px 30px 11px 29px;
+              cursor: pointer;
+          }
+
+          .requested-inquiry .request-form .select-selected:after {
+              position: absolute;
+              content: "";
+              top: 16px;
+              right: 10px;
+              width: 0;
+              height: 0;
+              border: 6px solid transparent;
+              border-color: #666666 transparent transparent transparent;
+          }
+
+          .requested-inquiry   .request-input{
+            background: linear-gradient(180deg, #F5F5F5 0%, #EBEBEB 100%);
+          }
+        
+          .image-div-icon::after{
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-image: url('/assets/img/no.svg');
+            background-repeat: no-repeat;
+            background-color: #fff;
+            border-radius: 50%;
+            top: -10px;
+            right: -7px;
+           
+          
+          }
+
+          .productdetail{
+            display: block;
+          }
+          .delivery,.additional,.product,.imagepro,.material,.coating{
+            display: none;
+          }
+          li:hover{
+            background-color: #e9ecef;
+            
+          }
+
+          li:hover a{
+            color: #000;
+          }
+                
       </style>
 
     <title>Product Details</title>
@@ -146,61 +204,61 @@
                             </div>
                             <div class="divider"></div>
                 
-                            <div class="material-nav-option">
+                            <div class="material-nav-option py-0">
                               <ul class="nav flex-column">
-                                <li class="side-nav  side-nav-active">
+                                <li class="side-nav  py-2">
                                     <div class="side-link">
-                                        <a href="/requestedmaterial.html" class="text-decoration-none text-black">
-                                        <img src="/assets/img/plus-icon-2.svg" class="material-icon px-3" >
+                                        <a href="#" class="text-decoration-none text-black toggle-btn4">
+                                        <img src="/assets/img/plus-icon-2.svg" class="material-icon px-3 " >
                                         Product details
                                         </a>
                                     </div>
                                 </li>
-                                <li class="side-nav">
+                                <li class="side-nav py-2">
                                   <div class="side-link">
-                                    <a href="/offermaterial.html" class="text-decoration-none text-black">
+                                    <a href="#" class="text-decoration-none text-black toggle-btn5">
                                      <img src="/assets/img/plus-icon-2.svg" class="material-icon px-3">
-                                        Delivery & Payment
+                                        Dimensions
                                     </a>
                                   </div>
                                 </li>
-                                <li class="side-nav">
+                                <li class="side-nav py-2">
                                   <div class="side-link">
-                                    <a href="/offermaterial.html" class="text-decoration-none text-black">
+                                    <a href="#" class="text-decoration-none text-black toggle-btn6">
                                      <img src="/assets/img/plus-icon-2.svg" class="material-icon px-3">
-                                        Additional Information
+                                     Coating Details
                                     </a>
                                   </div>
                                 </li>
-                                <li class="side-nav">
+                                <li class="side-nav py-2">
                                   <div class="side-link">
-                                    <a href="/offermaterial.html" class="text-decoration-none text-black">
+                                    <a href="#" class="text-decoration-none text-black toggle-btn7">
                                      <img src="/assets/img/plus-icon-2.svg" class="material-icon px-3">
-                                      Coating Details
+                                      Material Property
                                     </a>
                                   </div>
                                 </li>
-                                <li class="side-nav">
+                                <li class="side-nav py-2">
                                   <div class="side-link">
-                                    <a href="/offermaterial.html" class="text-decoration-none text-black">
+                                    <a href="#" class="text-decoration-none text-black toggle-btn8">
                                      <img src="/assets/img/plus-icon-2.svg" class="material-icon px-3">
-                                       Product Diamensions
+                                       Delivery and Payments
                                     </a>
                                   </div>
                                 </li>
-                                <li class="side-nav">
+                                <li class="side-nav py-2">
                                   <div class="side-link">
-                                    <a href="/offermaterial.html" class="text-decoration-none text-black">
+                                    <a href="#" class="text-decoration-none text-black toggle-btn9">
                                      <img src="/assets/img/plus-icon-2.svg" class="material-icon px-3">
-                                       Product Images
+                                       Additional information
                                     </a>
                                   </div>
                                 </li>
-                                <li class="side-nav">
+                                <li class="side-nav py-2">
                                   <div class="side-link">
-                                    <a href="/offermaterial.html" class="text-decoration-none text-black">
+                                    <a href="#" class="text-decoration-none text-black toggle-btn10">
                                      <img src="/assets/img/plus-icon-2.svg" class="material-icon px-3">
-                                       Material Property
+                                       Product images
                                     </a>
                                   </div>
                                 </li>
@@ -223,8 +281,9 @@
                     </div>
 
                     <div class="col-md-9">
+                      <section class="productdetail">
                         <div class="requested-inquiry bg-white border">
-                            <div class="navigation-heading border-bottom">
+                            <div class="navigation-heading">
                               <h6 class="text-black">Product Detail</h6>
                             </div>
                         </div>
@@ -238,12 +297,15 @@
                   
                                 <div class="row my-3 py-3">
                                   <div class="col">
-                                    <label for="productid">Product ID</label>
                                     <div class="">
-                                      <select id="productid" name="productid" multiple>
-                                        <option value="Commodity 1">Commodity 1</option>
-                                        <option value="Commodity 2">Commodity 2</option>
-                                      </select>
+                                      <!-- <div class="col">
+                                        <div class=""> -->
+                                          <div class="form-group">
+                                            <label for="productid">Product ID</label>
+                                            <input type="text" class="form-control request-input" placeholder="Title" maxlength="200" id="title">
+                                          </div>
+                                        <!-- </div>
+                                      </div> -->
                                     </div>
                                   </div>
                                   <div class="col-1"></div>
@@ -341,13 +403,7 @@
 
                                 <div class="row my-3 py-3">
                                   <div class="col">
-                                    <!-- <label for="standard">Standard</label> -->
                                     <div class="">
-                                      <!-- <select id="standard" name="standard" multiple>
-                                        <option value="HOT Rolled Coil">HOT Rolled Coil</option>
-                                        <option value="Steel Sheet">Steel Sheet</option>
-                                        <option value="Aluminum">Aluminum</option>
-                                      </select> -->
                                       <div class="form-group">
                                         <label for="standard">Standard</label>
                                         <input type="text" class="form-control request-input" placeholder="Title" maxlength="200" id="title">
@@ -388,8 +444,8 @@
                                       <div class="col">
                                         <div class="input-group">
                                           <input type="text" class="form-control request-input"  aria-label="thikness">
-                                            <div class="custom-select range-input bg-acent" id="inputGroupFileAddon04">
-                                              <select name="thikness_min"  id="availabequantity">
+                                            <div class="custom-select range-input bg-acent" id="inputGroupFileAddon01">
+                                              <select name="thikness_min"  id="availabequantity1">
                                                 <option value="1080 MM">Price</option>
                                                 <option value="1250 MM">Unit</option>
                                               </select>
@@ -411,8 +467,10 @@
                   
                               </form>
                         </div>
+                      </section>
+                      <section class="delivery">
                         <div class="requested-inquiry bg-white border">
-                            <div class="navigation-heading border-bottom">
+                            <div class="navigation-heading">
                               <h6 class="text-black">Delivery & Payment</h6>
                             </div>
                         </div>
@@ -491,11 +549,13 @@
                   
                               </form>
                         </div>
+                      </section>
+                      <section class="additional">
                         <div class="requested-inquiry bg-white border">
-                          <div class="navigation-heading border-bottom">
+                          <div class="navigation-heading">
                             <h6 class="text-black">Additional Information</h6>
                           </div>
-                      </div>
+                        </div>
                       <div class="requested-inquiry mt-3 bg-white border">
                           <form action="" class="request-form py-5"> 
 
@@ -556,8 +616,10 @@
                 
                             </form>
                       </div>
+                    </section>
+                    <section class="product">
                         <div class="requested-inquiry bg-white border">
-                          <div class="navigation-heading border-bottom">
+                          <div class="navigation-heading">
                             <h6 class="text-black">Product Dimensions</h6>
                           </div>
                       </div>
@@ -603,16 +665,20 @@
                                 </div>
                                 <div class="col-1"></div>
                                 <div class="col">
-                                  <label for="standard">Cross Section</label>
-                                <div class="input-group">
-                                  <input type="text" class="form-control request-input" aria-label="Text input with dropdown button">
-                                  <button class="btn btn-outline-secondary dropdown-toggle py-0 px-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <select id="cross-dimension" name="cross-dimension" class="form-select " multiple>
-                                      <option value="Commodity 1">Commodity 1</option>
-                                      <option value="Commodity 2">Commodity 2</option>
-                                    </select>
-                                  </button>
-                                </div>
+                                  <label for="products">Cross Section</label>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="input-group">
+                                        <input type="text" class="form-control request-input"  aria-label="thikness">
+                                          <div class="custom-select range-input bg-acent" id="inputGroupFileAddon03">
+                                            <select name="thikness_min"  id="availabequantity3">
+                                              <option value="1080 MM">Price</option>
+                                              <option value="1250 MM">Unit</option>
+                                            </select>
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
 
@@ -630,14 +696,19 @@
                                 </div>
                                 <div class="col-1"></div>
                                 <div class="col">
-                                  <label for="standard">Internal Diameter</label>
-                                  <div class="form-group d-flex justify-content-between">
-                                      <input type="text" class="form-control request-input" placeholder="from" style="width: 90%;">
-                                      <input type="text" class="form-control request-input mx-2" placeholder="To" style="width: 90%;">
-                                      <select id="internal-dimension" name="internal-dimension" multiple style="width: 100%;">
-                                        <option value="Commodity 1">Commodity 1</option>
-                                        <option value="Commodity 2">Commodity 2</option>
-                                      </select>
+                                  <label for="products">Internal Diameter</label>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="input-group">
+                                        <input type="text" class="form-control request-input"  aria-label="thikness">
+                                          <div class="custom-select range-input bg-acent" id="inputGroupFileAddon04">
+                                            <select name="thikness_min"  id="availabequantity4">
+                                              <option value="1080 MM">Price</option>
+                                              <option value="1250 MM">Unit</option>
+                                            </select>
+                                          </div>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -680,111 +751,125 @@
                 
                             </form>
                       </div>
+                    </section>
+                    <section class="imagepro">
                       <div class="requested-inquiry bg-white border">
-                        <div class="navigation-heading border-bottom">
+                        <div class="navigation-heading">
                           <h6 class="text-black">Product Images</h6>
                         </div>
                     </div>
                     <div class="requested-inquiry mt-3 bg-white border">
                         <div class="row mx-0 py-5">
                          <div class="col-md-3 px-0 d-flex justify-content-center">
-                           <div class="image-div-icon bg-grey">
-                              <div class="iamge-des text-center">
-                                <img src="/assets/img/upload 2.svg">
-                                <p class="mt-1">Upload Image</p>
-                              </div>
+                           <div class="image-div-icon bg-grey text-center">
+                                <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
+                                <label class="form-label" for="usercustomFile">
+                                  <img src="/assets/img/upload 2.svg">
+                                   <p class="mt-1">Upload Image</p>
+                                </label>
                            </div>
                          </div>
                          <div class="col-md-3 px-0 d-flex justify-content-center">
-                           <div class="image-div-icon bg-grey">
-                              <div class="iamge-des text-center">
-                                <img src="/assets/img/upload 2.svg">
-                                <p class="mt-1">Upload Image</p>
-                              </div>
+                           <div class="image-div-icon bg-grey text-center">
+                                <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
+                                <label class="form-label" for="usercustomFile">
+                                  <img src="/assets/img/upload 2.svg">
+                                   <p class="mt-1">Upload Image</p>
+                                </label>
                            </div>
                          </div>
                          <div class="col-md-3 px-0 d-flex justify-content-center">
-                           <div class="image-div-icon bg-grey">
-                              <div class="iamge-des text-center">
-                                <img src="/assets/img/upload 2.svg">
-                                <p class="mt-1">Upload Image</p>
-                              </div>
+                           <div class="image-div-icon bg-grey text-center">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
+                            <label class="form-label" for="usercustomFile">
+                              <img src="/assets/img/upload 2.svg">
+                               <p class="mt-1">Upload Image</p>
+                            </label>
                            </div>
                          </div>
                          <div class="col-md-3 px-0 d-flex justify-content-center">
-                           <div class="image-div-icon bg-grey">
-                              <div class="iamge-des text-center">
-                                <img src="/assets/img/upload 2.svg">
-                                <p class="mt-1">Upload Image</p>
-                              </div>
+                           <div class="image-div-icon bg-grey text-center">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
+                            <label class="form-label" for="usercustomFile">
+                              <img src="/assets/img/upload 2.svg">
+                               <p class="mt-1">Upload Image</p>
+                            </label>
                            </div>
                          </div>
                         </div>
                         <div class="row mx-0 py-4">
                          <div class="col-md-3 px-0 d-flex justify-content-center">
-                           <div class="image-div-icon bg-grey">
-                              <div class="iamge-des text-center">
-                                <img src="/assets/img/upload 2.svg">
-                                <p class="mt-1">Upload Image</p>
-                              </div>
+                           <div class="image-div-icon bg-grey text-center">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
+                            <label class="form-label" for="usercustomFile">
+                              <img src="/assets/img/upload 2.svg">
+                               <p class="mt-1">Upload Image</p>
+                            </label>
                            </div>
                          </div>
                          <div class="col-md-3 px-0 d-flex justify-content-center">
-                           <div class="image-div-icon bg-grey">
-                              <div class="iamge-des text-center">
-                                <img src="/assets/img/upload 2.svg">
-                                <p class="mt-1">Upload Image</p>
-                              </div>
+                           <div class="image-div-icon bg-grey text-center">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
+                            <label class="form-label" for="usercustomFile">
+                              <img src="/assets/img/upload 2.svg">
+                               <p class="mt-1">Upload Image</p>
+                            </label>
                            </div>
                          </div>
                          <div class="col-md-3 px-0 d-flex justify-content-center">
-                           <div class="image-div-icon bg-grey">
-                              <div class="iamge-des text-center">
-                                <img src="/assets/img/upload 2.svg">
-                                <p class="mt-1">Upload Image</p>
-                              </div>
+                           <div class="image-div-icon bg-grey text-center">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
+                            <label class="form-label" for="usercustomFile">
+                              <img src="/assets/img/upload 2.svg">
+                               <p class="mt-1">Upload Image</p>
+                            </label>
                            </div>
                          </div>
                          <div class="col-md-3 px-0 d-flex justify-content-center">
-                           <div class="image-div-icon bg-grey">
-                              <div class="iamge-des text-center">
-                                <img src="/assets/img/upload 2.svg">
-                                <p class="mt-1">Upload Image</p>
-                              </div>
+                           <div class="image-div-icon bg-grey text-center">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
+                            <label class="form-label" for="usercustomFile">
+                              <img src="/assets/img/upload 2.svg">
+                               <p class="mt-1">Upload Image</p>
+                            </label>
                            </div>
                          </div>
                         </div> 
                        <div class="row mx-0 py-5">
                          <div class="col-md-3 px-0 d-flex justify-content-center">
-                           <div class="image-div-icon bg-grey">
-                              <div class="iamge-des text-center">
-                                <img src="/assets/img/upload 2.svg">
-                                <p class="mt-1">Upload Image</p>
-                              </div>
+                           <div class="image-div-icon bg-grey text-center">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
+                            <label class="form-label" for="usercustomFile">
+                              <img src="/assets/img/upload 2.svg">
+                               <p class="mt-1">Upload Image</p>
+                            </label>
                            </div>
                          </div>
                          <div class="col-md-3 px-0 d-flex justify-content-center">
-                           <div class="image-div-icon bg-grey">
-                              <div class="iamge-des text-center">
-                                <img src="/assets/img/upload 2.svg">
-                                <p class="mt-1">Upload Image</p>
-                              </div>
+                           <div class="image-div-icon bg-grey text-center">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
+                            <label class="form-label" for="usercustomFile">
+                              <img src="/assets/img/upload 2.svg">
+                               <p class="mt-1">Upload Image</p>
+                            </label>
                            </div>
                          </div>
                          <div class="col-md-3 px-0 d-flex justify-content-center">
-                           <div class="image-div-icon bg-grey">
-                              <div class="iamge-des text-center">
-                                <img src="/assets/img/upload 2.svg">
-                                <p class="mt-1">Upload Image</p>
-                              </div>
+                           <div class="image-div-icon bg-grey text-center">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
+                            <label class="form-label" for="usercustomFile">
+                              <img src="/assets/img/upload 2.svg">
+                               <p class="mt-1">Upload Image</p>
+                            </label>
                            </div>
                          </div>
                          <div class="col-md-3 px-0 d-flex justify-content-center">
-                           <div class="image-div-icon bg-grey">
-                              <div class="iamge-des text-center">
-                                <img src="/assets/img/upload 2.svg">
-                                <p class="mt-1">Upload Image</p>
-                              </div>
+                           <div class="image-div-icon bg-grey text-center">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
+                            <label class="form-label" for="usercustomFile">
+                              <img src="/assets/img/upload 2.svg">
+                               <p class="mt-1">Upload Image</p>
+                            </label>
                            </div>
                          </div>
                         </div>
@@ -795,12 +880,14 @@
                          </div>
                     </div>
                     </div>
+                  </section>
+                  <section class="material">
                     <div class="requested-inquiry">
-                      <div class="navigation-heading border-bottom">
+                      <div class="navigation-heading">
                         <h6 class="text-black">Material Property</h6>
                       </div>
                     </div>
-                    <div class="requested-inquiry">
+                    <div class="requested-inquiry mt-3">
                       <p class="py-4 mx-3">Chemical Property</p>
                       <div class="row mx-0">
                         <div class="col-md-3 px-0 d-flex justify-content-center">
@@ -1011,8 +1098,10 @@
                         </div>
                       </div>
                     </div>
+                  </section>
+                  <section class="coating">
                     <div class="requested-inquiry bg-white border">
-                      <div class="navigation-heading border-bottom">
+                      <div class="navigation-heading">
                         <h6 class="text-black">Coating details</h6>
                       </div>
                     </div>
@@ -1027,10 +1116,20 @@
                               </div>
                               <div class="col-1"></div>
                               <div class="col">
-                                <label for="commodity">Commodity</label>
-                                <div class="">
-                                  <input type="text" class="form-control request-input" placeholder="Title" maxlength="200" id="title">
-                                </div>
+                                  <label for="products">Coating Quantity</label>
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="input-group">
+                                        <input type="text" class="form-control request-input"  aria-label="thikness">
+                                          <div class="custom-select range-input bg-acent" id="inputGroupFileAddon02">
+                                            <select name="thikness_min"  id="availabequantity2">
+                                              <option value="1080 MM">Price</option>
+                                              <option value="1250 MM">Unit</option>
+                                            </select>
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
                               </div>
                             </div>
                             <div class="row my-3 py-3">
@@ -1042,7 +1141,7 @@
                               </div>
                               <div class="col-1"></div>
                               <div class="col">
-                                <label for="material">Material</label>
+                                <label for="material">Oil</label>
                                 <div class="">
                                   <input type="text" class="form-control request-input" placeholder="Title" maxlength="200" id="title">
                                 </div>
@@ -1051,14 +1150,14 @@
               
                             <div class="row my-3 py-3">
                               <div class="col">
-                                <label for="form">Form</label>
+                                <label for="form">Hardness</label>
                                 <div class="">
                                   <input type="text" class="form-control request-input" placeholder="Title" maxlength="200" id="title">
                                 </div>
                               </div>
                               <div class="col-1"></div>
                               <div class="col">
-                                <label for="productionmethod">Production Method</label>
+                                <label for="productionmethod">Finish</label>
                                 <div class="position-menu-within">
                                   <input type="text" class="form-control request-input" placeholder="Title" maxlength="200" id="title">
                                 </div>
@@ -1067,14 +1166,14 @@
               
                             <div class="row my-3 py-3">
                               <div class="col">
-                                <label for="productioname">Production Name</label>
+                                <label for="productioname">Paint System</label>
                                 <div class="">
                                   <input type="text" class="form-control request-input" placeholder="Title" maxlength="200" id="title">
                                 </div>
                               </div>
                               <div class="col-1"></div>
                               <div class="col">
-                                <label for="grades">Grades</label>
+                                <label for="grades">Color (RAL)</label>
                                 <div class="position-menu-within">
                                   <input type="text" class="form-control request-input" placeholder="Title" maxlength="200" id="title">
                                 </div>
@@ -1083,29 +1182,73 @@
 
                             <div class="row my-3 py-3">
                               <div class="col">
-                                <label for="standard">Standard</label>
-                                <div class="">
-                                  <input type="text" class="form-control request-input" placeholder="Title" maxlength="200" id="title"> 
+                                <label for="products">Primer</label>
+                                <div class="row">
+                                  <div class="col">
+                                    <div class="input-group">
+                                      <input type="text" class="form-control request-input"  aria-label="thikness">
+                                        <div class="custom-select range-input bg-acent" id="inputGroupFileAddon02">
+                                          <select name="thikness_min"  id="availabequantity2">
+                                            <option value="1080 MM">Price</option>
+                                            <option value="1250 MM">Unit</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                  </div>
                                 </div>
-                              </div>
+                            </div>
                               <div class="col-1"></div>
                               <div class="col">
-                                <label for="origin">Origin</label>
-                                <input type="text" class="form-control request-input" placeholder="Title" maxlength="200" id="title">
-                              </div>
+                                <label for="products">Top Coat</label>
+                                <div class="row">
+                                  <div class="col">
+                                    <div class="input-group">
+                                      <input type="text" class="form-control request-input"  aria-label="thikness">
+                                        <div class="custom-select range-input bg-acent" id="inputGroupFileAddon02">
+                                          <select name="thikness_min"  id="availabequantity2">
+                                            <option value="1080 MM">Price</option>
+                                            <option value="1250 MM">Unit</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
                             </div>
                             <div class="row my-3 py-3">
                               <div class="col">
-                                <label for="quality">Quality</label>
-                                <div class="">
-                                  <input type="text" class="form-control request-input" placeholder="Title" maxlength="200" id="title">
+                                <label for="products">Back Coat</label>
+                                <div class="row">
+                                  <div class="col">
+                                    <div class="input-group">
+                                      <input type="text" class="form-control request-input"  aria-label="thikness">
+                                        <div class="custom-select range-input bg-acent" id="inputGroupFileAddon02">
+                                          <select name="thikness_min"  id="availabequantity2">
+                                            <option value="1080 MM">Price</option>
+                                            <option value="1250 MM">Unit</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                  </div>
                                 </div>
-                              </div>
+                            </div>
                               <div class="col-1"></div>
                               <div class="col">
-                                <label for="products">Quantity</label>
-                                <input type="text" class="form-control request-input" placeholder="Title" maxlength="200" id="title">
-                              </div>
+                                <label for="products">Guard Film</label>
+                                <div class="row">
+                                  <div class="col">
+                                    <div class="input-group">
+                                      <input type="text" class="form-control request-input"  aria-label="thikness">
+                                        <div class="custom-select range-input bg-acent" id="inputGroupFileAddon02">
+                                          <select name="thikness_min"  id="availabequantity2">
+                                            <option value="1080 MM">Price</option>
+                                            <option value="1250 MM">Unit</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
                             </div>
     
               
@@ -1121,6 +1264,7 @@
                           </form>
                    
                   </div>
+                </section>
                 </div>
             </div>
         </div>
@@ -1216,18 +1360,6 @@
         });
         </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     type="text/javascript"></script>
   <script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
@@ -1255,6 +1387,184 @@
         }
       }
     })
+  </script>
+
+  <script>
+    $(document).ready(function(){
+      
+      $(".toggle-btn4").click(function(){
+          $(".productdetail").show();
+      });
+      $(".toggle-btn4").click(function(){
+          $(".delivery").hide();
+      });
+      $(".toggle-btn4").click(function(){
+          $(".additional").hide();
+      });
+      $(".toggle-btn4").click(function(){
+          $(".product").hide();
+      });
+      $(".toggle-btn4").click(function(){
+          $(".imagepro").hide();
+      });
+      $(".toggle-btn4").click(function(){
+          $(".material").hide();
+      });
+      $(".toggle-btn4").click(function(){
+          $(".coating").hide();
+      });
+     
+  });
+    $(document).ready(function(){
+      
+      $(".toggle-btn5").click(function(){
+          $(".productdetail").hide();
+      });
+      $(".toggle-btn5").click(function(){
+          $(".delivery").hide();
+      });
+      $(".toggle-btn5").click(function(){
+          $(".additional").hide();
+      });
+      $(".toggle-btn5").click(function(){
+          $(".product").show();
+      });
+      $(".toggle-btn5").click(function(){
+          $(".imagepro").hide();
+      });
+      $(".toggle-btn5").click(function(){
+          $(".material").hide();
+      });
+      $(".toggle-btn5").click(function(){
+          $(".coating").hide();
+      });
+     
+  });
+    $(document).ready(function(){
+      
+      $(".toggle-btn6").click(function(){
+          $(".productdetail").hide();
+      });
+      $(".toggle-btn6").click(function(){
+          $(".delivery").hide();
+      });
+      $(".toggle-btn6").click(function(){
+          $(".additional").hide();
+      });
+      $(".toggle-btn6").click(function(){
+          $(".product").hide();
+      });
+      $(".toggle-btn6").click(function(){
+          $(".imagepro").hide();
+      });
+      $(".toggle-btn6").click(function(){
+          $(".material").hide();
+      });
+      $(".toggle-btn6").click(function(){
+          $(".coating").show();
+      });
+     
+  });
+    $(document).ready(function(){
+      
+      $(".toggle-btn7").click(function(){
+          $(".productdetail").hide();
+      });
+      $(".toggle-btn7").click(function(){
+          $(".delivery").hide();
+      });
+      $(".toggle-btn7").click(function(){
+          $(".additional").hide();
+      });
+      $(".toggle-btn7").click(function(){
+          $(".product").hide();
+      });
+      $(".toggle-btn7").click(function(){
+          $(".imagepro").hide();
+      });
+      $(".toggle-btn7").click(function(){
+          $(".material").show();
+      });
+      $(".toggle-btn7").click(function(){
+          $(".coating").hide();
+      });
+     
+  });
+    $(document).ready(function(){
+      
+      $(".toggle-btn8").click(function(){
+          $(".productdetail").hide();
+      });
+      $(".toggle-btn8").click(function(){
+          $(".delivery").show();
+      });
+      $(".toggle-btn8").click(function(){
+          $(".additional").hide();
+      });
+      $(".toggle-btn8").click(function(){
+          $(".product").hide();
+      });
+      $(".toggle-btn8").click(function(){
+          $(".imagepro").hide();
+      });
+      $(".toggle-btn8").click(function(){
+          $(".material").hide();
+      });
+      $(".toggle-btn8").click(function(){
+          $(".coating").hide();
+      });
+     
+  });
+    $(document).ready(function(){
+      
+      $(".toggle-btn9").click(function(){
+          $(".productdetail").hide();
+      });
+      $(".toggle-btn9").click(function(){
+          $(".delivery").hide();
+      });
+      $(".toggle-btn9").click(function(){
+          $(".additional").show();
+      });
+      $(".toggle-btn9").click(function(){
+          $(".product").hide();
+      });
+      $(".toggle-btn9").click(function(){
+          $(".imagepro").hide();
+      });
+      $(".toggle-btn9").click(function(){
+          $(".material").hide();
+      });
+      $(".toggle-btn9").click(function(){
+          $(".coating").hide();
+      });
+     
+  });
+    $(document).ready(function(){
+      
+      $(".toggle-btn10").click(function(){
+          $(".productdetail").hide();
+      });
+      $(".toggle-btn10").click(function(){
+          $(".delivery").hide();
+      });
+      $(".toggle-btn10").click(function(){
+          $(".additional").hide();
+      });
+      $(".toggle-btn10").click(function(){
+          $(".product").hide();
+      });
+      $(".toggle-btn10").click(function(){
+          $(".imagepro").show();
+      });
+      $(".toggle-btn10").click(function(){
+          $(".material").hide();
+      });
+      $(".toggle-btn10").click(function(){
+          $(".coating").hide();
+      });
+     
+  });
   </script>
 </body>
 </html>
