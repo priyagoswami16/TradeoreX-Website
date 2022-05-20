@@ -19,11 +19,12 @@
         .image-div-icon{
           width: 150px;
           height: 150px;
+          position: relative;   
           display: flex;
           justify-content: center;
           align-items: center;
-          position: relative;     
         }
+      
         .input-div-icon{
           width: 150px;
           height: 150px;
@@ -208,7 +209,7 @@
                               <ul class="nav flex-column">
                                 <li class="side-nav  py-2">
                                     <div class="side-link">
-                                        <a href="#" class="text-decoration-none text-black toggle-btn4">
+                                        <a href="#" class="text-decoration-none text-black toggle-btn44">
                                         <img src="/assets/img/plus-icon-2.svg" class="material-icon px-3 " >
                                         Product details
                                         </a>
@@ -459,7 +460,7 @@
                   
                                  <div class="row py-3">
                                   <div class="col d-flex justify-content-end">
-                                  <button type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block" data-bs-toggle="modal" data-bs-target="#myModal">Next</button>
+                                  <a href="#" type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block toggle-btn5" data-bs-toggle="modal" data-bs-target="#myModal">Next</a>
                                   </div>
                                 </div>
                          
@@ -540,8 +541,8 @@
                   
                                  <div class="row py-3">
                                   <div class="col d-flex justify-content-between">
-                                  <button type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block" data-bs-toggle="modal" data-bs-target="#myModal">Back</button>
-                                  <button type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block" data-bs-toggle="modal" data-bs-target="#myModal">Next</button>
+                                  <a href="#" type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block toggle-btn7" data-bs-toggle="modal" data-bs-target="#myModal">Back</a>
+                                  <a href="#" type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block toggle-btn9" data-bs-toggle="modal" data-bs-target="#myModal">Next</a>
                                   </div>
                                 </div>
                          
@@ -607,8 +608,8 @@
                 
                                <div class="row py-3">
                                 <div class="col d-flex justify-content-between">
-                                <button type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block" data-bs-toggle="modal" data-bs-target="#myModal">Back</button>
-                                <button type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block" data-bs-toggle="modal" data-bs-target="#myModal">Next</button>
+                                <a type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block toggle-btn8" data-bs-toggle="modal" data-bs-target="#myModal">Back</a>
+                                <a type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block toggle-btn10" data-bs-toggle="modal" data-bs-target="#myModal">Next</a>
                                 </div>
                               </div>
                        
@@ -742,8 +743,8 @@
                 
                                <div class="row py-3">
                                 <div class="col d-flex justify-content-between">
-                                <button type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block" data-bs-toggle="modal" data-bs-target="#myModal">Back</button>
-                                <button type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block" data-bs-toggle="modal" data-bs-target="#myModal">Next</button>
+                                <button type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block toggle-btn44" data-bs-toggle="modal" data-bs-target="#myModal">Back</button>
+                                <button type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block toggle-btn6" data-bs-toggle="modal" data-bs-target="#myModal">Next</button>
                                 </div>
                               </div>
                        
@@ -761,11 +762,11 @@
                     <div class="requested-inquiry mt-3 bg-white border">
                         <div class="row mx-0 py-5">
                          <div class="col-md-3 px-0 d-flex justify-content-center">
-                           <div class="image-div-icon bg-grey text-center">
-                                <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
-                                <label class="form-label" for="usercustomFile">
-                                  <img src="/assets/img/upload 2.svg">
-                                   <p class="mt-1">Upload Image</p>
+                           <div class="image-div-icon bg-grey text-center" id="imageproductdiv">
+                                <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile" onchange="UploadImageProduct(event)">
+                                <label class="form-label " for="usercustomFile">
+                                  <img src="/assets/img/upload 2.svg" id="imageproductid">
+                                  <p class="mt-1" id="textImage">Upload Image</p>
                                 </label>
                            </div>
                          </div>
@@ -875,8 +876,8 @@
                         </div>
                         <div class="row py-3">
                          <div class="col d-flex justify-content-between mx-5">
-                         <button type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block" data-bs-toggle="modal" data-bs-target="#myModal">Back</button>
-                         <button type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block" data-bs-toggle="modal" data-bs-target="#myModal">Next</button>
+                         <button type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block toggle-btn9" data-bs-toggle="modal" data-bs-target="#myModal">Back</button>
+                         <button type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block toggle-btn44" data-bs-toggle="modal" data-bs-target="#myModal">Next</button>
                          </div>
                     </div>
                     </div>
@@ -1088,14 +1089,21 @@
                           <div class="input-div-icon">
                             <p class="">AI %</p>
                             <input type="text" style="width:40px; height:40px; border-radius: 5px;">
-                       </div>
+                          </div>
                         </div>
                         <div class="col-md-3 px-0 d-flex justify-content-center">
                           <div class="input-div-icon">
                             <p class="">AI %</p>
                             <input type="text" style="width:40px; height:40px; border-radius: 5px;">
-                       </div>
+                          </div>
                         </div>
+                        <div class="row py-3 mx-auto px-5">
+                          <div class="col d-flex justify-content-between">
+                          <a href="#" type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block toggle-btn6" data-bs-toggle="modal" data-bs-target="#myModal">Back</a>
+                          <a href="#" type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block toggle-btn8" data-bs-toggle="modal" data-bs-target="#myModal">Next</a>
+                          </div>
+                        </div>
+
                       </div>
                     </div>
                   </section>
@@ -1254,8 +1262,8 @@
               
                             <div class="row py-3">
                               <div class="col d-flex justify-content-between">
-                              <button type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block" data-bs-toggle="modal" data-bs-target="#myModal">Back</button>
-                              <button type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block" data-bs-toggle="modal" data-bs-target="#myModal">Next</button>
+                              <a href="#" type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block toggle-btn5" data-bs-toggle="modal" data-bs-target="#myModal">Back</a>
+                              <a href="#" type="submit" id="submitbtn" class="btn btn-warning text-white px-5 btn-block toggle-btn7" data-bs-toggle="modal" data-bs-target="#myModal">Next</a>
                               </div>
                          </div>
                      
@@ -1390,27 +1398,40 @@
   </script>
 
   <script>
+
+      function UploadImageProduct(event){
+          let image = URL.createObjectURL(event.target.files[0]);
+          let imageproductdiv = document.getElementById('imageproductdiv');
+          let newimage = document.getElementById('imageproductid');
+          newimage.src = image;
+          newimage.width = 100;
+          newimage.height = 100;
+          imageproductdiv.appendChild(newimage);
+        }
+
+
+
     $(document).ready(function(){
       
-      $(".toggle-btn4").click(function(){
+      $(".toggle-btn44").click(function(){
           $(".productdetail").show();
       });
-      $(".toggle-btn4").click(function(){
+      $(".toggle-btn44").click(function(){
           $(".delivery").hide();
       });
-      $(".toggle-btn4").click(function(){
+      $(".toggle-btn44").click(function(){
           $(".additional").hide();
       });
-      $(".toggle-btn4").click(function(){
+      $(".toggle-btn44").click(function(){
           $(".product").hide();
       });
-      $(".toggle-btn4").click(function(){
+      $(".toggle-btn44").click(function(){
           $(".imagepro").hide();
       });
-      $(".toggle-btn4").click(function(){
+      $(".toggle-btn44").click(function(){
           $(".material").hide();
       });
-      $(".toggle-btn4").click(function(){
+      $(".toggle-btn44").click(function(){
           $(".coating").hide();
       });
      
