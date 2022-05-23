@@ -90,6 +90,36 @@
           li:hover a{
             color: #000;
           }
+
+            .requested-inquiry .user-image{
+              width: 150px; 
+              height: 150px; 
+              position: relative;  
+            }
+            .requested-inquiry .image-file{
+                background: transparent;
+                position: absolute;
+                top: 31% ;
+                text-align: center;
+                cursor: pointer;
+                display: block;
+                /* background-color: #666666; */
+               
+            }
+        
+            .requested-inquiry .user-image span > img{
+               position: absolute;
+               top: -10px;
+               right:-10px;
+               display: none; 
+        
+            }
+            .requested-inquiry .user-image > img{
+              /* position: absolute;
+              top: 0;
+              left: 0; */
+              display: block;
+            }
                 
       </style>
 
@@ -762,27 +792,50 @@
                     <div class="requested-inquiry mt-3 bg-white border">
                         <div class="row mx-0 py-5">
                          <div class="col-md-3 px-0 d-flex justify-content-center">
-                           <div class="image-div-icon bg-grey text-center" id="imageproductdiv">
+                          <div class="user-image bg-grey" id="imageproductdiv">  
+                            <span><img src="/assets/img/no.svg" onclick="remove()" id="removebtn"></span>
+                            <img src="" style="width: 100%; height:100%;" id="imageproductid">
+                          </div>
+                          <div class="image-file" id="imageFile">
+                              <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile" onchange="UploadImageProduct(event)">
+                              <label class="form-label" for="usercustomFile">
+                                <img src="/assets/img/upload 2.svg">
+                                <p class="mt-1">Upload Image</p>
+                              </label>
+                          </div>
+
+                           <!-- <div class="image-div-icon bg-grey text-center" id="imageproductdiv">
                                 <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile" onchange="UploadImageProduct(event)">
                                 <label class="form-label " for="usercustomFile">
                                   <img src="/assets/img/upload 2.svg" id="imageproductid">
-                                  <p class="mt-1" id="textImage">Upload Image</p>
+                                  <p class="mt-1">Upload Image</p>
                                 </label>
-                           </div>
+                           </div> -->
                          </div>
                          <div class="col-md-3 px-0 d-flex justify-content-center">
-                           <div class="image-div-icon bg-grey text-center">
-                                <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
-                                <label class="form-label" for="usercustomFile">
+                          <div class="user-image bg-grey" id="imageproductdiv1">  
+                            <span><img src="/assets/img/no.svg" onclick="remove1()" id="removebtn1"></span>
+                            <img src="" style="width: 100%; height:100%;" id="imageproductid1">
+                          </div>
+                          <div class="image-file" id="imageFile1">
+                              <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile11" onchange="UploadImageProduct1(event)">
+                              <label class="form-label" for="usercustomFile11">
+                                <img src="/assets/img/upload 2.svg">
+                                <p class="mt-1">Upload Image</p>
+                              </label>
+                          </div>
+                            <!-- <div class="image-div-icon bg-grey text-center">
+                                <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile11">
+                                <label class="form-label " for="usercustomFile11">
                                   <img src="/assets/img/upload 2.svg">
-                                   <p class="mt-1">Upload Image</p>
+                                  <p class="mt-1">Upload Image</p>
                                 </label>
-                           </div>
+                            </div> -->
                          </div>
                          <div class="col-md-3 px-0 d-flex justify-content-center">
                            <div class="image-div-icon bg-grey text-center">
-                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
-                            <label class="form-label" for="usercustomFile">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile1">
+                            <label class="form-label" for="usercustomFile1">
                               <img src="/assets/img/upload 2.svg">
                                <p class="mt-1">Upload Image</p>
                             </label>
@@ -790,8 +843,8 @@
                          </div>
                          <div class="col-md-3 px-0 d-flex justify-content-center">
                            <div class="image-div-icon bg-grey text-center">
-                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
-                            <label class="form-label" for="usercustomFile">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile2">
+                            <label class="form-label" for="usercustomFile2">
                               <img src="/assets/img/upload 2.svg">
                                <p class="mt-1">Upload Image</p>
                             </label>
@@ -801,8 +854,8 @@
                         <div class="row mx-0 py-4">
                          <div class="col-md-3 px-0 d-flex justify-content-center">
                            <div class="image-div-icon bg-grey text-center">
-                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
-                            <label class="form-label" for="usercustomFile">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile3">
+                            <label class="form-label" for="usercustomFile3">
                               <img src="/assets/img/upload 2.svg">
                                <p class="mt-1">Upload Image</p>
                             </label>
@@ -810,8 +863,8 @@
                          </div>
                          <div class="col-md-3 px-0 d-flex justify-content-center">
                            <div class="image-div-icon bg-grey text-center">
-                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
-                            <label class="form-label" for="usercustomFile">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile4">
+                            <label class="form-label" for="usercustomFile4">
                               <img src="/assets/img/upload 2.svg">
                                <p class="mt-1">Upload Image</p>
                             </label>
@@ -819,8 +872,8 @@
                          </div>
                          <div class="col-md-3 px-0 d-flex justify-content-center">
                            <div class="image-div-icon bg-grey text-center">
-                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
-                            <label class="form-label" for="usercustomFile">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile5">
+                            <label class="form-label" for="usercustomFile5">
                               <img src="/assets/img/upload 2.svg">
                                <p class="mt-1">Upload Image</p>
                             </label>
@@ -828,8 +881,8 @@
                          </div>
                          <div class="col-md-3 px-0 d-flex justify-content-center">
                            <div class="image-div-icon bg-grey text-center">
-                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
-                            <label class="form-label" for="usercustomFile">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile6">
+                            <label class="form-label" for="usercustomFile6">
                               <img src="/assets/img/upload 2.svg">
                                <p class="mt-1">Upload Image</p>
                             </label>
@@ -839,8 +892,8 @@
                        <div class="row mx-0 py-5">
                          <div class="col-md-3 px-0 d-flex justify-content-center">
                            <div class="image-div-icon bg-grey text-center">
-                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
-                            <label class="form-label" for="usercustomFile">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile7">
+                            <label class="form-label" for="usercustomFile7">
                               <img src="/assets/img/upload 2.svg">
                                <p class="mt-1">Upload Image</p>
                             </label>
@@ -848,8 +901,8 @@
                          </div>
                          <div class="col-md-3 px-0 d-flex justify-content-center">
                            <div class="image-div-icon bg-grey text-center">
-                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
-                            <label class="form-label" for="usercustomFile">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile8">
+                            <label class="form-label" for="usercustomFile8">
                               <img src="/assets/img/upload 2.svg">
                                <p class="mt-1">Upload Image</p>
                             </label>
@@ -857,8 +910,8 @@
                          </div>
                          <div class="col-md-3 px-0 d-flex justify-content-center">
                            <div class="image-div-icon bg-grey text-center">
-                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
-                            <label class="form-label" for="usercustomFile">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile9">
+                            <label class="form-label" for="usercustomFile9">
                               <img src="/assets/img/upload 2.svg">
                                <p class="mt-1">Upload Image</p>
                             </label>
@@ -866,8 +919,8 @@
                          </div>
                          <div class="col-md-3 px-0 d-flex justify-content-center">
                            <div class="image-div-icon bg-grey text-center">
-                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile">
-                            <label class="form-label" for="usercustomFile">
+                            <input class="form-control" type="file" name="inlineRadioOptions" id="usercustomFile10">
+                            <label class="form-label" for="usercustomFile10">
                               <img src="/assets/img/upload 2.svg">
                                <p class="mt-1">Upload Image</p>
                             </label>
@@ -1277,7 +1330,6 @@
             </div>
         </div>
 
-
         <script type="text/javascript" src="assets/js/jquery.multi-select.js"></script>
         <script type="text/javascript">
         $(function(){
@@ -1399,16 +1451,43 @@
 
   <script>
 
-      function UploadImageProduct(event){
-          let image = URL.createObjectURL(event.target.files[0]);
-          let imageproductdiv = document.getElementById('imageproductdiv');
-          let newimage = document.getElementById('imageproductid');
-          newimage.src = image;
-          newimage.width = 100;
-          newimage.height = 100;
-          imageproductdiv.appendChild(newimage);
-        }
+    function UploadImageProduct(event){
+      let imageproductdiv = document.getElementById('imageproductdiv');
+      let newimage = document.getElementById('imageproductid');
+      let removebtn = document.getElementById('removebtn').style.display = "block";
+      let imageFile = document.getElementById('imageFile').style.display = "none";
+      let image = URL.createObjectURL(event.target.files[0]);
+      newimage.src = image;
+      // newimage.width = 100;
+      // newimage.height = 100;
+      imageproductdiv.appendChild(newimage);  
+      }
 
+      function UploadImageProduct1(event){
+        let imageproductdiv1 = document.getElementById('imageproductdiv1');
+        let newimage1 = document.getElementById('imageproductid1');
+        let removebtn1 = document.getElementById('removebtn1').style.display = "block";
+        let imageFile1 = document.getElementById('imageFile1').style.display = "none";
+        let image1 = URL.createObjectURL(event.target.files[0]);
+        newimage1.src = image1;
+        // newimage.width = 100;
+        // newimage.height = 100;
+        imageproductdiv1.appendChild(newimage1);
+      }
+
+    function remove(){
+      let remove = document.getElementById('imageproductid');
+      remove.src ="null";
+      let removebtn = document.getElementById('removebtn').style.display = "none";
+      let imageFile = document.getElementById('imageFile').style.display = "block";
+
+    }
+    function remove1(){
+      let remove1 = document.getElementById('imageproductid1');
+      remove1.src ="null";
+      let removebtn1 = document.getElementById('removebtn1').style.display = "none";
+      let imageFile1 = document.getElementById('imageFile1').style.display = "block";
+    }
 
 
     $(document).ready(function(){
