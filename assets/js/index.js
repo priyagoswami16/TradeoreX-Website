@@ -68,7 +68,8 @@ function readImageURL(event) {
     let urls = URL.createObjectURL(event.target.files[i]);
     document.getElementById("show").style.display = 'block';
     document.getElementById("show").innerHTML +=
-      '<img src="' + urls + '" id="removeImage">';
+     '<img src="' + urls + '" id="removeImage">' + '<img src="/assets/img/no.svg"  id="btnImage" onclick="removBttnn()">';
+      // '<img src="' + urls + '" id="removeImage">'+ '<img src="/assets/img/no.svg"  id="btnImage">';
   }
   // remove disabled attribute if file is present
   if (files) {
@@ -80,6 +81,16 @@ function readImageURL(event) {
   }
 
 }
+
+function removBttnn(event){
+
+    var x = document.getElementById('removeImage');
+      x.remove(x.selectedIndex);
+
+    var y = document.getElementById('btnImage');
+    y.remove(y.selectedIndex);
+}
+
 
 // Remove Images in Post Modal
 function removePost(){

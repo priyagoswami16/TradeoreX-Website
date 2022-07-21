@@ -16,6 +16,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <script type="text/javascript" src="custom-text-editor.js"></script>
+    <link type="text/css" rel="stylesheet" href="custom-text-editor.css"/> 
     <style>
       .modal-content {
         position: relative;
@@ -29,6 +32,44 @@
         border-radius: 0.3rem;
         outline: 0;
         }
+        #show {
+          position: relative;
+        }
+     
+        #show > #btnImage {
+            width: 20px;
+            height: auto;
+            position:absolute;
+            margin-left: -26px;
+            margin-bottom: 5px;
+            /* border-radius: 4px; */
+      
+        }
+
+        #container button {
+    width: 5ex;
+    text-align: center;
+    height:22px;
+    width:25px;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    background: #fff;
+    border:none;
+}
+#container .bold{
+  background-image: url('/assets/img/bold-text.svg');  
+}
+#container .italic{
+  background-image: url('/assets/img/italic-text.svg');
+}
+#container .unorderedlist{
+  background-image: url('/assets/img/bold-dots.svg');  
+}
+[contentEditable=true]:empty:not(:focus):before{
+    content:attr(data-text);
+    color:#888;
+}
+      
     </style>
 
   <title>TradeoreX</title>
@@ -594,7 +635,7 @@
               <div class="modal" id="addNewPostModal" tabindex="-1" aria-labelledby="addNewPostModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
-                  <div class="modal-content">
+                  <div class="modal-content bg-white">
                     <form action="" id="postForm">
                       <div class="modal-header">
                         <h6 class="modal-title text-uppercase" id="addNewPostModalLabel">Create Your Post</h6>
@@ -612,8 +653,26 @@
                           </select>
                         </div>
                         <div class="post-container">
-                          <textarea rows="2" onchange="changeDisable()" id="post-feild" class="form-control border-0"
-                            name="desc" placeholder="What's in your mind?"></textarea>
+                          <!-- <textarea rows="2" onchange="changeDisable()" id="post-feild" class="form-control border-0"
+                            name="desc" placeholder="What's in your mind?"></textarea> -->
+
+                            <div id="container" class="">
+                              <div id="editor1" contenteditable="true" data-text="Enter comment...."></div>
+                              <div id="show2" class="" style="display: none;"></div>
+                              <div class="d-flex justify-content-end px-3">
+                                <button class="bold m-2" onclick="document.execCommand('bold',false,null)" title="Bold Highlighted Text"></button>
+                                <button class="unorderedlist m-2" onclick="document.execCommand('insertUnorderedList',false, null)"></button>    
+                                <button class="italic m-2" onclick="document.execCommand('italic',false,null);" title="Italicize Highlighted Text"></button>
+                                <div class="attch bg-warning btn mb-3 me-3 mt-1" style="width: 30px; height: 30px;">
+                                  <label for="formFile" class="form-label"><img src="/assets/img/attachment-file.svg"></label>
+                                  <input class="form-control bg-warning" type="file" id="formFile" onchange="readRimageURL(event)" multiple accept="image/gif, image/jpeg, image/png">
+                                </div>
+                                 <a type="submit" class="btn bg-warning text-white mb-3 mt-1 py-0 px-2">
+                                  <img src="/assets/img/send-btn.svg" class="me-1">Send
+                                </a>
+                              </div>
+                            </div>
+
                           <div id="show" style="display: none;">
                           </div>
 
@@ -740,7 +799,7 @@
 
                              <div class="scroll-modal-post-view">
                                
-                                <div class="single-post-user py-2 d-flex justify-content-between position-sticky">
+                                <div class="single-post-user py-2 d-flex justify-content-between position-sticky bg-info">
                                   <a href="/profile.html" class='link-styles'>
                                     <div class="d-flex ps-3">
                                       <img src="assets/img/profile-img.png" class="post-user-img" />
